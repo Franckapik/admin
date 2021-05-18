@@ -23,9 +23,10 @@ app.get("/api", (req, res) => {
 
 app.get("/db/:id", async (req, res) => {
 const {id} = req.params
-const essai = await db.query('select * from "user" where id = $1', [id])
-console.log(essai.rows[0]);
-res.json(essai.rows[0]);
+const essai = await db.query('select * from "product"');
+/* const essai = await db.query('select * from "product" where id = $1', [id])
+ */console.log(essai.rows);
+res.json(essai.rows);
 });
 
 app.listen(PORT, () => {
