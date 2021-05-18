@@ -43,6 +43,10 @@ import useFetch from "hooks/useFetch"
 
 
 const Products = () => {
+
+  const { response, errors } = useFetch("/api");
+  console.log(response);
+
   return (
     <>
       <Header />
@@ -85,7 +89,7 @@ const Products = () => {
                         </a>
                         <Media>
                           <span className="mb-0 text-sm">
-                            Argon Design System
+                            {response? response.message : "non"}
                           </span>
                         </Media>
                       </Media>
