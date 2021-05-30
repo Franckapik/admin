@@ -1,5 +1,7 @@
 -- version 5 ---
-
+ctrl shift o : effracer les dep non utilisées
+ctrl+l : join line
+ctrl+shift+i : indent lines
 
 Charte graphique à remettre en place
 https://github.com/Franckapik/quadratik-charter
