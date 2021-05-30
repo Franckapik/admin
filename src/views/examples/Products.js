@@ -1,46 +1,9 @@
-  /*!
-
-  =========================================================
-  * Argon Dashboard React - v1.2.0
-  =========================================================
-
-  * Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-  * Copyright 2021 Creative Tim (https://www.creative-tim.com)
-  * Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-  * Coded by Creative Tim
-
-  =========================================================
-
-  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-  */
-  import React from "react";
-
-  // reactstrap components
-  import {
-    Badge,
-    Card,
-    CardHeader,
-    CardFooter,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    Media,
-    Pagination,
-    PaginationItem,
-    PaginationLink,
-    Progress,
-    Table,
-    Container,
-    Row,
-    UncontrolledTooltip,
-  } from "reactstrap";
   // core components
-  import Header from "components/Headers/Header.js";
-  import useFetch from "hooks/useFetch"
-
+import Header from "components/Headers/Header.js";
+import useFetch from "hooks/useFetch";
+import React from "react";
+// reactstrap components
+import { Button, Card, CardBody, CardHeader, Col, Container, Form, FormGroup, Input, Row, Table } from "reactstrap";
 
   const Products = () => {
 
@@ -84,6 +47,123 @@
               </Card>
             </div>
           </Row>
+          <Row className="mt-5">
+            <Col>
+            <Card className="shadow">
+              <CardHeader className="bg-transparent">
+                <h3 className="mb-0">Ajouter un produit</h3>
+              </CardHeader>
+              <CardBody>
+          <Form>
+            <FormGroup>
+              <label
+                className="form-control-label"
+                htmlFor="example-text-input"
+              >
+                Id 
+              </label>
+              <Input
+                defaultValue="42"
+                id="example-text-input"
+                type="text"
+                disabled
+              />
+            </FormGroup>
+            <FormGroup>
+              <label
+                className="form-control-label"
+                htmlFor="example-text-input"
+              >
+                Nom 
+              </label>
+              <Input
+                defaultValue="Woodik-7"
+                id="example-text-input"
+                type="text"
+              />
+            </FormGroup>
+            <FormGroup>
+              <label
+                className="form-control-label"
+                htmlFor="example-search-input"
+              >
+                Prix
+              </label>
+              <Input
+                defaultValue="87 €"
+                id="example-search-input"
+                type="search"
+              />
+            </FormGroup>
+            <FormGroup>
+            <label htmlFor="exampleFormControlSelect1">Collection</label>
+            <Input id="exampleFormControlSelect1" type="select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </Input>
+          </FormGroup>
+            <FormGroup>
+        <label 
+        className="form-control-label"
+        for="exampleFile"
+        >File
+        </label>
+        <Input type="file" name="file" id="exampleFile" />
+
+      </FormGroup>
+      <FormGroup>
+            <label htmlFor="exampleFormControlSelect1">Performances</label>
+            <Input id="exampleFormControlSelect1" type="select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <label htmlFor="exampleFormControlSelect1">Packaging</label>
+            <Input id="exampleFormControlSelect1" type="select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <label htmlFor="exampleFormControlSelect1">Propriétés</label>
+            <Input id="exampleFormControlSelect1" type="select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+              <label
+                className="form-control-label"
+                htmlFor="example-search-input"
+              >
+                Stock
+              </label>
+              <Input
+                defaultValue="rupture"
+                id="example-search-input"
+                type="search"
+              />
+            </FormGroup>
+            <Button>Submit</Button>
+
+          </Form>
+          </CardBody>
+          </Card>
+          </Col>
+        </Row>
         </Container>
       </>
     );
