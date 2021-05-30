@@ -1,9 +1,23 @@
 -- version 5 ---
 
 
+Charte graphique à remettre en place
+https://github.com/Franckapik/quadratik-charter
 
 
+* Dans le dashboard, recuperer des données de gg analytics ?
+* Info générale => Profil utilisateur. (Pourrait être utile pour les clients dans la v6) Ambitieux
+* Mes clients => Tableau avec les différents services associés. facture, devis, contact, livraison, expedition...
+S'assurer du bon chargement des données et vérifier les erreurs possibles suite à des défauts d'enregistrement.
+* Mailing . Edition de mails
+* Devis/facturation => Possibilité de reprendre un client dans la liste pour auto-completer ou bien faire une nouvelle facture qui ne sera associé à aucun client mais visible dans les clients ? Oui, juste un badge pour différencier client web ou client hors-web.
+* Mes produits => Sépération peut-etre necessaire entre le calcul d'un prix avec marges etc et les caractéristiques économiques d'un produit ? Non je ne pense pas. le fichier excel peut-etre adopté de plusieurs manières différentes mais doit garder une bonne liberté.
+* Template CSS => charte graphique en réutilisant tous les components proposés par Argon dans la doc.
 
+1- Revoir la bd selon les besoins et mettre en lien avec les fichiers excel de calculs de prix.
+2- Trouver de nouvelles relations entre les tables avec les factures, mails, livraisons, etc...
+3- Mettre en place les clefs et les nouvelles infos dans les tables.
+4- Afficher le maxmimum de données sur l'admin avec les fausses informations.
 
 
 Les dernières reflexions sur l'ancien site internet :
