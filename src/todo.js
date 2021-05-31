@@ -3,6 +3,10 @@ ctrl shift o : effracer les dep non utilisées
 ctrl+l : join line
 ctrl+shift+i : indent lines
 
+exemple de vérification de données avant affichage :   
+{response && response.length && response.length > 0 ?
+
+
 Charte graphique à remettre en place
 https://github.com/Franckapik/quadratik-charter
 
