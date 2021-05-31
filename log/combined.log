@@ -65,3 +65,32 @@ undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error:
   routine: '_bt_check_unique'
 }
 undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 5
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error: insert into "product" ("collection_id", "img", "name", "packaging_id", "performance_id", "price", "product_id", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning "product_id" - la valeur d'une clé dupliquée rompt la contrainte unique « product_pk »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 216,
+  severity: 'ERREUR',
+  code: '23505',
+  detail: 'La clé « (product_id)=(5) » existe déjà.',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'product',
+  column: undefined,
+  dataType: undefined,
+  constraint: 'product_pk',
+  file: 'nbtinsert.c',
+  line: '656',
+  routine: '_bt_check_unique'
+}
+undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 5

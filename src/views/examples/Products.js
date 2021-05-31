@@ -19,7 +19,7 @@
           });
         }
 
-        const { response, fetchError } = useFetch("/status");
+        const { response, fetchError } = useFetch("/product");
 
         const { register, formState: { errors }, handleSubmit } = useForm({mode: 'onBlur'});
         const handleRegistration = (data) => {

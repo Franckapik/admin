@@ -26,11 +26,20 @@ knex
 app.post("/newProduct", (req, res) => {
   knex('product')
   .insert(req.body)
+  .onConflict('product_id')
+  .merge() //upsert if .merge and no action if .ignore
   .returning('product_id')
   .then(id => {
     logger.info('[Knex] Table ' + 'product' + ' Données enregistrées (id): %s', id[0]);
     return id
   }).catch(error => logger.error('[Erreur Enregistrement ' + 'product' + '] Sauvegarde db %s', error))
+})
+
+app.get("/product", (req,res) => {
+  knex
+  .select('*')
+  .from('product')
+  .then(data => res.send(data))
 })
 
 
