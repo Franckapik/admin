@@ -12,6 +12,9 @@ const logger = require('./log/logger');
 const session = require('express-session');
 const db = require('./db/db')
 
+var helmet = require('helmet');
+app.use(helmet());
+
 // Middleware 
 app.use(express.json()); //since express 4.16
 app.use(session({ 
@@ -26,6 +29,10 @@ app.use(session({
 
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
+});
+
+app.get("/session", (req, res) => {
+  res.send(req.session)
 });
 
 knex
