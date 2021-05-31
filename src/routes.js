@@ -23,6 +23,7 @@ import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
 import Products from "views/examples/Products.js";
+import Customers from "views/examples/Customers.js";
 
 var routes = [
   {
@@ -37,6 +38,13 @@ var routes = [
     name: "Produits",
     icon: "ni ni-bullet-list-67 text-red",
     component: Products,
+    layout: "/admin",
+  },
+  {
+    path: "/clients",
+    name: "Clients",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: Customers,
     layout: "/admin",
   },
   {

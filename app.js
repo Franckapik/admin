@@ -9,10 +9,20 @@ const config = require('./config');
 const knex = require('knex')(config.db);
 
 const logger = require('./log/logger');
+const session = require('express-session');
+const db = require('./db/db')
 
-
-// Middleware since express 4.16
-app.use(express.json());
+// Middleware 
+app.use(express.json()); //since express 4.16
+app.use(session({ 
+  secret: config.secret,
+  cookie: {
+    maxAge: 7200000, // 120min
+  },
+  store: db.sessionStore,
+  resave : true,
+  saveUninitialized : true
+}));
 
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
@@ -39,6 +49,13 @@ app.get("/product", (req,res) => {
   knex
   .select('*')
   .from('product')
+  .then(data => res.send(data))
+})
+
+app.get("/customer", (req,res) => {
+  knex
+  .select('*')
+  .from('customer')
   .then(data => res.send(data))
 })
 
