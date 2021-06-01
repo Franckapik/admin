@@ -74,30 +74,68 @@
                 <Col>
                 <Card className="shadow">
                   <CardHeader className="bg-transparent">
-                    <h3 className="mb-0">Ajouter un produit</h3>
+                    <h3 className="mb-0">Ajouter un client</h3>
                   </CardHeader>
                   <CardBody>
               <Form onSubmit={handleSubmit(handleRegistration, handleError)}>
                 <FormGroup>
-                  <label className="form-control-label" htmlFor="example-text-input" > Id </label>
-                  <Input name="id"  defaultValue="42" id="example-text-input" type="number" disabled {...register("product_id")} />
+                  <label className="form-control-label" for="user_id" > Id </label>
+                  <Input name="id"  defaultValue="1" id="c_user_id" type="number" disabled {...register("user_id")} />
                 </FormGroup>
                 <FormGroup>
-                  <label className="form-control-label" htmlFor="example-text-input" > Nom </label>
-                  <Input defaultValue="Woodik-7" id="example-text-input" type="text" {...register('name', { required: true, maxLength: 20 })} />
+                  <label className="form-control-label" for="c_name" > Nom </label>
+                  <Input defaultValue="Girard" id="c_name" type="text" {...register('name', { required: true, maxLength: 20 })} />
                   {errors.name?.type === 'required' && "Un nom est requis"}
                   {errors.name?.type === 'maxLength' && "Le nom est trop long"}
                 </FormGroup>
                 <FormGroup>
-                  <label className="form-control-label" htmlFor="example-search-input" > Prix </label>
-                  <Input defaultValue="87" id="example-search-input" type="number" {...register("price", { required : true, min: 0, max: 1000 })} />
-                  {errors.price?.type === 'required' && "Un prix est requis"}
-                  {errors.price?.type === 'min' && "Prix positif seulement"}
-                  {errors.price?.type === 'max' && "Prix trop important"}
+                  <label className="form-control-label" for="c_firstname" > Prénom </label>
+                  <Input defaultValue="Franck" id="c_firstname" type="text" {...register('firstname', { required: true, maxLength: 20 })} />
+                  {errors.name?.type === 'required' && "Un prénom est requis"}
+                  {errors.name?.type === 'maxLength' && "Le prénom est trop long"}
+                </FormGroup>
+                <FormGroup>
+                  <label className="form-control-label" for="c_address" > Adresse </label>
+                  <Input defaultValue="1 rue des lilas" id="c_address" type="text" {...register('address', { required: true, maxLength: 150 })} />
+                  {errors.name?.type === 'required' && "Une adresse est requise"}
+                  {errors.name?.type === 'maxLength' && "L'adresse est trop longue"}
+                </FormGroup>
+                <FormGroup>
+                  <label className="form-control-label" for="c_postal" > Postal </label>
+                  <Input defaultValue="35423" id="c_postal" type="text" {...register('postal', { required: true, maxLength: 5 })} />
+                  {errors.name?.type === 'required' && "Un code postal est requis"}
+                  {errors.name?.type === 'maxLength' && "Le code postal est trop long"}
 
                 </FormGroup>
                 <FormGroup>
-                <label htmlFor="exampleFormControlSelect1">Collection</label>
+                  <label className="form-control-label" for="c_mail" > Mail </label>
+                  <Input defaultValue="Franck" id="c_mail" type="text" {...register('mail', { required: true, pattern : /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ })} />
+                  {errors.name?.type === 'required' && "Une adresse mail est requise"}
+                  {errors.name?.type === 'pattern' && "L'adresse mail est erronée"}
+                </FormGroup>
+                <FormGroup>
+                  <label className="form-control-label" for="c_city" > City </label>
+                  <Input defaultValue="Rennes" id="c_city" type="text" {...register('city', { required: true, maxLength: 80 })} />
+                  {errors.name?.type === 'required' && "Une ville est requise"}
+                  {errors.name?.type === 'maxLength' && "Le nom de ville est trop long"}
+
+                </FormGroup>
+                <FormGroup>
+                  <label className="form-control-label" for="c_country" > Pays </label>
+                  <Input defaultValue="Rennes" id="c_country" type="text" {...register('city', { required: true, maxLength: 20 })} />
+                  {errors.name?.type === 'required' && "Un pays est requis"}
+                  {errors.name?.type === 'maxLength' && "Le nom de pays est trop long"}
+
+                </FormGroup>
+                <FormGroup>
+                  <label className="form-control-label" for="c_city" > City </label>
+                  <Input defaultValue="Rennes" id="c_city" type="text" {...register('city', { required: true, maxLength: 80 })} />
+                  {errors.name?.type === 'required' && "Une ville est requise"}
+                  {errors.name?.type === 'maxLength' && "Le nom de ville est trop long"}
+
+                </FormGroup>
+                <FormGroup>
+                <label for="exampleFormControlSelect1">Session</label>
                 <Input id="exampleFormControlSelect1" type="select" {...register("collection_id", { required: true} )}>
                   <option>1</option>
                   <option>2</option>
@@ -107,50 +145,6 @@
                 </Input>
                 {errors.collection_id?.type === 'required' && "Une collection est requise"}
               </FormGroup>
-                <FormGroup>
-            <label className="form-control-label" for="exampleFile" >File </label>
-            <Input type="file" name="product_picture" id="exampleFile" {...register("img")} />
-          </FormGroup>
-          <FormGroup>
-                <label htmlFor="exampleFormControlSelect1">Performances</label>
-                <Input id="exampleFormControlSelect1" type="select" {...register("performance_id", { required: true})}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
-                {errors.performance_id?.type === 'required' && "Une performance est requise"}
-
-              </FormGroup>
-              <FormGroup>
-                <label htmlFor="exampleFormControlSelect1">Packaging</label>
-                <Input id="exampleFormControlSelect1" type="select" {...register("packaging_id", { required: true})}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
-                {errors.packaging_id?.type === 'required' && "Un packaging est requis"}
-
-              </FormGroup>
-              <FormGroup>
-                <label htmlFor="exampleFormControlSelect1">Propriétés</label>
-                <Input id="exampleFormControlSelect1" type="select" {...register("property_id", { required: true})}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
-                {errors.property_id?.type === 'required' && "Une propriété est requise"}
-
-              </FormGroup>
-              <FormGroup>
-                  <label className="form-control-label" htmlFor="example-search-input" > Stock </label>
-                  <Input defaultValue="rupture" id="example-search-input" type="text" {...register("stock")} />
-                </FormGroup>
                 <Button>Submit</Button>
               </Form>
               </CardBody>

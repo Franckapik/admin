@@ -50,7 +50,7 @@ const Profile = () => {
                         alt="..."
                         className="rounded-circle"
                         src={
-                          require("../../assets/img/theme/team-4-800x800.jpg")
+                          require("../../assets/img/theme/profil.png")
                             .default
                         }
                       />
@@ -58,72 +58,32 @@ const Profile = () => {
                   </div>
                 </Col>
               </Row>
-              <CardHeader className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                <div className="d-flex justify-content-between">
-                  <Button
-                    className="mr-4"
-                    color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                    size="sm"
-                  >
-                    Connect
-                  </Button>
-                  <Button
-                    className="float-right"
-                    color="default"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                    size="sm"
-                  >
-                    Message
-                  </Button>
-                </div>
-              </CardHeader>
-              <CardBody className="pt-0 pt-md-4">
-                <Row>
-                  <div className="col">
-                    <div className="card-profile-stats d-flex justify-content-center mt-md-5">
-                      <div>
-                        <span className="heading">22</span>
-                        <span className="description">Friends</span>
-                      </div>
-                      <div>
-                        <span className="heading">10</span>
-                        <span className="description">Photos</span>
-                      </div>
-                      <div>
-                        <span className="heading">89</span>
-                        <span className="description">Comments</span>
-                      </div>
-                    </div>
-                  </div>
-                </Row>
+
+              <CardBody className="pt-0 pt-md-8">
+
                 <div className="text-center">
                   <h3>
-                    Jessica Jones
-                    <span className="font-weight-light">, 27</span>
+                    Fanch Cavellec
+                    <span className="font-weight-light">, 33</span>
                   </h3>
                   <div className="h5 font-weight-300">
                     <i className="ni location_pin mr-2" />
-                    Bucharest, Romania
+                    Feins, France
                   </div>
                   <div className="h5 mt-4">
                     <i className="ni business_briefcase-24 mr-2" />
-                    Solution Manager - Creative Tim Officer
+                    Responsable et Administrateur de Quadratik.fr
                   </div>
                   <div>
                     <i className="ni education_hat mr-2" />
-                    University of Computer Science
+                    Solution acoustique
                   </div>
                   <hr className="my-4" />
                   <p>
-                    Ryan — the name taken by Melbourne-raised, Brooklyn-based
-                    Nick Murphy — writes, performs and records all of his own
-                    music.
+                   Informatique, Acoustique, Musique et Techniques sonores
                   </p>
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                    Show more
+                    Plus d'info
                   </a>
                 </div>
               </CardBody>
@@ -134,7 +94,7 @@ const Profile = () => {
               <CardHeader className="bg-white border-0">
                 <Row className="align-items-center">
                   <Col xs="8">
-                    <h3 className="mb-0">My account</h3>
+                    <h3 className="mb-0">Mon compte</h3>
                   </Col>
                   <Col className="text-right" xs="4">
                     <Button
@@ -143,7 +103,7 @@ const Profile = () => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      Settings
+                      Paramètres
                     </Button>
                   </Col>
                 </Row>
@@ -151,7 +111,7 @@ const Profile = () => {
               <CardBody>
                 <Form>
                   <h6 className="heading-small text-muted mb-4">
-                    User information
+                    Mon profile Quadratik.fr
                   </h6>
                   <div className="pl-lg-4">
                     <Row>
@@ -161,7 +121,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-username"
                           >
-                            Username
+                            Nom d'utilisateur
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -178,7 +138,7 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-email"
                           >
-                            Email address
+                            Adresse mail
                           </label>
                           <Input
                             className="form-control-alternative"
@@ -196,11 +156,11 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-first-name"
                           >
-                            First name
+                            Prénom
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="Lucky"
+                            defaultValue="Fanch"
                             id="input-first-name"
                             placeholder="First name"
                             type="text"
@@ -213,11 +173,11 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-last-name"
                           >
-                            Last name
+                            Nom
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="Jesse"
+                            defaultValue="Cavellec"
                             id="input-last-name"
                             placeholder="Last name"
                             type="text"
@@ -229,7 +189,7 @@ const Profile = () => {
                   <hr className="my-4" />
                   {/* Address */}
                   <h6 className="heading-small text-muted mb-4">
-                    Contact information
+                    Contact
                   </h6>
                   <div className="pl-lg-4">
                     <Row>
@@ -239,11 +199,11 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-address"
                           >
-                            Address
+                            Addresse
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                            defaultValue="1 rue d'Aubigné"
                             id="input-address"
                             placeholder="Home Address"
                             type="text"
@@ -258,11 +218,11 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-city"
                           >
-                            City
+                            Ville
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="New York"
+                            defaultValue="Feins"
                             id="input-city"
                             placeholder="City"
                             type="text"
@@ -275,13 +235,13 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-country"
                           >
-                            Country
+                            Pays
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="United States"
+                            defaultValue="France"
                             id="input-country"
-                            placeholder="Country"
+                            placeholder="France"
                             type="text"
                           />
                         </FormGroup>
@@ -292,12 +252,12 @@ const Profile = () => {
                             className="form-control-label"
                             htmlFor="input-country"
                           >
-                            Postal code
+                            Code Postal
                           </label>
                           <Input
                             className="form-control-alternative"
                             id="input-postal-code"
-                            placeholder="Postal code"
+                            placeholder="35440"
                             type="number"
                           />
                         </FormGroup>
@@ -306,10 +266,10 @@ const Profile = () => {
                   </div>
                   <hr className="my-4" />
                   {/* Description */}
-                  <h6 className="heading-small text-muted mb-4">About me</h6>
+                  <h6 className="heading-small text-muted mb-4">A propos de moi</h6>
                   <div className="pl-lg-4">
                     <FormGroup>
-                      <label>About Me</label>
+                      <label>A propos</label>
                       <Input
                         className="form-control-alternative"
                         placeholder="A few words about you ..."

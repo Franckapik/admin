@@ -17,12 +17,13 @@ app.use(helmet());
 
 // Middleware 
 app.use(express.json()); //since express 4.16
+
 app.use(session({ 
   secret: config.secret,
-  cookie: {
-    maxAge: 7200000, // 120min
-  },
   store: db.sessionStore,
+  cookie : {
+    maxAge : 24 * 60 * 60 * 1000 // 24 hours
+  },
   resave : true,
   saveUninitialized : true
 }));
