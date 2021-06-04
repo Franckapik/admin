@@ -22,10 +22,11 @@ app.use(session({
   secret: config.secret,
   store: db.sessionStore,
   cookie : {
-    maxAge : 24 * 60 * 60 * 1000 // 24 hours
+    maxAge : 24 * 60 * 60 * 1000, // 24 hours
+    httpOnly : false
   },
   resave : true,
-  saveUninitialized : true
+  saveUninitialized : true,
 }));
 
 app.get("/api", (req, res) => {

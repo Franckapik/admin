@@ -194,3 +194,59 @@ undefined [31merror[39m : [Erreur Enregistrement customer] Sauvegarde db error
   line: '1953',
   routine: 'ExecConstraints'
 }
+undefined [31merror[39m : [Erreur Enregistrement customer] Sauvegarde db error: insert into "customer" ("address", "city", "country", "firstname", "mail", "name", "postal") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("user_id") do update set "address" = excluded."address", "city" = excluded."city", "country" = excluded."country", "firstname" = excluded."firstname", "mail" = excluded."mail", "name" = excluded."name", "postal" = excluded."postal" returning "user_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « user_id » dans la relation « customer »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 316,
+  severity: 'ERREUR',
+  code: '23502',
+  detail: "La ligne en échec contient (null, Cavellec, Fanch, 1 rue d'aubigné, 35440, fanch44@hotmail.com, Feins, France, null).",
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'customer',
+  column: 'user_id',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '1953',
+  routine: 'ExecConstraints'
+}
+undefined [31merror[39m : [Erreur Enregistrement customer] Sauvegarde db error: insert into "customer" ("address", "city", "country", "firstname", "mail", "name", "postal", "session_id") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("user_id") do update set "address" = excluded."address", "city" = excluded."city", "country" = excluded."country", "firstname" = excluded."firstname", "mail" = excluded."mail", "name" = excluded."name", "postal" = excluded."postal", "session_id" = excluded."session_id" returning "user_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « user_id » dans la relation « customer »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 297,
+  severity: 'ERREUR',
+  code: '23502',
+  detail: "La ligne en échec contient (null, Cavellec, Fanch, 1 rue d'aubigné, 35440, f@h, Feins, France, 3).",
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'customer',
+  column: 'user_id',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '1953',
+  routine: 'ExecConstraints'
+}

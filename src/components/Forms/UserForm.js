@@ -1,19 +1,27 @@
 import postData from "hooks/postData";
 import { useForm } from "react-hook-form";
 import { Button, Form, FormGroup, Input } from "reactstrap";
-
+import Cookies from 'js-cookie'
+import { useEffect } from "react";
 
 const UserForm = ({preloadValues}) => {
 
-const { register, formState: { errors }, handleSubmit } = useForm({ 
-    defaultValues: preloadValues[preloadValues.length -1]
-});
+const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
 const handleRegistration = (data) => postData("/addCustomer", data);
 
 const handleError = (errors) => console.log("error", errors);
 
-console.log(document);
+const defaultValue = {
+    user_id : preloadValues[preloadValues.length -1].user_id + 1,
+    session_id : 'admin'+ Cookies.get('connect.sid')
+}
+
+useEffect(() => {
+    if (preloadValues) {
+      reset( defaultValue ); //considering values from props
+    }
+  }, []);
 
   return (
     <Form onSubmit={handleSubmit(handleRegistration, handleError)}>
@@ -24,8 +32,8 @@ console.log(document);
         </label>
         <Input
           name="user_id"
+          defaultValue={defaultValue.user_id}
           id="user_id"
-          defaultValue={preloadValues[preloadValues.length -1].user_id + 1}
           type="number"
           disabled
           {...register("user_id")}
@@ -37,7 +45,7 @@ console.log(document);
           Session Id{" "}
         </label>
         <Input
-          defaultValue={preloadValues[preloadValues.length -1].sessionId + 1}
+          defaultValue={defaultValue.session_id}
           name="session_id"
           id="c_session_id"
           type="text"
@@ -113,7 +121,7 @@ console.log(document);
           {...register("mail", {
             required: true,
             pattern:
-              /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
           })}
         />
         {errors.name?.type === "required" && "Une adresse mail est requise"}
