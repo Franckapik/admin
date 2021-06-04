@@ -1,7 +1,8 @@
 -- version 5 ---
-ctrl shift o : effracer les dep non utilisées
+alt shift o : effracer les dep non utilisées
 ctrl+l : join line
 ctrl+shift+i : indent lines
+windows+shit+f : format document
 
 exemple de vérification de données avant affichage :   
 {response && response.length && response.length > 0 ?
