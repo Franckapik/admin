@@ -53,6 +53,18 @@ app.post("/newProduct", (req, res) => {
   }).catch(error => logger.error('[Erreur Enregistrement ' + 'product' + '] Sauvegarde db %s', error))
 })
 
+app.post("/addCustomer", (req, res) => {
+  knex('customer')
+  .insert(req.body)
+  .onConflict('user_id')
+  .merge() //upsert if .merge and no action if .ignore
+  .returning('user_id')
+  .then(id => {
+    logger.info('[Knex] Table ' + 'customer' + ' Données enregistrées (id): %s', id[0]);
+    return id
+  }).catch(error => logger.error('[Erreur Enregistrement ' + 'customer' + '] Sauvegarde db %s', error))
+})
+
 app.get("/product", (req,res) => {
   knex
   .select('*')
@@ -66,6 +78,7 @@ app.get("/customer", (req,res) => {
   .from('customer')
   .then(data => res.send(data))
 })
+
 
 
 app.listen(PORT, () => {

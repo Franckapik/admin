@@ -1,32 +1,19 @@
-      // core components
     import Header from "components/Headers/Header.js";
     import useFetch from "hooks/useFetch";
+    import postData from 'hooks/postData';
     import React from "react";
-    // reactstrap components
     import { Button, Card, CardBody, CardHeader, Col, Container, Form, FormGroup, Input, Row, Table } from "reactstrap";
     import { useForm } from "react-hook-form";
+
       const Customers = () => {
-
-        const postData = (url, body) => {
-          return fetch(url, {
-            credentials: 'include',
-            method: 'post',
-            body: JSON.stringify(body),
-            headers: new Headers({'Content-Type': 'application/json'})
-          })
-          .then(response => {
-            return response
-          });
-        }
-
         const { response, fetchError } = useFetch("/customer");
 
-        const { register, formState: { errors }, handleSubmit } = useForm({mode: 'onBlur'});
-        const handleRegistration = (data) => {
-          console.log(data);
-          postData('/addStatus', data)
-          .then(res=> console.log(res))
-        };
+        const defaultUser = { user_id : "2", session_id : "sessionId" }
+
+        const { register, formState: { errors }, handleSubmit } = useForm({ defaultValues : defaultUser } );
+
+        const handleRegistration = data => postData('/addCustomer', data);
+
         const handleError = (errors) => console.log("error", errors);
 
         return (
@@ -39,7 +26,7 @@
                 <div className="col">
                   <Card className="bg-default shadow">
                     <CardHeader className="bg-transparent border-0">
-                      <h3 className="text-white mb-0">Liste des produits</h3>
+                      <h3 className="text-white mb-0">Liste des clients</h3>
                     </CardHeader>
                     {response && response.length && response.length > 0 ?
                     <Table
@@ -80,7 +67,11 @@
               <Form onSubmit={handleSubmit(handleRegistration, handleError)}>
                 <FormGroup>
                   <label className="form-control-label" for="user_id" > Id </label>
-                  <Input name="id"  defaultValue="1" id="c_user_id" type="number" disabled {...register("user_id")} />
+                  <Input name="id" defaultValue={defaultUser.user_id}  id="c_user_id" type="number" disabled {...register("user_id")} />
+                </FormGroup>
+                <FormGroup>
+                  <label className="form-control-label" for="session_id" > Session Id </label>
+                  <Input name="id" defaultValue={defaultUser.session_id}  id="c_session_id" type="text" disabled {...register("session_id")} />
                 </FormGroup>
                 <FormGroup>
                   <label className="form-control-label" for="c_name" > Nom </label>
@@ -122,29 +113,12 @@
                 </FormGroup>
                 <FormGroup>
                   <label className="form-control-label" for="c_country" > Pays </label>
-                  <Input defaultValue="Rennes" id="c_country" type="text" {...register('city', { required: true, maxLength: 20 })} />
+                  <Input defaultValue="Rennes" id="c_country" type="text" {...register('country', { required: true, maxLength: 20 })} />
                   {errors.name?.type === 'required' && "Un pays est requis"}
                   {errors.name?.type === 'maxLength' && "Le nom de pays est trop long"}
 
                 </FormGroup>
-                <FormGroup>
-                  <label className="form-control-label" for="c_city" > City </label>
-                  <Input defaultValue="Rennes" id="c_city" type="text" {...register('city', { required: true, maxLength: 80 })} />
-                  {errors.name?.type === 'required' && "Une ville est requise"}
-                  {errors.name?.type === 'maxLength' && "Le nom de ville est trop long"}
 
-                </FormGroup>
-                <FormGroup>
-                <label for="exampleFormControlSelect1">Session</label>
-                <Input id="exampleFormControlSelect1" type="select" {...register("collection_id", { required: true} )}>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
-                {errors.collection_id?.type === 'required' && "Une collection est requise"}
-              </FormGroup>
                 <Button>Submit</Button>
               </Form>
               </CardBody>
