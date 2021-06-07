@@ -66,17 +66,67 @@ app.post("/addCustomer", (req, res) => {
   }).catch(error => logger.error('[Erreur Enregistrement ' + 'customer' + '] Sauvegarde db %s', error))
 })
 
+app.post("/addProduct", (req, res) => {
+  knex('product')
+  .insert(req.body)
+  .onConflict('product_id')
+  .merge() //upsert if .merge and no action if .ignore
+  .returning('product_id')
+  .then(id => {
+    logger.info('[Knex] Table ' + 'product' + ' Données enregistrées (id): %s', id[0]);
+    return id
+  }).catch(error => logger.error('[Erreur Enregistrement ' + 'product' + '] Sauvegarde db %s', error))
+})
+
 app.get("/product", (req,res) => {
   knex
-  .select('*')
+  .select([
+    'product.*','collection.name as nom', 'packaging.*', 'performance.*', 'property.*'
+  ])
   .from('product')
-  .then(data => res.send(data))
+  .join( 'collection', 'product.collection_id', 'collection.collection_id' )
+  .join( 'performance', 'product.performance_id', 'performance.performance_id' )
+  .join( 'packaging', 'product.packaging_id', 'packaging.packaging_id' )
+  .join( 'property', 'product.property_id', 'property.property_id' )
+  .then(data => {console.log(data)
+  res.send(data)})
 })
 
 app.get("/customer", (req,res) => {
   knex
   .select('*')
   .from('customer')
+  .then(data => res.send(data))
+})
+
+app.get("/collection", (req,res) => {
+  knex
+  .select('*')
+  .from('collection')
+  .then(data => res.send(data))
+})
+app.get("/performance", (req,res) => {
+  knex
+  .select('*')
+  .from('performance')
+  .then(data => res.send(data))
+})
+app.get("/packaging", (req,res) => {
+  knex
+  .select('*')
+  .from('packaging')
+  .then(data => res.send(data))
+})
+app.get("/property", (req,res) => {
+  knex
+  .select('*')
+  .from('property')
+  .then(data => res.send(data))
+})
+app.get("/business", (req,res) => {
+  knex
+  .select('*')
+  .from('business')
   .then(data => res.send(data))
 })
 

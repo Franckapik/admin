@@ -156,7 +156,7 @@ useEffect(() => {
         {errors.name?.type === "maxLength" && "Le nom de pays est trop long"}
       </FormGroup>
 
-      <Button>Submit</Button>
+      <Button>Ajouter</Button>
     </Form>
   );
 };

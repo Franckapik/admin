@@ -250,3 +250,143 @@ undefined [31merror[39m : [Erreur Enregistrement customer] Sauvegarde db error
   line: '1953',
   routine: 'ExecConstraints'
 }
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error: insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_id", "property_id", "session_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8, $9) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_id" = excluded."product_id", "property_id" = excluded."property_id", "session_id" = excluded."session_id", "stock" = excluded."stock" returning "product_id" - la colonne « session_id » de la relation « product » n'existe pas
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 145,
+  severity: 'ERREUR',
+  code: '42703',
+  detail: undefined,
+  hint: undefined,
+  position: '121',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_target.c',
+  line: '1039',
+  routine: 'checkInsertTargets'
+}
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error: insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_id", "property_id") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_id" = excluded."product_id", "property_id" = excluded."property_id" returning "product_id" - syntaxe en entrée invalide pour le type smallint : « Collection 2 »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 131,
+  severity: 'ERREUR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '247',
+  routine: 'pg_strtoint16'
+}
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error: insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_id", "property_id") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_id" = excluded."product_id", "property_id" = excluded."property_id" returning "product_id" - syntaxe en entrée invalide pour le type smallint : « Collection 2 »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 131,
+  severity: 'ERREUR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '247',
+  routine: 'pg_strtoint16'
+}
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error: insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_id", "property_id") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_id" = excluded."product_id", "property_id" = excluded."property_id" returning "product_id" - syntaxe en entrée invalide pour le type smallint : « 500x600x100 »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 130,
+  severity: 'ERREUR',
+  code: '22P02',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'numutils.c',
+  line: '247',
+  routine: 'pg_strtoint16'
+}
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error: insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_id", "property_id") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_id" = excluded."product_id", "property_id" = excluded."property_id" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « img » dans la relation « product »
+    at Parser.parseErrorMessage (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:287:98)
+    at Parser.handlePacket (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:126:29)
+    at Parser.parse (/home/fanch/admin/node_modules/pg-protocol/dist/parser.js:39:38)
+    at Socket.<anonymous> (/home/fanch/admin/node_modules/pg-protocol/dist/index.js:11:42)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:296:12)
+    at readableAddChunk (_stream_readable.js:272:9)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23) {
+  length: 258,
+  severity: 'ERREUR',
+  code: '23502',
+  detail: 'La ligne en échec contient (43, 1, Woodik-8, 95, null, null, 2, 2, 1).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'product',
+  column: 'img',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '1953',
+  routine: 'ExecConstraints'
+}
