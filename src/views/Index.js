@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, { useState } from "react";
 // node.js library that concatenates classes (strings)
 import classnames from "classnames";
@@ -36,6 +19,8 @@ import {
   Container,
   Row,
   Col,
+  CardTitle,
+  CardText,
 } from "reactstrap";
 
 // core components
@@ -47,6 +32,10 @@ import {
 } from "variables/charts.js";
 
 import Header from "components/Headers/Header.js";
+import useFetch from "hooks/useFetch";
+import Interweave, { Markup } from "interweave";
+
+
 
 const Index = (props) => {
   const [activeNav, setActiveNav] = useState(1);
@@ -61,6 +50,14 @@ const Index = (props) => {
     setActiveNav(index);
     setChartExample1Data("data" + index);
   };
+
+  const {response: feed} = useFetch("/news");
+  
+  const transform = (node, children) => {
+    if (node.tagName === 'IMG') {
+      return <img src={node.getAttribute('src')} width="100%"></img>;
+    }
+  }
   return (
     <>
       <Header />
@@ -330,6 +327,25 @@ const Index = (props) => {
             </Card>
           </Col>
         </Row>
+        {feed && feed.items ? 
+        <Row>
+         <div className="card-deck">
+          {feed.items.filter((a,i) => i < 3).map((a,i) => (
+            <Card>
+              <CardBody>
+              <CardTitle href={a.link}>{a.title}</CardTitle>
+              <CardText>
+ <Interweave content={a.content} blockList={['img']} transform={transform} /> 
+              </CardText>
+              <CardText>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </CardText>
+            </CardBody>
+            </Card>
+          ))}
+          </div>
+        </Row>
+        : "Loading"}
       </Container>
     </>
   );

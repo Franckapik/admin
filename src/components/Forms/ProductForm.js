@@ -1,7 +1,6 @@
 import postData from "hooks/postData";
 import { useForm } from "react-hook-form";
 import { Button, Form, FormGroup, Input } from "reactstrap";
-import Cookies from 'js-cookie'
 import { useEffect } from "react";
 
 const ProductForm = ({productList, collectionList, packagingList, propertyList, performanceList}) => {

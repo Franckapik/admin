@@ -1,44 +1,23 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
-import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  FormGroup,
-  Form,
-  Input,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+import { Button, Card, CardHeader, CardBody, FormGroup, Form, Input, Container, Row, Col, } from "reactstrap";
 // core components
 import UserHeader from "components/Headers/UserHeader.js";
+import useFetch from "hooks/useFetch";
 
 const Profile = () => {
+
+  const {response: businessList} = useFetch("/business");
+  const {response: feed} = useFetch("/news");
+
+  let b = businessList && businessList.length ? businessList[businessList.length - 1] : 0;
+  
   return (
     <>
       <UserHeader />
       {/* Page content */}
-      <Container className="mt--7" fluid>
+      <Container className="mt--9" fluid>
         <Row>
           <Col className="order-xl-2 mb-5 mb-xl-0" xl="4">
             <Card className="card-profile shadow">
@@ -89,8 +68,8 @@ const Profile = () => {
               </CardBody>
             </Card>
           </Col>
-          <Col className="order-xl-1" xl="8">
-            <Card className="bg-secondary shadow">
+          {b ? <Col className="order-xl-1" xl="8">
+             <Card className="bg-secondary shadow">
               <CardHeader className="bg-white border-0">
                 <Row className="align-items-center">
                   <Col xs="8">
@@ -103,7 +82,7 @@ const Profile = () => {
                       onClick={(e) => e.preventDefault()}
                       size="sm"
                     >
-                      Paramètres
+                      Copier
                     </Button>
                   </Col>
                 </Row>
@@ -111,21 +90,40 @@ const Profile = () => {
               <CardBody>
                 <Form>
                   <h6 className="heading-small text-muted mb-4">
-                    Mon profile Quadratik.fr
+                    Mon profile {b.business}
                   </h6>
                   <div className="pl-lg-4">
                     <Row>
-                      <Col lg="6">
+                    <Col lg="6">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-first-name"
+                          >
+                            Responsable
+                          </label>
+                          <Input
+                            className="form-control-alternative"
+                            defaultValue={b.owner}
+                            id="input-first-name"
+                            placeholder="First name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>                      
+                    </Row>
+                    <Row>
+                    <Col lg="6">
                         <FormGroup>
                           <label
                             className="form-control-label"
                             htmlFor="input-username"
                           >
-                            Nom d'utilisateur
+                            Téléphone
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="lucky.jesse"
+                            defaultValue={b.tel}
                             id="input-username"
                             placeholder="Username"
                             type="text"
@@ -143,44 +141,8 @@ const Profile = () => {
                           <Input
                             className="form-control-alternative"
                             id="input-email"
-                            placeholder="jesse@example.com"
+                            placeholder={b.mail}
                             type="email"
-                          />
-                        </FormGroup>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col lg="6">
-                        <FormGroup>
-                          <label
-                            className="form-control-label"
-                            htmlFor="input-first-name"
-                          >
-                            Prénom
-                          </label>
-                          <Input
-                            className="form-control-alternative"
-                            defaultValue="Fanch"
-                            id="input-first-name"
-                            placeholder="First name"
-                            type="text"
-                          />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="6">
-                        <FormGroup>
-                          <label
-                            className="form-control-label"
-                            htmlFor="input-last-name"
-                          >
-                            Nom
-                          </label>
-                          <Input
-                            className="form-control-alternative"
-                            defaultValue="Cavellec"
-                            id="input-last-name"
-                            placeholder="Last name"
-                            type="text"
                           />
                         </FormGroup>
                       </Col>
@@ -203,7 +165,7 @@ const Profile = () => {
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="1 rue d'Aubigné"
+                            defaultValue={b.address}
                             id="input-address"
                             placeholder="Home Address"
                             type="text"
@@ -222,7 +184,7 @@ const Profile = () => {
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="Feins"
+                            defaultValue={b.city}
                             id="input-city"
                             placeholder="City"
                             type="text"
@@ -239,7 +201,7 @@ const Profile = () => {
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="France"
+                            defaultValue={b.country}
                             id="input-country"
                             placeholder="France"
                             type="text"
@@ -257,7 +219,7 @@ const Profile = () => {
                           <Input
                             className="form-control-alternative"
                             id="input-postal-code"
-                            placeholder="35440"
+                            placeholder={b.postal}
                             type="number"
                           />
                         </FormGroup>
@@ -266,24 +228,99 @@ const Profile = () => {
                   </div>
                   <hr className="my-4" />
                   {/* Description */}
-                  <h6 className="heading-small text-muted mb-4">A propos de moi</h6>
+                  <h6 className="heading-small text-muted mb-4">L'entreprise</h6>
                   <div className="pl-lg-4">
                     <FormGroup>
-                      <label>A propos</label>
-                      <Input
-                        className="form-control-alternative"
-                        placeholder="A few words about you ..."
-                        rows="4"
-                        defaultValue="A beautiful Dashboard for Bootstrap 4. It is Free and
-                        Open Source."
-                        type="textarea"
-                      />
+                      <Row>
+                      <Col lg="4">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-siret"
+                          >
+                            Siret
+                          </label>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-siret-code"
+                            value={b.siret}
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col lg="4">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-sirene"
+                          >
+                            Sirene
+                          </label>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-sirene-code"
+                            value={b.sirene}
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col lg="4">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-ape"
+                          >
+                            Ape
+                          </label>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-ape-code"
+                            value={b.ape}
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                      <Row>
+                      <Col lg="8">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-iban"
+                          >
+                            Iban
+                          </label>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-iban-code"
+                            value={b.iban}
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col lg="4">
+                        <FormGroup>
+                          <label
+                            className="form-control-label"
+                            htmlFor="input-iban"
+                          >
+                            Bic
+                          </label>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-iban-code"
+                            value={b.bic}
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
                     </FormGroup>
                   </div>
                 </Form>
               </CardBody>
             </Card>
-          </Col>
+          </Col> : "Loading" }
         </Row>
       </Container>
     </>

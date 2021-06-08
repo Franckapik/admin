@@ -7,6 +7,7 @@ windows+shit+f : format document
 exemple de vérification de données avant affichage :   
 {response && response.length && response.length > 0 ?
 
+news avec filter pour l'image de interweave
 
 Charte graphique à remettre en place
 https://github.com/Franckapik/quadratik-charter

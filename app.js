@@ -11,6 +11,15 @@ const knex = require('knex')(config.db);
 const logger = require('./log/logger');
 const session = require('express-session');
 const db = require('./db/db')
+const cors = require('cors');
+
+app.options('*', cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+}));
+
+let Parser = require('rss-parser');
+let parser = new Parser();
 
 var helmet = require('helmet');
 app.use(helmet());
@@ -36,6 +45,17 @@ app.get("/api", (req, res) => {
 app.get("/session", (req, res) => {
   res.send(req.session)
 });
+
+app.get("/news", (req, res) => {
+  (async () => {
+
+    let feed = await parser.parseURL('https://fr.audiofanzine.com/news/a.rss.xml');
+    res.send(feed)
+  
+  })();
+});
+
+
 
 knex
 .raw('SELECT NOW() as now')
@@ -127,8 +147,12 @@ app.get("/business", (req,res) => {
   knex
   .select('*')
   .from('business')
-  .then(data => res.send(data))
-})
+  .then(
+    data => {
+    console.log(data)
+    res.send(data)
+  })
+  })
 
 
 
