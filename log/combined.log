@@ -407,3 +407,39 @@ undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db error:
   routine: 'ExecConstraints'
 }
 undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 43
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 44
+undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 44
+undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 44
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [33mwarn[39m : [Knex] Données delivery manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2

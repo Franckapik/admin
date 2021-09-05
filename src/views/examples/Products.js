@@ -8,7 +8,7 @@
 import ProductForm from "components/Forms/ProductForm";
       const Products = () => {
 
-        const {response: productList} = useFetch("/product");
+        const {response: productList} = useFetch("/complete_product");
         const {response: collectionList } = useFetch("/collection");
         const {response: propertyList } = useFetch("/property");
         const {response: performanceList } = useFetch("/performance");

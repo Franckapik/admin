@@ -7,6 +7,10 @@ import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
 import Products from "views/examples/Products.js";
 import Customers from "views/examples/Customers.js";
+import ReactGA from 'react-ga';
+
+{ReactGA.initialize('UA-112792874-1')}
+{ReactGA.pageview(window.location.pathname + window.location.search)}
 
 var routes = [
   {

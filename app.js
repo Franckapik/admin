@@ -4,157 +4,350 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-const config = require('./config');
+const config = require("./config");
 
-const knex = require('knex')(config.db);
+const knex = require("knex")(config.db);
 
-const logger = require('./log/logger');
-const session = require('express-session');
-const db = require('./db/db')
-const cors = require('cors');
+const {google} = require('googleapis');
 
-app.options('*', cors({
-  origin: 'http://localhost:3000',
-  credentials: true,
-}));
+const logger = require("./log/logger");
 
-let Parser = require('rss-parser');
+const moment = require('moment');
+const session = require("express-session");
+const db = require("./db/db");
+const cors = require("cors");
+
+app.options(
+  "*",
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+
+let Parser = require("rss-parser");
 let parser = new Parser();
 
-var helmet = require('helmet');
+var cookies = require("cookie-parser");
+
+app.use(cookies());
+
+var helmet = require("helmet");
 app.use(helmet());
 
-// Middleware 
+// Middleware
 app.use(express.json()); //since express 4.16
 
-app.use(session({ 
-  secret: config.secret,
-  store: db.sessionStore,
-  cookie : {
-    maxAge : 24 * 60 * 60 * 1000, // 24 hours
-    httpOnly : false
-  },
-  resave : true,
-  saveUninitialized : true,
-}));
+app.use(
+  session({
+    secret: config.secret,
+    store: db.sessionStore,
+    cookie: {
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours
+      httpOnly: false,
+    },
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
+//analytics
+
+
+const googleAccounts = google.analytics('v3')
+const googleAnalytics = google.analyticsreporting('v4')
+let viewSelected
+
+const clientID = '136823446557-1uqetqqjabi0tbmqs1i9ci1rsil1i9np.apps.googleusercontent.com'
+const clientSecret = 'IlZwBg0TEhGnGHkyvUGOaBsn'
+const callbackURL = 'http://localhost:3001/login/google/return'
+
+const oauth2Client = new google.auth.OAuth2(clientID, clientSecret, callbackURL)
+const url = oauth2Client.generateAuthUrl({
+	access_type: 'online',
+	scope: 'https://www.googleapis.com/auth/analytics.readonly'
+})
+
+app.get('/auth/google', (req, res) => {
+	res.redirect(url)
+})
+
+app.get('/login/google/return', (req, res) => {
+	oauth2Client.getToken(req.query.code, (err, tokens) => {
+		viewSelected = ''
+		if (!err) {
+			oauth2Client.setCredentials({
+				access_token: tokens.access_token
+			})
+			res.redirect('/setcookie')
+		} else {
+			console.log('Error: ' + err)
+		}
+	})
+})
+
+app.get('/setcookie', (req, res) => {
+	res.cookie('google-auth', new Date())
+	res.redirect('/success')
+})
+
+app.get('/success', (req, res) => {
+	if (req.cookies['google-auth']) {
+    res.redirect('/getData')
+	} else {
+		res.redirect('/')
+	}
+})
+
+app.get('/clear', (req, res) => {
+	viewSelected = ''
+	res.redirect('/success')
+})
+
+
+app.get('/getData', function(req, res) {
+
+		viewSelected = '169310577'
+	
+	if (!viewSelected) {
+    console.log('pas de view');
+		googleAccounts.management.profiles.list(
+			{
+				accountId: '~all',
+				webPropertyId: '~all',
+				auth: oauth2Client
+			},
+			(err, data) => {
+				if (err) {
+					console.error('Error: ' + err)
+					res.send('An error occurred')
+				} else if (data) {
+					let views = []
+					data.items.forEach(view => {
+						views.push({
+							name: view.webPropertyId + ' - ' + view.name + ' (' + view.websiteUrl + ')',
+							id: view.id
+						})
+					})
+					res.send({ type: 'views', results: views })
+          console.log(views);
+				}
+			}
+		)
+	} else {
+    console.log('view');
+		let now = moment().format('YYYY-MM-DD')
+		let aMonthAgo = moment()
+			.subtract(1, 'months')
+			.format('YYYY-MM-DD')
+		let repReq = [
+			{
+				viewId: viewSelected,
+				dateRanges: [
+					{
+						startDate: aMonthAgo,
+						endDate: now
+					}
+				],
+				metrics: [
+					{
+						expression: 'ga:pageLoadTime'
+					}
+				],
+				dimensions: [
+					{
+						name: 'ga:source'
+					}
+				]
+			}
+		]
+
+		googleAnalytics.reports.batchGet(
+			{
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				auth: oauth2Client,
+				resource: {
+					reportRequests: repReq
+				}
+			},
+			(err, data) => {
+				if (err) {
+					console.error('Error: ' + err)
+					res.send('An error occurred')
+				} else if (data) {
+					let views = []
+					let max = 0
+					data.data.reports[0].data.rows.forEach(view => {
+						views.push(view.metrics[0].values[0])
+						if (parseInt(view.metrics[0].values[0]) > parseInt(max)) max = view.metrics[0].values[0]
+					})
+					res.send([views, max])
+				}
+			}
+		)
+	}
+})
+
+app.get('/logoff', (req, res) => {
+	res.clearCookie('google-auth')
+	res.redirect('/')
+})
+
+
+
+
 
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
 app.get("/session", (req, res) => {
-  res.send(req.session)
+  res.send(req.session);
 });
 
-app.get("/news", (req, res) => {
-  (async () => {
+upsert = (table, id, body) => {
+  return knex(table)
+    .insert(body)
+    .onConflict(id)
+    .merge() //upsert if .merge and no action if .ignore
+    .returning(id)
+    .then((id_data) => {
+      logger.info(
+        "[Knex] Table " + table + " Données enregistrées (id): %s",
+        id_data[0]
+      );
+      return id_data;
+    })
+    .catch((error) =>
+      logger.error(
+        "[Erreur Enregistrement " + table + "] Sauvegarde db %s",
+        error
+      )
+    );
+};
 
-    let feed = await parser.parseURL('https://fr.audiofanzine.com/news/a.rss.xml');
-    res.send(feed)
-  
-  })();
-});
-
-
+query = (table) => {
+  return knex(table)
+    .then((data) => {
+      data.length
+        ? logger.debug(
+            "[Knex] Données Table " + table + " chargées (length): %o",
+            data.length
+          )
+        : logger.warn(
+            "[Knex] Données " + table + " manquantes (length): %o",
+            data.length
+          );
+      return data;
+    })
+    .catch((error) =>
+      logger.error("[Knex] Erreur de chargement de " + table + " %s", error)
+    );
+};
 
 knex
-.raw('SELECT NOW() as now')
-.then(res => console.log("Connexion checked on database",config.db.connection.host,"/",config.db.connection.database," [", res.rows[0].now,"] "))
-.catch(err => console.log(err))
+  .raw("SELECT NOW() as now")
+  .then((res) =>
+    console.log(
+      "Connexion checked on database",
+      config.db.connection.host,
+      "/",
+      config.db.connection.database,
+      " [",
+      res.rows[0].now,
+      "] "
+    )
+  )
+  .catch((err) => console.log(err));
 
-app.post("/newProduct", (req, res) => {
-  knex('product')
-  .insert(req.body)
-  .onConflict('product_id')
-  .merge() //upsert if .merge and no action if .ignore
-  .returning('product_id')
-  .then(id => {
-    logger.info('[Knex] Table ' + 'product' + ' Données enregistrées (id): %s', id[0]);
-    return id
-  }).catch(error => logger.error('[Erreur Enregistrement ' + 'product' + '] Sauvegarde db %s', error))
-})
-
-app.post("/addCustomer", (req, res) => {
-  knex('customer')
-  .insert(req.body)
-  .onConflict('user_id')
-  .merge() //upsert if .merge and no action if .ignore
-  .returning('user_id')
-  .then(id => {
-    logger.info('[Knex] Table ' + 'customer' + ' Données enregistrées (id): %s', id[0]);
-    return id
-  }).catch(error => logger.error('[Erreur Enregistrement ' + 'customer' + '] Sauvegarde db %s', error))
-})
+// insert into db
 
 app.post("/addProduct", (req, res) => {
-  knex('product')
-  .insert(req.body)
-  .onConflict('product_id')
-  .merge() //upsert if .merge and no action if .ignore
-  .returning('product_id')
-  .then(id => {
-    logger.info('[Knex] Table ' + 'product' + ' Données enregistrées (id): %s', id[0]);
-    return id
-  }).catch(error => logger.error('[Erreur Enregistrement ' + 'product' + '] Sauvegarde db %s', error))
-})
+  upsert("product", "product_id", req.body)
+  .then(() => {
+    res.sendStatus(200);
+  });
+});
 
-app.get("/product", (req,res) => {
-  knex
-  .select([
-    'product.*','collection.name as nom', 'packaging.*', 'performance.*', 'property.*'
-  ])
-  .from('product')
-  .join( 'collection', 'product.collection_id', 'collection.collection_id' )
-  .join( 'performance', 'product.performance_id', 'performance.performance_id' )
-  .join( 'packaging', 'product.packaging_id', 'packaging.packaging_id' )
-  .join( 'property', 'product.property_id', 'property.property_id' )
-  .then(data => {console.log(data)
-  res.send(data)})
-})
-
-app.get("/customer", (req,res) => {
-  knex
-  .select('*')
-  .from('customer')
-  .then(data => res.send(data))
-})
-
-app.get("/collection", (req,res) => {
-  knex
-  .select('*')
-  .from('collection')
-  .then(data => res.send(data))
-})
-app.get("/performance", (req,res) => {
-  knex
-  .select('*')
-  .from('performance')
-  .then(data => res.send(data))
-})
-app.get("/packaging", (req,res) => {
-  knex
-  .select('*')
-  .from('packaging')
-  .then(data => res.send(data))
-})
-app.get("/property", (req,res) => {
-  knex
-  .select('*')
-  .from('property')
-  .then(data => res.send(data))
-})
-app.get("/business", (req,res) => {
-  knex
-  .select('*')
-  .from('business')
-  .then(
-    data => {
-    console.log(data)
-    res.send(data)
-  })
-  })
+app.post("/addCustomer", (req, res) => {
+  upsert("customer", "user_id", req.body)
+  .then(() => {
+    res.sendStatus(200);
+  });
+});
 
 
+//simple get
+
+app.get("/customer", (req, res) => {
+  query("customer").then((data) => res.send(data));
+});
+app.get("/collection", (req, res) => {
+  query("collection").then((data) => res.send(data));
+});
+app.get("/product", (req, res) => {
+  query("product").then((data) => res.send(data));
+});
+app.get("/performance", (req, res) => {
+  query("performance").then((data) => res.send(data));
+});
+app.get("/packaging", (req, res) => {
+  query("packaging").then((data) => res.send(data));
+});
+app.get("/property", (req, res) => {
+  query("property").then((data) => res.send(data));
+});
+app.get("/business", (req, res) => {
+  query("business").then((data) => res.send(data));
+});
+app.get("/transporter", (req, res) => {
+  query("transporter").then((data) => res.send(data));
+});
+app.get("/status", (req, res) => {
+  query("status").then((data) => res.send(data));
+});
+app.get("/invoice", (req, res) => {
+  query("invoice").then((data) => res.send(data));
+});
+app.get("/delivery", (req, res) => {
+  query("delivery").then((data) => res.send(data));
+});
+app.get("/news", (req, res) => {
+  (async () => {
+    let feed = await parser.parseURL(
+      "https://fr.audiofanzine.com/news/a.rss.xml"
+    );
+    res.send(feed);
+  })();
+});
+app.get("/transaction", (req, res) => {
+  query("transaction").then((data) => res.send(data));
+});
+app.get("/item", (req, res) => {
+  query("item").then((data) => res.send(data));
+});
+
+//get with join
+app.get("/complete_product", (req, res) => {
+  knex
+    .select([
+      "product.*",
+      "collection.name as nom",
+      "packaging.*",
+      "performance.*",
+      "property.*",
+    ])
+    .from("product")
+    .join("collection", "product.collection_id", "collection.collection_id")
+    .join("performance", "product.performance_id", "performance.performance_id")
+    .join("packaging", "product.packaging_id", "packaging.packaging_id")
+    .join("property", "product.property_id", "property.property_id")
+    .then((data) => {
+      res.send(data);
+    });
+});
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
