@@ -1,6 +1,6 @@
       // core components
     import ProductForm from "components/Forms/ProductForm";
-import Header from "components/Headers/Header.js";
+import ProductHeader from "components/Headers/ProductHeader.js";
 import useFetch from "hooks/useFetch";
 import React from "react";
 // reactstrap components
@@ -15,7 +15,9 @@ import { Card, CardBody, CardHeader, Col, Container, Row, Table } from "reactstr
 
         return (
           <>
-            <Header />
+            {productList && collectionList && productList.length && collectionList.length && productList.length > 0 && collectionList.length > 0 ?
+            <ProductHeader products={productList} collections={collectionList} /> : "Aucun Produit" }
+            
             {/* Page content */}
             <Container className="mt--7" fluid>
               {/* Dark table */}
