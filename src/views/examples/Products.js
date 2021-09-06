@@ -1,11 +1,10 @@
       // core components
-    import Header from "components/Headers/Header.js";
-    import useFetch from "hooks/useFetch";
-    import React from "react";
-    // reactstrap components
-    import { Button, Card, CardBody, CardHeader, Col, Container, Form, FormGroup, Input, Row, Table } from "reactstrap";
-    import { useForm } from "react-hook-form";
-import ProductForm from "components/Forms/ProductForm";
+    import ProductForm from "components/Forms/ProductForm";
+import Header from "components/Headers/Header.js";
+import useFetch from "hooks/useFetch";
+import React from "react";
+// reactstrap components
+import { Card, CardBody, CardHeader, Col, Container, Row, Table } from "reactstrap";
       const Products = () => {
 
         const {response: productList} = useFetch("/complete_product");
@@ -45,7 +44,6 @@ import ProductForm from "components/Forms/ProductForm";
                     </thead>
                     <tbody>
                     {Array.from(productList).map((a,i)=> {
-                      console.log(a.charge);
                       return (<tr>
                               <td>{a.product_id}</td>
                               <td>{a.name}</td>
