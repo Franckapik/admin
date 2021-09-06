@@ -33,19 +33,29 @@ import ProductForm from "components/Forms/ProductForm";
                   >
                     <thead className="thead-dark">
                       <tr>
-                        {Object.keys(productList[0]).map((a,i) => {
-                          return <th scope="col">{a}</th>
-                        })}
+                      <th scope="col">Id</th>
+                      <th scope="col">Nom</th>
+                      <th scope="col">Collection</th>
+                      <th scope="col">Prix</th>
+                      <th scope="col">Dimensions</th>
+                      <th scope="col">Spectre</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Matière</th>
                       </tr>
                     </thead>
                     <tbody>
                     {Array.from(productList).map((a,i)=> {
+                      console.log(a.charge);
                       return (<tr>
-                          { Object.keys(a).map((b, c) => {
-                                return(                          
-                                  <td>{a[b]}</td>
-                                )
-                              })}
+                              <td>{a.product_id}</td>
+                              <td>{a.name}</td>
+                              <td>{a.col_name}</td>
+                              <td>{a.price} €</td>
+                              <td>{a.width}x{a.lenght}x{a.depth}</td>
+                              <td>{a.spectre} Hz</td>
+                              <td>{a.type}</td>
+                              <td>{a.wood}</td>
+
                         </tr>);
                     })}
                     </tbody>
