@@ -46,7 +46,7 @@ useEffect(() => {
                 <label htmlFor="exampleFormControlSelect1">Collection</label>
                 <Input id="exampleFormControlSelect1" type="select" {...register("collection_id", { required: true} )}>
               {Array.from(collectionList).map((a,i) => {
-                    return <option value={a.collection_id}>{a.name}</option>
+                    return <option value={a.collection_id}>{a.col_name}</option>
                   })} 
                 </Input>
                 {errors.collection_id?.type === 'required' && "Une collection est requise"}

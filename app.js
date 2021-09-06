@@ -295,7 +295,7 @@ app.get("/complete_product", (req, res) => {
   knex
     .select([
       "product.*",
-      "collection.name as nom",
+      "collection.*",
       "packaging.*",
       "performance.*",
       "property.*",
@@ -306,6 +306,7 @@ app.get("/complete_product", (req, res) => {
     .join("packaging", "product.packaging_id", "packaging.packaging_id")
     .join("property", "product.property_id", "property.property_id")
     .then((data) => {
+      console.log(data);
       res.send(data);
     });
 });
