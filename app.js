@@ -14,7 +14,7 @@ const logger = require("./log/logger");
 
 const moment = require('moment');
 const session = require("express-session");
-const db = require("./db/db");
+const {sessionStore, upsert, query} = require("./db/db");
 const cors = require("cors");
 
 app.options(
@@ -41,7 +41,7 @@ app.use(express.json()); //since express 4.16
 app.use(
   session({
     secret: config.secret,
-    store: db.sessionStore,
+    store: sessionStore,
     cookie: {
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       httpOnly: false,
@@ -207,45 +207,7 @@ app.get("/session", (req, res) => {
   res.send(req.session);
 });
 
-upsert = (table, id, body) => {
-  return knex(table)
-    .insert(body)
-    .onConflict(id)
-    .merge() //upsert if .merge and no action if .ignore
-    .returning(id)
-    .then((id_data) => {
-      logger.info(
-        "[Knex] Table " + table + " Données enregistrées (id): %s",
-        id_data[0]
-      );
-      return id_data;
-    })
-    .catch((error) =>
-      logger.error(
-        "[Erreur Enregistrement " + table + "] Sauvegarde db %s",
-        error
-      )
-    );
-};
 
-query = (table) => {
-  return knex(table)
-    .then((data) => {
-      data.length
-        ? logger.debug(
-            "[Knex] Données Table " + table + " chargées (length): %o",
-            data.length
-          )
-        : logger.warn(
-            "[Knex] Données " + table + " manquantes (length): %o",
-            data.length
-          );
-      return data;
-    })
-    .catch((error) =>
-      logger.error("[Knex] Erreur de chargement de " + table + " %s", error)
-    );
-};
 
 knex
   .raw("SELECT NOW() as now")
@@ -277,7 +239,6 @@ app.post("/addCustomer", (req, res) => {
     res.sendStatus(200);
   });
 });
-
 
 //simple get
 
