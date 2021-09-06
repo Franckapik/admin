@@ -6,6 +6,7 @@ import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
 import Products from "views/examples/Products.js";
+import Database from "views/examples/Database.js";
 import Customers from "views/examples/Customers.js";
 import ReactGA from 'react-ga';
 
@@ -25,6 +26,13 @@ var routes = [
     name: "Produits",
     icon: "ni ni-bullet-list-67 text-red",
     component: Products,
+    layout: "/admin",
+  },
+  {
+    path: "/database",
+    name: "Base de Données",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: Database,
     layout: "/admin",
   },
   {

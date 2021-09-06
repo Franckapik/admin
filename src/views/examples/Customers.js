@@ -55,7 +55,7 @@ import { Card, CardBody, CardHeader, Col, Container, Row, Table } from "reactstr
                     <h3 className="mb-0">Ajouter un client</h3>
                   </CardHeader>
                   <CardBody>
-                  {response && response.length? <UserForm preloadValues = {response} /> : "Loading..." } 
+                  {response && response.length? <UserForm preloadValues = {response} /> : "Aucun client trouvé" } 
               </CardBody>
               </Card>
               </Col>

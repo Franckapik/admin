@@ -68,7 +68,7 @@ import ProductForm from "components/Forms/ProductForm";
                   packagingList={packagingList} 
                   performanceList={performanceList} 
                   propertyList={propertyList} /> 
-                  : "Loading..." } 
+                  : "Aucun produit trouvé" } 
               </CardBody>
               </Card>
               </Col>
