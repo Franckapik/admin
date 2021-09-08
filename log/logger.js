@@ -45,7 +45,7 @@ if (env!== 'production') { //console dvp sans precision de level
   }));
 }
 
-if (env== 'production') { //console production avec le level warn
+if (env=== 'production') { //console production avec le level warn
   logger.add(
     new winston.transports.Console({
 
