@@ -1,5 +1,5 @@
 import postData from "hooks/postData";
-import { FormProvider, useForm, useFormContext } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import {
   Button,
   Card,
@@ -17,6 +17,10 @@ import {
 } from "reactstrap";
 import { useEffect, useState } from "react";
 import useToggle from "hooks/useToggle";
+import { CollectionForm } from "./CollectionForm";
+import { PerformanceForm } from "./PerformanceForm";
+import { PackagingForm } from "./PackagingForm";
+import { PropertyForm } from "./PropertyForm";
 
 export default function ProductForm({
   productList,
@@ -46,6 +50,36 @@ export default function ProductForm({
       desc: "Description de la collection",
       folder: "nouvelleCollection",
     },
+    performance : {
+      performance_id:         performanceList[performanceList.length - 1].performance_id + 1,
+      desc : "Description des performances",
+      freq_min : "1040",
+      freq_max : "2048",
+      spectre : "1040-2048 Hz"
+    },
+    property : {
+      property_id : propertyList[propertyList.length - 1].property_id + 1,
+      depth : 100,
+      length : 500,
+      weight : 2,
+      width : 500,
+      width_cel : 68,
+      area : 4,
+      part_nb : 64,
+      cel_nb : 49,
+      paint : false,
+      wood : "peuplier",
+      finish : "vernis"
+    },
+    packaging : {
+      packaging_id : packagingList[packagingList.length - 1].packaging_id + 1,
+      length: 500,
+      width: 600,
+      weight : 4,
+      depth: 500,
+      price: 3,
+      unit : 1
+    }
   });
   
   const register = methods.register;
@@ -60,6 +94,9 @@ export default function ProductForm({
   };
 
   const [newCollection, addCollection] = useToggle();
+  const [newPerformance, addPerformance] = useToggle();
+  const [newPackaging, addPackaging] = useToggle();
+  const [newProperty, addProperty] = useToggle();
 
   return (
     <FormProvider {...methods} >
@@ -160,8 +197,25 @@ export default function ProductForm({
           {...register("product.img")}
         />
       </FormGroup>
+
+      {newPerformance ? 
+        <Card color="info">
+          <CardTitle>
+            Nouvelle Performance |{" "}
+            <small onClick={addPerformance}>Performance Existante</small>
+          </CardTitle>
+          <CardBody>
+            <PerformanceForm
+              performanceList={performanceList}
+              errorsForm={errorsForm}
+              register={register}
+            />
+          </CardBody>
+        </Card>
+       : 
       <FormGroup>
         <Label for="product_perf">Performance</Label>
+        <InputGroup>
         <Input
           type="select"
           name="p_perf"
@@ -172,12 +226,33 @@ export default function ProductForm({
             return <option value={a.performance_id}>{a.spectre}</option>;
           })}
         </Input>
+        <InputGroupAddon addonType="append">
+              <Button onClick={addPerformance}>Ajouter</Button>
+            </InputGroupAddon>
+          </InputGroup>
         {errorsForm &&
           errorsForm.product.performance_id?.type === "required" &&
           "Une performance est requise"}
-      </FormGroup>
+      </FormGroup> }
+
+      {newPackaging ? 
+        <Card color="info">
+          <CardTitle>
+            Nouveau Packaging |{" "}
+            <small onClick={addPackaging}>Packaging Existant</small>
+          </CardTitle>
+          <CardBody>
+            <PackagingForm
+              packagingList={packagingList}
+              errorsForm={errorsForm}
+              register={register}
+            />
+          </CardBody>
+        </Card>
+       : 
       <FormGroup>
         <Label for="product_pack">Packaging</Label>
+        <InputGroup>
         <Input
           type="select"
           name="p_pack"
@@ -188,12 +263,33 @@ export default function ProductForm({
             return <option value={a.packaging_id}>{a.reference}</option>;
           })}
         </Input>
+        <InputGroupAddon addonType="append">
+              <Button onClick={addPackaging}>Ajouter</Button>
+            </InputGroupAddon>
+          </InputGroup>
         {errorsForm &&
           errorsForm.product.packaging_id?.type === "required" &&
           "Un packaging est requis"}
-      </FormGroup>
+      </FormGroup> }
+
+      {newProperty ? 
+        <Card color="info">
+          <CardTitle>
+            Nouvelle Propriété |{" "}
+            <small onClick={addProperty}>Propriété Existante</small>
+          </CardTitle>
+          <CardBody>
+            <PropertyForm
+              propertyList={propertyList}
+              errorsForm={errorsForm}
+              register={register}
+            />
+          </CardBody>
+        </Card>
+       : 
       <FormGroup>
         <Label for="product_prop">Propriétés</Label>
+        <InputGroup>
         <Input
           type="select"
           name="p_prop"
@@ -204,10 +300,15 @@ export default function ProductForm({
             return <option value={a.property_id}>{a.type}</option>;
           })}
         </Input>
+        <InputGroupAddon addonType="append">
+              <Button onClick={addProperty}>Ajouter</Button>
+            </InputGroupAddon>
+          </InputGroup>
         {errorsForm &&
           errorsForm.product.property_id?.type === "required" &&
           "Une propriété est requise"}
-      </FormGroup>
+      </FormGroup> }
+
       <FormGroup>
         <Label for="product_stock">Stock</Label>
         <Input
@@ -231,60 +332,4 @@ export default function ProductForm({
   );
 }
 
-const CollectionForm = ({ collectionList, errorsForm }) => {
 
-  const { register } = useFormContext();
-  return (
-    <>
-      <FormGroup>
-        <label className="form-control-label" htmlFor="example-text-input">
-          {" "}
-          Id{" "}
-        </label>
-        <Input
-          name="col_id"
-          id="example-text-input"
-          type="number"
-          placeholder={
-            collectionList[collectionList.length - 1].collection_id + 1
-          }
-          disabled
-          {...register("collection_id")}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="collection_name">Nom</Label>
-        <Input
-          name="c_name"
-          id="collection_name"
-          {...register("collection.col_name", { required: true })}
-        ></Input>
-        {errorsForm &&
-          errorsForm.collection.col_name?.type === "required" &&
-          "Un nom est requis"}
-        {errorsForm &&
-          errorsForm.collection.col_name?.type === "maxLength" &&
-          "Le nom est trop long"}
-      </FormGroup>
-      <FormGroup>
-        <Label for="collection_desc">Description</Label>
-        <Input
-          name="c_desc"
-          id="collection_desc"
-          rows="3"
-          {...register("collection.desc")}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="collection_folder">Nom de dossier</Label>
-
-        <Input
-          name="c_folder"
-          id="collection_folder"
-          type="text"
-          {...register("collection.folder")}
-        />
-      </FormGroup>
-    </>
-  );
-};
