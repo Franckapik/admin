@@ -24,9 +24,9 @@ const upsert = (table, id, body) => {
       return id_data;
     })
     .catch((error) =>
+    
       logger.error(
-        "[Erreur Enregistrement " + table + "] Sauvegarde db %s",
-        error
+        "[Erreur Enregistrement " + table + "] Sauvegarde db %s", error.message
       )
     );
 };
@@ -46,14 +46,16 @@ const query = (table) => {
       return data;
     })
     .catch((error) =>
-      logger.error("[Knex] Erreur de chargement de " + table + " %s", error)
+      logger.error("[Knex] Erreur de chargement de " + table + " %s", error.message)
     );
 };
 
 knex
-.raw('SELECT NOW() as now')
-.then(res => console.log("Connexion checked on database",config.db.connection.host,"/",config.db.connection.database," [", res.rows[0].now,"] "))
-.catch(err => console.log(err))
+  .raw("SELECT NOW() as now")
+  .then((res) =>
+    logger.info('Connexion checked on database %s %s %s %s %s %s', config.db.connection.host, '/', config.db.connection.database, '[', res.rows[0].now, ']' )
+  )
+  .catch((err) => logger.error(err));
 
 module.exports.sessionStore = sessionStore;
 module.exports.upsert = upsert;
