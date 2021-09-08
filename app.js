@@ -209,24 +209,10 @@ app.get("/session", (req, res) => {
 
 
 
-knex
-  .raw("SELECT NOW() as now")
-  .then((res) =>
-    console.log(
-      "Connexion checked on database",
-      config.db.connection.host,
-      "/",
-      config.db.connection.database,
-      " [",
-      res.rows[0].now,
-      "] "
-    )
-  )
-  .catch((err) => console.log(err));
-
 // insert into db
 
 app.post("/addProduct", (req, res) => {
+	console.log(req.body);
   upsert("product", "product_id", req.body)
   .then(() => {
     res.sendStatus(200);
@@ -306,11 +292,10 @@ app.get("/complete_product", (req, res) => {
     .join("packaging", "product.packaging_id", "packaging.packaging_id")
     .join("property", "product.property_id", "property.property_id")
     .then((data) => {
-      console.log(data);
       res.send(data);
     });
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+  logger.info(`Server listening on ${PORT}`);
 });
