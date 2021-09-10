@@ -1,22 +1,21 @@
 import { useFormContext } from "react-hook-form";
 import { FormGroup, Input, Label } from "reactstrap";
 
-export const PackagingForm = ({ packagingList, errorsForm }) => {
+export const PackagingForm = ({ nextId, errorsForm }) => {
 
   const { register } = useFormContext();
   return (
     <>
       <FormGroup>
-        <label className="form-control-label" htmlFor="example-text-input">
-          {" "}
-          Id{" "}
-        </label>
+        <Label for="packaging_id">Identifiant Packaging</Label>
         <Input
           name="pack_id"
-          type="number"
-          placeholder={packagingList[packagingList.length - 1].packaging_id + 1}
+          id="packaging_id"
+          type="text"
+          placeholder={nextId}
           disabled
-          {...register("packaging.packaging_id")} />
+        >
+        </Input>
       </FormGroup>
       <FormGroup>
         <Label for="packaging_length">Longueur</Label>

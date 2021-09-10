@@ -1,23 +1,21 @@
 import { useFormContext } from "react-hook-form";
 import { FormGroup, Input, Label } from "reactstrap";
 
-export const PerformanceForm = ({ performanceList, errorsForm }) => {
+export const PerformanceForm = ({ nextId, errorsForm }) => {
 
   const { register } = useFormContext();
   return (
     <>
       <FormGroup>
-        <label className="form-control-label" htmlFor="prop_id">
-          {" "}
-          Id{" "}
-        </label>
+        <Label for="perf_ident">Identifiant Performance</Label>
         <Input
-          name="prop_i"
-          id="prop_id"
-          type="number"
-          placeholder={performanceList[performanceList.length - 1].performance_id + 1}
+          name="perf_id_id"
+          id="perf_ident"
+          type="text"
+          placeholder={nextId}
           disabled
-          {...register("performance.performance_id")} />
+        >
+        </Input>
       </FormGroup>
       <FormGroup>
         <Label for="performance_desc">Description</Label>

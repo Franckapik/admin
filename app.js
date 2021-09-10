@@ -195,10 +195,6 @@ app.get('/logoff', (req, res) => {
 	res.redirect('/')
 })
 
-
-
-
-
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
@@ -212,11 +208,15 @@ app.get("/session", (req, res) => {
 // insert into db
 
 app.post("/addProduct", (req, res) => {
-	console.log(req.body);
-  upsert("product", "product_id", req.body)
-  .then(() => {
-    res.sendStatus(200);
-  });
+	if(req.body.product) {
+		upsert("product", "product_id", req.body.product)
+		.then(() => {
+		  res.sendStatus(200);
+		});
+	} else {
+		res.json({message : "Aucun élément à ajouter"})
+	}
+
 });
 
 app.post("/addCustomer", (req, res) => {

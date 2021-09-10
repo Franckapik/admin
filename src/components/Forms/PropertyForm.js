@@ -1,23 +1,22 @@
 import { useFormContext } from "react-hook-form";
 import { FormGroup, Input, Label } from "reactstrap";
 
-export const PropertyForm = ({ propertyList, errorsForm }) => {
+export const PropertyForm = ({ nextId, errorsForm }) => {
+
 
   const { register } = useFormContext();
   return (
     <>
       <FormGroup>
-        <label className="form-control-label" htmlFor="prop_id">
-          {" "}
-          Id{" "}
-        </label>
+        <Label for="prop_id">Identifiant Propriété</Label>
         <Input
-          name="prop_i"
+          name="p_id"
           id="prop_id"
-          type="number"
-          placeholder={propertyList[propertyList.length - 1].property_id + 1}
+          type="text"
+          placeholder={nextId}
           disabled
-          {...register("property.property_id")} />
+        >
+        </Input>
       </FormGroup>
       <FormGroup>
         <Label for="property_depth">Profondeur</Label>
@@ -86,7 +85,7 @@ export const PropertyForm = ({ propertyList, errorsForm }) => {
       <FormGroup>
         <Label for="property_paint">Peinture ?</Label>
         <Input
-          type="number"
+          type="boolean"
           id="property_paint"
           {...register("property.paint", { required: true })}
         ></Input>
@@ -94,7 +93,7 @@ export const PropertyForm = ({ propertyList, errorsForm }) => {
       <FormGroup>
         <Label for="property_wood">Matière</Label>
         <Input
-          type="number"
+          type="text"
           id="property_wood"
           {...register("property.wood", { required: true })}
         ></Input>
@@ -102,7 +101,7 @@ export const PropertyForm = ({ propertyList, errorsForm }) => {
       <FormGroup>
         <Label for="property_finish">Finition</Label>
         <Input
-          type="number"
+          type="text"
           id="property_finish"
           {...register("property.finish", { required: true })}
         ></Input>

@@ -2796,3 +2796,831 @@ undefined [34mdebug[39m : [Knex] Données Table collection chargées (length):
 undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
 undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
 undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection", "packaging", "performance", "product", "property") values ($1, $2, $3, $4, $5) on conflict ("product_id") do update set "collection" = excluded."collection", "packaging" = excluded."packaging", "performance" = excluded."performance", "product" = excluded."product", "property" = excluded."property" returning "product_id" - la colonne « collection » de la relation « product » n'existe pas
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T15:46:42.577Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection", "packaging", "performance", "product", "property") values ($1, $2, $3, $4, $5) on conflict ("product_id") do update set "collection" = excluded."collection", "packaging" = excluded."packaging", "performance" = excluded."performance", "product" = excluded."product", "property" = excluded."property" returning "product_id" - la colonne « collection » de la relation « product » n'existe pas
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection", "packaging", "performance", "product", "property") values ($1, $2, $3, $4, $5) on conflict ("product_id") do update set "collection" = excluded."collection", "packaging" = excluded."packaging", "performance" = excluded."performance", "product" = excluded."product", "property" = excluded."property" returning "product_id" - la colonne « collection » de la relation « product » n'existe pas
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T15:52:21.704Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T15:53:24.022Z ]
+undefined [32minfo[39m : produit
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection", "packaging", "performance", "product", "property") values ($1, $2, $3, $4, $5) on conflict ("product_id") do update set "collection" = excluded."collection", "packaging" = excluded."packaging", "performance" = excluded."performance", "product" = excluded."product", "property" = excluded."property" returning "product_id" - la colonne « collection » de la relation « product » n'existe pas
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T15:53:39.084Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection", "packaging", "performance", "product", "property") values ($1, $2, $3, $4, $5) on conflict ("product_id") do update set "collection" = excluded."collection", "packaging" = excluded."packaging", "performance" = excluded."performance", "product" = excluded."product", "property" = excluded."property" returning "product_id" - la colonne « collection » de la relation « product » n'existe pas
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T15:56:11.043Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "img", "name", "performance_id", "price", "publish", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "img" = excluded."img", "name" = excluded."name", "performance_id" = excluded."performance_id", "price" = excluded."price", "publish" = excluded."publish", "stock" = excluded."stock" returning "product_id" - la colonne « publish » de la relation « product » n'existe pas
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T15:58:12.971Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "img", "name", "performance_id", "price", "product_publish", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "img" = excluded."img", "name" = excluded."name", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T16:02:16.568Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "img", "name", "performance_id", "price", "publish", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "img" = excluded."img", "name" = excluded."name", "performance_id" = excluded."performance_id", "price" = excluded."price", "publish" = excluded."publish", "stock" = excluded."stock" returning "product_id" - la colonne « publish » de la relation « product » n'existe pas
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("name", "price", "stock") values ($1, $2, $3) on conflict ("product_id") do update set "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("name", "price", "product_publish", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "name" = excluded."name", "price" = excluded."price", "product_publish" = excluded."product_publish", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-08T16:09:20.233Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 48
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:13:42.663Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : [Knex] Table product Données enregistrées (id): 49
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:16:54.739Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:25:16.276Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:25:53.225Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:26:06.953Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:26:17.282Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:26:46.572Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:26:55.808Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:29:03.850Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:30:38.039Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:31:01.706Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:35:27.539Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:36:14.829Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:36:54.758Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:38:07.446Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:39:26.127Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:40:33.832Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:41:49.347Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:42:28.002Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:43:06.187Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:43:20.090Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:43:32.998Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:43:37.522Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:43:54.263Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:44:41.426Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:45:23.682Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:51:55.808Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:55:20.460Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:56:17.742Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:57:19.470Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:58:50.957Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T09:59:31.022Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:06:39.325Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:11:16.870Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:11:58.068Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:12:50.389Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:13:47.799Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:13:57.387Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:14:04.837Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:14:07.697Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:17:01.645Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:18:55.461Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:19:24.300Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:19:29.283Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:19:35.174Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:19:56.361Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:20:28.348Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:21:13.026Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:21:51.667Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "performance_id", "price", "product_publish", "stock") values ($1, $2, $3, $4, $5, $6) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "stock" = excluded."stock" returning "product_id" - syntaxe en entrée invalide pour le type smallint : « true »
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id") values ($1, $2, $3, $4, $5, $6) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:30:54.430Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:31:01.666Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:31:19.142Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:31:27.059Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:31:31.285Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:34:17.049Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:34:27.535Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:34:33.180Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:34:57.637Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:36:38.650Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:40:05.107Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:42:28.074Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:42:52.678Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:43:02.801Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:44:09.532Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:46:15.692Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:49:26.575Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:50:09.468Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:50:45.784Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:54:02.234Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:54:47.126Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:55:10.270Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:57:07.947Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:58:59.997Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:59:02.672Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:59:22.945Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T10:59:27.868Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:01:15.508Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:02:54.809Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:04:32.703Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:05:46.084Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:11:34.690Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:12:10.840Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:12:17.715Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("name", "price", "stock") values ($1, $2, $3) on conflict ("product_id") do update set "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:14:26.331Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("name", "price", "stock") values ($1, $2, $3) on conflict ("product_id") do update set "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:20:02.512Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:20:57.313Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:21:39.750Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:24:55.864Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:26:52.446Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:28:40.521Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:29:05.133Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:32:33.720Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("name", "price", "stock") values ($1, $2, $3) on conflict ("product_id") do update set "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:34:06.828Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:34:12.286Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:40:40.568Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:41:16.261Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:41:30.908Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:41:40.468Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:41:59.807Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:46:57.809Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:47:05.659Z ]
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données invoice manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 3
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données invoice manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("name", "price", "stock") values ($1, $2, $3) on conflict ("product_id") do update set "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:51:20.180Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:53:27.408Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:56:12.061Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T11:59:18.842Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "price", "stock") values ($1, $2, $3, $4) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "price" = excluded."price", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:01:20.453Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:09:31.480Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:11:31.102Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id") values ($1, $2, $3, $4, $5, $6) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:21:28.766Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:21:39.650Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:23:44.267Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:24:25.848Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:24:33.004Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:28:23.128Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:28:36.465Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:30:13.746Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:32:04.402Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T12:33:05.556Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:03:19.502Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:09:10.341Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:16:44.307Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:16:52.949Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:21:29.535Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:21:34.345Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:23:33.010Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:23:37.338Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:23:56.484Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:25:54.381Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:26:42.263Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:33:10.313Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:34:03.606Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:34:37.922Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:35:01.803Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:35:33.429Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:35:58.855Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:36:10.115Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:37:19.274Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:37:45.108Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:46:19.632Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:46:34.344Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:46:58.596Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:47:12.806Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:47:56.019Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:48:42.883Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:48:54.108Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:49:27.010Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:49:36.577Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:50:02.300Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:50:10.774Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:51:26.296Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:52:43.576Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:53:36.849Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T13:54:20.569Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:00:14.944Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:07:24.279Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:08:10.289Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:08:57.955Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:09:34.627Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:09:38.838Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:09:45.668Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:09:54.013Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:10:50.113Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:11:52.923Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:12:15.650Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:12:33.666Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:28:01.081Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:28:12.855Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:28:43.183Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:31:16.157Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:31:37.340Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:31:52.846Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:32:07.567Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:32:50.690Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "product_publish", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7, $8) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "product_publish" = excluded."product_publish", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:33:57.157Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:34:25.815Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:35:10.509Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:35:56.673Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:36:53.624Z ]
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id") values ($1, $2, $3, $4, $5, $6) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:38:28.860Z ]
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-09T14:39:08.931Z ]
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 2
+undefined [31merror[39m : [Erreur Enregistrement product] Sauvegarde db insert into "product" ("collection_id", "name", "packaging_id", "performance_id", "price", "property_id", "stock") values ($1, $2, $3, $4, $5, $6, $7) on conflict ("product_id") do update set "collection_id" = excluded."collection_id", "name" = excluded."name", "packaging_id" = excluded."packaging_id", "performance_id" = excluded."performance_id", "price" = excluded."price", "property_id" = excluded."property_id", "stock" = excluded."stock" returning "product_id" - une valeur NULL viole la contrainte NOT NULL de la colonne « product_id » dans la relation « product »

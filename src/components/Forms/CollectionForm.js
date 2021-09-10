@@ -1,23 +1,35 @@
+import { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { FormGroup, Input, Label } from "reactstrap";
 
-export const CollectionForm = ({ collectionList, errorsForm }) => {
+export const CollectionForm = ({ nextId, errorsForm }) => {
+  const { register, setValue, unregister, reset } = useFormContext();
 
-  const { register } = useFormContext();
+  useEffect(() => {
+
+     setValue('collection.collection_id', nextId)
+     setValue('product.collection_id', nextId)
+
+     return () => {
+      unregister("collection");
+      unregister("product.collection_id");
+    }
+    
+   }, [])
+   
+
   return (
     <>
       <FormGroup>
-        <label className="form-control-label" htmlFor="example-text-input">
-          {" "}
-          Id{" "}
-        </label>
+        <Label for="collection_name">Identifiant Collection</Label>
         <Input
           name="col_id"
-          id="example-text-input"
-          type="number"
-          placeholder={collectionList[collectionList.length - 1].collection_id + 1}
-          disabled
-          {...register("collection.collection_id")} />
+          id="collection_name"
+          type="text"
+          placeholder={nextId}
+          
+        >
+        </Input>
       </FormGroup>
       <FormGroup>
         <Label for="collection_name">Nom</Label>
@@ -26,10 +38,10 @@ export const CollectionForm = ({ collectionList, errorsForm }) => {
           id="collection_name"
           {...register("collection.col_name", { required: true })}
         ></Input>
-        {errorsForm &&
+        {errorsForm && errorsForm.collection &&
           errorsForm.collection.col_name?.type === "required" &&
           "Un nom est requis"}
-        {errorsForm &&
+        {errorsForm && errorsForm.collection &&
           errorsForm.collection.col_name?.type === "maxLength" &&
           "Le nom est trop long"}
       </FormGroup>
@@ -39,7 +51,8 @@ export const CollectionForm = ({ collectionList, errorsForm }) => {
           name="c_desc"
           id="collection_desc"
           rows="3"
-          {...register("collection.desc")} />
+          {...register("collection.desc")}
+        />
       </FormGroup>
       <FormGroup>
         <Label for="collection_folder">Nom de dossier</Label>
@@ -48,7 +61,8 @@ export const CollectionForm = ({ collectionList, errorsForm }) => {
           name="c_folder"
           id="collection_folder"
           type="text"
-          {...register("collection.folder")} />
+          {...register("collection.folder")}
+        />
       </FormGroup>
     </>
   );
