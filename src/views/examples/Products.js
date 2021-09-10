@@ -15,6 +15,7 @@ const Products = () => {
 	const { response: packagingList } = useFetch('/packaging')
 
 	const [p_selected, setSelection] = useState(0)
+
 	const [modal, setModal] = useToggle()
 
 	const [productState, setProductState] = useState([]) //update when deleting
@@ -36,7 +37,7 @@ const Products = () => {
 			collectionList.length &&
 			productList.length > 0 &&
 			collectionList.length > 0 ? (
-				<ProductHeader products={productList} collections={collectionList} />
+				<ProductHeader products={productState} collections={collectionList} />
 			) : (
 				'Aucun Produit'
 			)}
@@ -55,7 +56,10 @@ const Products = () => {
 									<thead className="thead-dark">
 										<tr>
 											<th scope="col">
-												<i className="far fa-trash-alt"></i>
+												<i className="far fa-trash-alt" />
+											</th>
+											<th scope="col">
+												<i class="far fa-list-alt"></i>
 											</th>
 											<th scope="col">Id</th>
 											<th scope="col">Nom</th>
@@ -80,8 +84,9 @@ const Products = () => {
 															setModal()
 														}}
 													>
-														{a.product_id}
+														<i className="far fa-list-alt text-info"></i>
 													</td>
+													<td>{a.product_id}</td>
 													<td>{a.name}</td>
 													<td>{a.col_name}</td>
 													<td>{a.price} €</td>
