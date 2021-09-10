@@ -1,69 +1,44 @@
-import { useEffect } from "react";
-import { useFormContext } from "react-hook-form";
-import { FormGroup, Input, Label } from "reactstrap";
+import { useEffect } from 'react'
+import { useFormContext } from 'react-hook-form'
+import { FormGroup } from 'reactstrap'
 
 export const CollectionForm = ({ nextId, errorsForm }) => {
-  const { register, setValue, unregister, reset } = useFormContext();
+	const { register, setValue, unregister } = useFormContext()
 
-  useEffect(() => {
+	useEffect(() => {
+		setValue('collection.collection_id', nextId)
+		setValue('product.collection_id', nextId)
 
-     setValue('collection.collection_id', nextId)
-     setValue('product.collection_id', nextId)
+		return () => {
+			unregister('collection')
+			unregister('product.collection_id')
+		}
+	}, [setValue, unregister, nextId])
 
-     return () => {
-      unregister("collection");
-      unregister("product.collection_id");
-    }
-    
-   }, [])
-   
+	return (
+		<>
+			<FormGroup>
+				<label for="collection_name">Identifiant Collection</label>
+				<input className="form-control" type="text" placeholder={nextId}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="collection_name">Nom</label>
+				<input className="form-control" {...register('collection.col_name', { required: true })}></input>
+				{errorsForm && errorsForm.collection && errorsForm.collection.col_name?.type === 'required' && 'Un nom est requis'}
+				{errorsForm &&
+					errorsForm.collection &&
+					errorsForm.collection.col_name?.type === 'maxLength' &&
+					'Le nom est trop long'}
+			</FormGroup>
+			<FormGroup>
+				<label for="collection_desc">Description</label>
+				<input className="form-control" rows="3" {...register('collection.desc')} />
+			</FormGroup>
+			<FormGroup>
+				<label for="collection_folder">Nom de dossier</label>
 
-  return (
-    <>
-      <FormGroup>
-        <Label for="collection_name">Identifiant Collection</Label>
-        <Input
-          name="col_id"
-          id="collection_name"
-          type="text"
-          placeholder={nextId}
-          
-        >
-        </Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="collection_name">Nom</Label>
-        <Input
-          name="c_name"
-          id="collection_name"
-          {...register("collection.col_name", { required: true })}
-        ></Input>
-        {errorsForm && errorsForm.collection &&
-          errorsForm.collection.col_name?.type === "required" &&
-          "Un nom est requis"}
-        {errorsForm && errorsForm.collection &&
-          errorsForm.collection.col_name?.type === "maxLength" &&
-          "Le nom est trop long"}
-      </FormGroup>
-      <FormGroup>
-        <Label for="collection_desc">Description</Label>
-        <Input
-          name="c_desc"
-          id="collection_desc"
-          rows="3"
-          {...register("collection.desc")}
-        />
-      </FormGroup>
-      <FormGroup>
-        <Label for="collection_folder">Nom de dossier</Label>
-
-        <Input
-          name="c_folder"
-          id="collection_folder"
-          type="text"
-          {...register("collection.folder")}
-        />
-      </FormGroup>
-    </>
-  );
-};
+				<input className="form-control" type="text" {...register('collection.folder')} />
+			</FormGroup>
+		</>
+	)
+}

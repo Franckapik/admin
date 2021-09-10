@@ -1,71 +1,50 @@
-import { useFormContext } from "react-hook-form";
-import { FormGroup, Input, Label } from "reactstrap";
+import { useEffect } from 'react'
+import { useFormContext } from 'react-hook-form'
+import { FormGroup } from 'reactstrap'
 
 export const PackagingForm = ({ nextId, errorsForm }) => {
+	const { register, setValue, unregister } = useFormContext()
 
-  const { register } = useFormContext();
-  return (
-    <>
-      <FormGroup>
-        <Label for="packaging_id">Identifiant Packaging</Label>
-        <Input
-          name="pack_id"
-          id="packaging_id"
-          type="text"
-          placeholder={nextId}
-          disabled
-        >
-        </Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="packaging_length">Longueur</Label>
-        <Input
-          type="number"
-          id="packaging_length"
-          {...register("packaging.length", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="packaging_width">Largueur</Label>
-        <Input
-          type="number"
-          id="packaging_width"
-          {...register("packaging.width", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="packaging_weight">Poids</Label>
-        <Input
-          type="number"
-          id="packaging_weight"
-          {...register("packaging.weight", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="packaging_depth">Profondeur</Label>
-        <Input
-          type="number"
-          id="packaging_depth"
-          {...register("packaging.depth", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="packaging_price">Prix</Label>
-        <Input
-          type="number"
-          id="packaging_price"
-          {...register("packaging.price", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="packaging_unit">Unités</Label>
-        <Input
-          type="number"
-          id="packaging_unit"
-          {...register("packaging.unit", { required: true })}
-        ></Input>
-      </FormGroup>
+	useEffect(() => {
+		setValue('packaging.packaging_id', nextId)
+		setValue('product.packaging_id', nextId)
 
-    </>
-  );
-};
+		return () => {
+			unregister('packaging')
+			unregister('product.packaging_id')
+		}
+	}, [setValue, unregister, nextId])
+
+	return (
+		<>
+			<FormGroup>
+				<label for="packaging_id">Identifiant Packaging</label>
+				<input className="form-control" type="text" placeholder={nextId} disabled></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="packaging_length">Longueur</label>
+				<input className="form-control" type="number" {...register('packaging.length', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="packaging_width">Largueur</label>
+				<input className="form-control" type="number" {...register('packaging.width', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="packaging_weight">Poids</label>
+				<input className="form-control" type="number" {...register('packaging.weight', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="packaging_depth">Profondeur</label>
+				<input className="form-control" type="number" {...register('packaging.depth', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="packaging_price">Prix</label>
+				<input className="form-control" type="number" {...register('packaging.price', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="packaging_unit">Unités</label>
+				<input className="form-control" type="number" {...register('packaging.unit', { required: true })}></input>
+			</FormGroup>
+		</>
+	)
+}

@@ -1,56 +1,42 @@
-import { useFormContext } from "react-hook-form";
-import { FormGroup, Input, Label } from "reactstrap";
+import { useEffect } from 'react'
+import { useFormContext } from 'react-hook-form'
+import { FormGroup } from 'reactstrap'
 
 export const PerformanceForm = ({ nextId, errorsForm }) => {
+	const { register, setValue, unregister } = useFormContext()
 
-  const { register } = useFormContext();
-  return (
-    <>
-      <FormGroup>
-        <Label for="perf_ident">Identifiant Performance</Label>
-        <Input
-          name="perf_id_id"
-          id="perf_ident"
-          type="text"
-          placeholder={nextId}
-          disabled
-        >
-        </Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="performance_desc">Description</Label>
-        <Input
-          type="text"
-          id="performance_desc"
-          {...register("performance.desc", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="performance_freq_min">Frequence minimum</Label>
-        <Input
-          type="number"
-          id="performance_freq_min"
-          {...register("performance.freq_min", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="performance_freq_max">Frequence maximum</Label>
-        <Input
-          type="number"
-          id="performance_freq_max"
-          {...register("performance.freq_max", { required: true })}
-        ></Input>
-      </FormGroup>
-      <FormGroup>
-        <Label for="performance_spectre">Profondeur</Label>
-        <Input
-          type="number"
-          id="performance_spectre"
-          {...register("performance.spectre", { required: true })}
-        ></Input>
-      </FormGroup>
-      
+	useEffect(() => {
+		setValue('performance.performance_id', nextId)
+		setValue('product.performance_id', nextId)
 
-    </>
-  );
-};
+		return () => {
+			unregister('performance')
+			unregister('product.performance_id')
+		}
+	}, [setValue, unregister, nextId])
+
+	return (
+		<>
+			<FormGroup>
+				<label for="perf_ident">Identifiant Performance</label>
+				<input className="form-control" type="text" placeholder={nextId} disabled></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="performance_desc">Description</label>
+				<input className="form-control" type="text" {...register('performance.desc', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="performance_freq_min">Frequence minimum</label>
+				<input className="form-control" type="number" {...register('performance.freq_min', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="performance_freq_max">Frequence maximum</label>
+				<input className="form-control" type="number" {...register('performance.freq_max', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
+				<label for="performance_spectre">Spectre</label>
+				<input className="form-control" type="text" {...register('performance.spectre', { required: true })}></input>
+			</FormGroup>
+		</>
+	)
+}
