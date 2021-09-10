@@ -217,6 +217,23 @@ app.post('/addProduct', (req, res) => {
 		})
 })
 
+app.post('/modifyProduct', (req, res) => {
+	const col = req.body.collection ? insert('collection', 'collection_id', req.body.collection) : Promise.resolve()
+	const perf = req.body.performance ? insert('collection', 'collection_id', req.body.collection) : Promise.resolve()
+	const pack = req.body.packaging ? insert('packaging', 'packaging_id', req.body.packaging) : Promise.resolve()
+	const prop = req.body.property ? insert('property', 'property_id', req.body.property) : Promise.resolve()
+
+	Promise.all([col, perf, pack, prop])
+		.then((values) => {
+			upsert('product', 'product_id', req.body.product)
+				.then((id) => res.json({ 'Product modified': values }))
+				.catch((error) => res.sendStatus(500))
+		})
+		.catch((err) => {
+			console.log(err)
+		})
+})
+
 app.delete('/delProduct/:id', (req, res) => {
 	knex('product')
 		.where('product_id', req.params.id)
@@ -224,6 +241,16 @@ app.delete('/delProduct/:id', (req, res) => {
 		.then((deletedRows) => {
 			res.sendStatus(200)
 			logger.warn('Le produit %s %s', req.params.id, 'a été supprimé.')
+		})
+		.catch((err) => res.json({ error: err }))
+})
+app.delete('/delCustomer/:id', (req, res) => {
+	knex('customer')
+		.where('user_id', req.params.id)
+		.del()
+		.then((deletedRows) => {
+			res.sendStatus(200)
+			logger.warn('Le client %s %s', req.params.id, 'a été supprimé.')
 		})
 		.catch((err) => res.json({ error: err }))
 })

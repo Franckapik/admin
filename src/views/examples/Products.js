@@ -7,6 +7,7 @@ import useToggle from 'hooks/useToggle'
 // reactstrap components
 import { Button, Card, CardBody, CardHeader, Col, Container, ListGroup, ListGroupItem, Modal, Row, Table } from 'reactstrap'
 import delData from 'hooks/delData'
+import ModifyProductForm from 'components/Forms/ModifyProductForm'
 const Products = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
@@ -17,6 +18,7 @@ const Products = () => {
 	const [p_selected, setSelection] = useState(0)
 
 	const [modal, setModal] = useToggle()
+	const [modalModif, setModif] = useToggle()
 
 	const [productState, setProductState] = useState([]) //update when deleting
 
@@ -61,6 +63,9 @@ const Products = () => {
 											<th scope="col">
 												<i class="far fa-list-alt"></i>
 											</th>
+											<th scope="col">
+												<i class="far fa-edit"></i>
+											</th>
 											<th scope="col">Id</th>
 											<th scope="col">Nom</th>
 											<th scope="col">Collection</th>
@@ -85,6 +90,14 @@ const Products = () => {
 														}}
 													>
 														<i className="far fa-list-alt text-info"></i>
+													</td>
+													<td
+														onClick={() => {
+															setSelection(a)
+															setModif()
+														}}
+													>
+														<i class="far fa-edit text-info"></i>
 													</td>
 													<td>{a.product_id}</td>
 													<td>{a.name}</td>
@@ -190,6 +203,44 @@ const Products = () => {
 				</div>
 				<div className="modal-footer">
 					<Button color="secondary" data-dismiss="modal" type="button" onClick={setModal}>
+						Close
+					</Button>
+					<Button color="primary" type="button">
+						Save changes
+					</Button>
+				</div>
+			</Modal>
+
+			{/* modification produit */}
+
+			<Modal className="modal-dialog-centered" isOpen={modalModif} toggle={setModif} size="xl">
+				<div className="modal-header">
+					<h5 className="modal-title" id="exampleModalLabel">
+						Détails
+					</h5>
+					<button aria-label="Close" className="close" data-dismiss="modal" type="button" onClick={setModif}>
+						<span aria-hidden={true}>×</span>
+					</button>
+				</div>
+				<div className="modal-body">
+					<Card className="shadow">
+						<CardHeader className="bg-transparent">
+							<h3 className="mb-0">Modification du produit</h3>
+						</CardHeader>
+						<CardBody>
+							<ModifyProductForm
+								p_selected={p_selected}
+								productList={productList}
+								collectionList={collectionList}
+								packagingList={packagingList}
+								propertyList={propertyList}
+								performanceList={performanceList}
+							/>
+						</CardBody>
+					</Card>
+				</div>
+				<div className="modal-footer">
+					<Button color="secondary" data-dismiss="modal" type="button" onClick={setModif}>
 						Close
 					</Button>
 					<Button color="primary" type="button">
