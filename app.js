@@ -217,11 +217,14 @@ app.post('/addProduct', (req, res) => {
 		})
 })
 
-app.post('/deleteProduct', (req, res) => {
+app.delete('/delProduct/:id', (req, res) => {
 	knex('product')
-		.where('product_id', req.body.product_id)
+		.where('product_id', req.params.id)
 		.del()
-		.then((deletedRows) => res.json({ deleted: deletedRows }))
+		.then((deletedRows) => {
+			res.sendStatus(200)
+			logger.warn('Le produit %s %s', req.params.id, 'a été supprimé.')
+		})
 		.catch((err) => res.json({ error: err }))
 })
 
