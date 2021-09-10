@@ -22,6 +22,10 @@ export const PackagingForm = ({ nextId, errorsForm }) => {
 				<input className="form-control" type="text" placeholder={nextId} disabled></input>
 			</FormGroup>
 			<FormGroup>
+				<label for="packaging_length">Reference</label>
+				<input className="form-control" type="text" {...register('packaging.reference', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
 				<label for="packaging_length">Longueur</label>
 				<input className="form-control" type="number" {...register('packaging.length', { required: true })}></input>
 			</FormGroup>
@@ -39,7 +43,7 @@ export const PackagingForm = ({ nextId, errorsForm }) => {
 			</FormGroup>
 			<FormGroup>
 				<label for="packaging_price">Prix</label>
-				<input className="form-control" type="number" {...register('packaging.price', { required: true })}></input>
+				<input className="form-control" type="number" {...register('packaging.charge', { required: true })}></input>
 			</FormGroup>
 			<FormGroup>
 				<label for="packaging_unit">Unités</label>

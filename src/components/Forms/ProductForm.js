@@ -1,3 +1,4 @@
+import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
@@ -18,51 +19,6 @@ export default function ProductForm({ productList, collectionList, packagingList
 		defaultValues: {
 			product: {
 				product_id: nextProductId,
-				performance_id: 1,
-				name: 'Woodik-7',
-				price: 88,
-				img: '',
-				stock: 'Disponible',
-				collection_id: 1,
-				packaging_id: 1,
-				property_id: 1,
-				product_publish: false,
-			},
-			collection: {
-				collection_id: false,
-				col_name: 'Nouvelle collection',
-				desc: 'Description de la collection',
-				folder: 'nouvelleCollection',
-			},
-			performance: {
-				performance_id: nextPerformanceId,
-				desc: 'Description des performances',
-				freq_min: '1040',
-				freq_max: '2048',
-				spectre: '1040-2048 Hz',
-			},
-			property: {
-				property_id: nextPropertyId,
-				depth: 100,
-				length: 500,
-				weight: 2,
-				width: 500,
-				width_cel: 68,
-				area: 4,
-				part_nb: 64,
-				cel_nb: 49,
-				paint: false,
-				wood: 'peuplier',
-				finish: 'vernis',
-			},
-			packaging: {
-				packaging_id: nextPackagingId,
-				length: 500,
-				width: 600,
-				weight: 4,
-				depth: 500,
-				price: 3,
-				unit: 1,
 			},
 		},
 	})
@@ -71,7 +27,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 
 	const [errorsForm, setErrors] = useState()
 
-	const handleRegistration = (data) => alert(JSON.stringify(data)) /* postData("/addProduct", data) */
+	const handleRegistration = (data) => postData('/addProduct', data)
 
 	const handleError = (errors) => {
 		console.log(errors)
@@ -131,20 +87,14 @@ export default function ProductForm({ productList, collectionList, packagingList
 				>
 					<label for="collection_id">Collection</label>
 					<InputGroup>
-						<select
-							className="form-control"
-							type="select"
-							{...register('product.collection_id', { required: true })}
-							onChange={(e) => console.log(e.target.value)}
-						>
-							<option disabled selected value>
+						<select className="form-control" type="select" {...register('product.collection_id', { required: true })}>
+							<option disabled selected value="">
 								{' '}
 								-- Choisir une collection --{' '}
 							</option>
 							{Array.from(collectionList).map((a, i) => {
 								return <option value={a.collection_id}>{a.col_name}</option>
 							})}
-							<option value={true}>nouvelle collection</option>
 						</select>
 						<InputGroupAddon addonType="append">
 							<Button onClick={addCollection}>Ajouter</Button>
@@ -183,7 +133,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 						<label for="product_perf">Performance</label>
 						<InputGroup>
 							<select className="form-control" type="select" {...register('product.performance_id', { required: true })}>
-								<option disabled selected value>
+								<option disabled selected value="">
 									{' '}
 									-- Choisir une performance --{' '}
 								</option>
@@ -216,7 +166,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 						<label for="product_pack">Packaging</label>
 						<InputGroup>
 							<select className="form-control" type="select" {...register('product.packaging_id', { required: true })}>
-								<option disabled selected value>
+								<option disabled selected value="">
 									{' '}
 									-- Choisir un packaging --{' '}
 								</option>
@@ -249,7 +199,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 						<label for="product_prop">Propriétés</label>
 						<InputGroup>
 							<select className="form-control" type="select" {...register('product.property_id', { required: true })}>
-								<option disabled selected value>
+								<option disabled selected value="">
 									{' '}
 									-- Choisir une propriété --{' '}
 								</option>
@@ -288,3 +238,57 @@ export default function ProductForm({ productList, collectionList, packagingList
 		</FormProvider>
 	)
 }
+
+/* {
+  defaultValues: {
+    product: {
+      product_id: nextProductId,
+      performance_id: 1,
+      name: 'Woodik-7',
+      price: 88,
+      img: '',
+      stock: 'Disponible',
+      collection_id: '',
+      packaging_id: 1,
+      property_id: 1,
+      product_publish: false,
+    },
+    collection: {
+      collection_id: '',
+      col_name: 'Nouvelle collection',
+      desc: 'Description de la collection',
+      folder: 'nouvelleCollection',
+      col_publish: false,
+    },
+    performance: {
+      performance_id: '',
+      desc: 'Description des performances',
+      freq_min: '1040',
+      freq_max: '2048',
+      spectre: '1040-2048 Hz',
+    },
+    property: {
+      property_id: '',
+      depth: 100,
+      length: 500,
+      weight: 2,
+      width: 500,
+      width_cel: 68,
+      area: 4,
+      part_nb: 64,
+      cel_nb: 49,
+      paint: false,
+      wood: 'peuplier',
+      finish: 'vernis',
+    },
+    packaging: {
+      packaging_id: '',
+      length: 500,
+      width: 600,
+      weight: 4,
+      depth: 500,
+      price: 3,
+      unit: 1,
+    },
+  },
+} */

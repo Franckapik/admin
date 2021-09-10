@@ -22,6 +22,10 @@ export const PropertyForm = ({ nextId, errorsForm }) => {
 				<input className="form-control" type="text" placeholder={nextId} disabled></input>
 			</FormGroup>
 			<FormGroup>
+				<label for="property_depth">Type</label>
+				<input className="form-control" type="text" {...register('property.type', { required: true })}></input>
+			</FormGroup>
+			<FormGroup>
 				<label for="property_depth">Profondeur</label>
 				<input className="form-control" type="number" {...register('property.depth', { required: true })}></input>
 			</FormGroup>

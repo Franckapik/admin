@@ -39,6 +39,13 @@ export const CollectionForm = ({ nextId, errorsForm }) => {
 
 				<input className="form-control" type="text" {...register('collection.folder')} />
 			</FormGroup>
+			<FormGroup>
+				<label for="col_publish">Publication</label>
+				<select className="form-control" type="select" {...register('collection.col_publish')}>
+					<option value="true">Publication en boutique</option>
+					<option value="false">Stockage caché</option>
+				</select>
+			</FormGroup>
 		</>
 	)
 }
