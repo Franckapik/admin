@@ -4923,3 +4923,5 @@ undefined [34mdebug[39m : [Knex] Données Table performance chargées (length)
 undefined [32minfo[39m : Server listening on 3001
 undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-12T20:47:13.746Z ]
 undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-12T21:07:08.398Z ]

@@ -51,6 +51,7 @@
     "connect-session-knex": "^2.1.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "easyinvoice": "^1.0.147",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "googleapis": "^75.0.0",
