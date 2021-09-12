@@ -8,6 +8,7 @@ import useToggle from 'hooks/useToggle'
 import { Button, Card, CardBody, CardHeader, Col, Container, ListGroup, ListGroupItem, Modal, Row, Table } from 'reactstrap'
 import delData from 'hooks/delData'
 import ModifyProductForm from 'components/Forms/ModifyProductForm'
+import ModalBox from 'layouts/ModalBox'
 const Products = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
@@ -143,111 +144,58 @@ const Products = () => {
 					</Col>
 				</Row>
 			</Container>
-
-			<Modal className="modal-dialog-centered" isOpen={modal} toggle={setModal} size="xl">
-				<div className="modal-header">
-					<h5 className="modal-title" id="exampleModalLabel">
-						Détails
-					</h5>
-					<button aria-label="Close" className="close" data-dismiss="modal" type="button" onClick={setModal}>
-						<span aria-hidden={true}>×</span>
-					</button>
-				</div>
-				<div className="modal-body">
-					<Card className="shadow">
-						<CardHeader className="bg-transparent">
-							<h3 className="mb-0">Détails du produit</h3>
-						</CardHeader>
-						<CardBody>
-							Image du produit n° {p_selected.product_id}
-							{productList && productList.length && productList.length > 0 ? (
-								<Container>
-									<Row>
-										<ListGroup className="col-3">
-											<ListGroupItem>{p_selected.product_id}</ListGroupItem>
-											<ListGroupItem>{p_selected.name}</ListGroupItem>
-											<ListGroupItem>{p_selected.col_name}</ListGroupItem>
-											<ListGroupItem>{p_selected.price} €</ListGroupItem>
-											<ListGroupItem>
-												{p_selected.width}x{p_selected.lenght}x{p_selected.depth}
-											</ListGroupItem>
-										</ListGroup>
-										<ListGroup className="col-3">
-											<ListGroupItem>{p_selected.spectre} Hz</ListGroupItem>
-											<ListGroupItem>{p_selected.type}</ListGroupItem>
-											<ListGroupItem>{p_selected.wood}</ListGroupItem>
-											<ListGroupItem>{p_selected.stock} </ListGroupItem>
-											<ListGroupItem>{p_selected.desc}</ListGroupItem>
-										</ListGroup>
-										<ListGroup className="col-3">
-											<ListGroupItem>{p_selected.cel_nb}</ListGroupItem>
-											<ListGroupItem>{p_selected.weight}</ListGroupItem>
-											<ListGroupItem>{p_selected.charge}</ListGroupItem>
-											<ListGroupItem>{p_selected.width_cel}</ListGroupItem>
-											<ListGroupItem>{p_selected.part_nb}</ListGroupItem>
-										</ListGroup>
-										<ListGroup className="col-3">
-											<ListGroupItem>{p_selected.reference}</ListGroupItem>
-											<ListGroupItem>{p_selected.finish}</ListGroupItem>
-											<ListGroupItem>{p_selected.area}</ListGroupItem>
-											<ListGroupItem>{p_selected.value}</ListGroupItem>
-											<ListGroupItem>{p_selected.unit}</ListGroupItem>
-										</ListGroup>
-									</Row>
-								</Container>
-							) : (
-								'Aucun produit existant'
-							)}
-						</CardBody>
-					</Card>
-				</div>
-				<div className="modal-footer">
-					<Button color="secondary" data-dismiss="modal" type="button" onClick={setModal}>
-						Close
-					</Button>
-					<Button color="primary" type="button">
-						Save changes
-					</Button>
-				</div>
-			</Modal>
-
-			{/* modification produit */}
-
-			<Modal className="modal-dialog-centered" isOpen={modalModif} toggle={setModif} size="xl">
-				<div className="modal-header">
-					<h5 className="modal-title" id="exampleModalLabel">
-						Détails
-					</h5>
-					<button aria-label="Close" className="close" data-dismiss="modal" type="button" onClick={setModif}>
-						<span aria-hidden={true}>×</span>
-					</button>
-				</div>
-				<div className="modal-body">
-					<Card className="shadow">
-						<CardHeader className="bg-transparent">
-							<h3 className="mb-0">Modification du produit</h3>
-						</CardHeader>
-						<CardBody>
-							<ModifyProductForm
-								p_selected={p_selected}
-								productList={productList}
-								collectionList={collectionList}
-								packagingList={packagingList}
-								propertyList={propertyList}
-								performanceList={performanceList}
-							/>
-						</CardBody>
-					</Card>
-				</div>
-				<div className="modal-footer">
-					<Button color="secondary" data-dismiss="modal" type="button" onClick={setModif}>
-						Close
-					</Button>
-					<Button color="primary" type="button">
-						Save changes
-					</Button>
-				</div>
-			</Modal>
+			<ModalBox title="Modification du produit" isOpen={modalModif} toggle={setModif} button1="Fermer" button2="Enregistrer">
+				<ModifyProductForm
+					p_selected={p_selected}
+					productList={productList}
+					collectionList={collectionList}
+					packagingList={packagingList}
+					propertyList={propertyList}
+					performanceList={performanceList}
+				/>
+			</ModalBox>
+			<ModalBox
+				title={'Image du produit n°' + p_selected.product_id}
+				isOpen={modal}
+				toggle={setModal}
+				button1="Fermer"
+				button2="Enregistrer"
+			>
+				<Container>
+					<Row>
+						<ListGroup className="col-3">
+							<ListGroupItem>{p_selected.product_id}</ListGroupItem>
+							<ListGroupItem>{p_selected.name}</ListGroupItem>
+							<ListGroupItem>{p_selected.col_name}</ListGroupItem>
+							<ListGroupItem>{p_selected.price} €</ListGroupItem>
+							<ListGroupItem>
+								{p_selected.width}x{p_selected.lenght}x{p_selected.depth}
+							</ListGroupItem>
+						</ListGroup>
+						<ListGroup className="col-3">
+							<ListGroupItem>{p_selected.spectre} Hz</ListGroupItem>
+							<ListGroupItem>{p_selected.type}</ListGroupItem>
+							<ListGroupItem>{p_selected.wood}</ListGroupItem>
+							<ListGroupItem>{p_selected.stock} </ListGroupItem>
+							<ListGroupItem>{p_selected.desc}</ListGroupItem>
+						</ListGroup>
+						<ListGroup className="col-3">
+							<ListGroupItem>{p_selected.cel_nb}</ListGroupItem>
+							<ListGroupItem>{p_selected.weight}</ListGroupItem>
+							<ListGroupItem>{p_selected.charge}</ListGroupItem>
+							<ListGroupItem>{p_selected.width_cel}</ListGroupItem>
+							<ListGroupItem>{p_selected.part_nb}</ListGroupItem>
+						</ListGroup>
+						<ListGroup className="col-3">
+							<ListGroupItem>{p_selected.reference}</ListGroupItem>
+							<ListGroupItem>{p_selected.finish}</ListGroupItem>
+							<ListGroupItem>{p_selected.area}</ListGroupItem>
+							<ListGroupItem>{p_selected.value}</ListGroupItem>
+							<ListGroupItem>{p_selected.unit}</ListGroupItem>
+						</ListGroup>
+					</Row>
+				</Container>
+			</ModalBox>
 		</>
 	)
 }
