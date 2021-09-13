@@ -4,8 +4,11 @@ import React from 'react'
 import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap'
 import easyinvoice from 'easyinvoice'
 import { Button } from 'bootstrap'
+import useFetch from 'hooks/useFetch'
 
 const Orders = () => {
+	const { response: invoiceList } = useFetch('/invoice')
+
 	var data = {
 		documentTitle: 'Facture',
 		locale: 'fr-FR',
