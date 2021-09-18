@@ -308,6 +308,12 @@ app.get('/transaction', (req, res) => {
 app.get('/item', (req, res) => {
 	query('item').then((data) => res.send(data))
 })
+app.get('/discount', (req, res) => {
+	query('discount').then((data) => res.send(data))
+})
+app.get('/status', (req, res) => {
+	query('status').then((data) => res.send(data))
+})
 
 //get with join
 app.get('/complete_product', (req, res) => {
@@ -319,6 +325,23 @@ app.get('/complete_product', (req, res) => {
 		.join('packaging', 'product.packaging_id', 'packaging.packaging_id')
 		.join('property', 'product.property_id', 'property.property_id')
 		.then((data) => {
+			res.send(data)
+		})
+})
+
+/* 
+.join('discount', 'invoice.discount_id', 'discount.discount_id')
+
+ */
+
+app.get('/complete_invoice', (req, res) => {
+	knex('invoice')
+		.join('customer', 'invoice.user_id', 'customer.user_id')
+		.join('status', 'invoice.status_id', 'status.status_id')
+		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
+		.join('discount', 'invoice.discount_id', 'discount.discount_id')
+		.then((data) => {
+			console.log(data)
 			res.send(data)
 		})
 })

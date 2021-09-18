@@ -1,13 +1,23 @@
 import CustomerForm from 'components/Forms/CustomerForm'
 import Header from 'components/Headers/Header.js'
-import React from 'react'
-import { Card, CardBody, CardHeader, Col, Container, Row } from 'reactstrap'
+import React, { useEffect, useState } from 'react'
+import { Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
 import easyinvoice from 'easyinvoice'
 import { Button } from 'bootstrap'
 import useFetch from 'hooks/useFetch'
+import { List } from 'layouts/List'
+import useToggle from 'hooks/useToggle'
+import delData from 'hooks/delData'
+import OrderForm from 'components/Forms/OrderForm'
 
 const Orders = () => {
-	const { response: invoiceList } = useFetch('/invoice')
+	const { response: transporterList } = useFetch('/transporter')
+	const { response: statusList } = useFetch('/status')
+	const { response: itemList } = useFetch('/item')
+	const { response: transactionList } = useFetch('/transaction')
+	const { response: productList } = useFetch('/product')
+	const { response: discountList } = useFetch('/discount')
+	const { response: customerList } = useFetch('/customer')
 
 	var data = {
 		documentTitle: 'Facture',
@@ -77,6 +87,25 @@ const Orders = () => {
 			console.log(result.pdf)
 		})
 
+	const { response: invoiceList } = useFetch('/complete_invoice')
+
+	const [p_selected, setSelection] = useState(0)
+
+	const [modal, setModal] = useToggle()
+	const [modalModif, setModif] = useToggle()
+
+	const [invoiceState, setInvoiceState] = useState([]) //update when deleting
+
+	useEffect(() => {
+		invoiceList && invoiceList.length && setInvoiceState(invoiceList)
+		console.log(invoiceState)
+	}, [invoiceList])
+
+	const removeProduct = (pid) => {
+		delData('/delProduct/' + pid)
+		setInvoiceState(invoiceState.filter((obj) => obj.product_id !== pid))
+	}
+
 	return (
 		<>
 			<Header />
@@ -85,12 +114,101 @@ const Orders = () => {
 				{/* Dark table */}
 				<Row className="mt-5">
 					<Col>
+						<Card className="bg-default shadow">
+							<CardHeader className="bg-transparent border-0">
+								<h3 className="text-white mb-0">Les commandes</h3>
+							</CardHeader>
+							<Table className="align-items-center table-dark table-flush" responsive>
+								<thead className="thead-dark">
+									<tr>
+										<th scope="col">
+											<i className="far fa-trash-alt" />
+										</th>
+										<th scope="col">
+											<i class="far fa-list-alt"></i>
+										</th>
+										<th scope="col">
+											<i class="far fa-edit"></i>
+										</th>
+										<th scope="col">Id</th>
+										<th scope="col">Client</th>
+										<th scope="col">Statut</th>
+										<th scope="col">FDP</th>
+										<th scope="col">Transporteur</th>
+										<th scope="col">Date</th>
+										<th scope="col">Réduction</th>
+										<th scope="col">Items</th>
+									</tr>
+								</thead>
+								<tbody>
+									{Array.from(invoiceState).map((a, i) => {
+										return (
+											<tr>
+												<td onClick={() => removeProduct(a.product_id)}>
+													<i className="far fa-trash-alt text-danger"></i>
+												</td>
+												<td
+													onClick={() => {
+														setSelection(a)
+														setModal()
+													}}
+												>
+													<i className="far fa-list-alt text-info"></i>
+												</td>
+												<td
+													onClick={() => {
+														setSelection(a)
+														setModif()
+													}}
+												>
+													<i class="far fa-edit text-info"></i>
+												</td>
+												<td>{a.invoice_id}</td>
+												<td>{a.name}</td>
+												<td>{a.status_msg}</td>
+												<td>{a.fdp} €</td>
+												<td>{a.reference}</td>
+												<td>{a.order_date}</td>
+												<td>{a.reduction} €</td>
+												<td>produits</td>
+											</tr>
+										)
+									})}
+								</tbody>
+							</Table>
+						</Card>
+					</Col>
+				</Row>
+				<Row className="mt-5">
+					<Col>
 						<Card className="shadow">
 							<CardHeader className="bg-transparent">
-								<h3 className="mb-0">Essai de generateur pdf</h3>
+								<h3 className="mb-0">Ajouter un devis/facture</h3>
 							</CardHeader>
 							<CardBody>
-								<span onClick={facturation}>generer</span>
+								<span onClick={facturation}>Generer une facture en pdf</span>
+								{invoiceState &&
+								invoiceState.length &&
+								transporterList &&
+								statusList &&
+								itemList &&
+								transactionList &&
+								productList &&
+								discountList &&
+								customerList ? (
+									<OrderForm
+										invoiceList={invoiceState}
+										transporterList={transporterList}
+										statusList={statusList}
+										itemList={itemList}
+										transactionList={transactionList}
+										productList={productList}
+										discountList={discountList}
+										customerList={customerList}
+									/>
+								) : (
+									'Aucune facturation possible'
+								)}
 							</CardBody>
 						</Card>
 					</Col>
