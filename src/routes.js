@@ -10,6 +10,7 @@ import Database from 'views/examples/Database.js'
 import Customers from 'views/examples/Customers.js'
 import ReactGA from 'react-ga'
 import Orders from 'views/examples/Orders'
+import Ship from 'views/examples/Ship'
 
 {
 	ReactGA.initialize('UA-112792874-1')
@@ -52,6 +53,13 @@ var routes = [
 		name: 'Commandes',
 		icon: 'ni ni-bullet-list-67 text-red',
 		component: Orders,
+		layout: '/admin',
+	},
+	{
+		path: '/ship',
+		name: 'Expeditions',
+		icon: 'ni ni-bullet-list-67 text-red',
+		component: Ship,
 		layout: '/admin',
 	},
 	{

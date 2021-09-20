@@ -17,6 +17,8 @@ const session = require('express-session')
 const { sessionStore, upsert, query, insert } = require('./db/db')
 const cors = require('cors')
 
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
+
 app.options(
 	'*',
 	cors({
@@ -340,6 +342,20 @@ app.get('/complete_invoice', (req, res) => {
 		.join('status', 'invoice.status_id', 'status.status_id')
 		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
 		.join('discount', 'invoice.discount_id', 'discount.discount_id')
+		.then((data) => {
+			console.log(data)
+			res.send(data)
+		})
+})
+
+app.get('/ship/:id', (req, res) => {
+	fetch(config.shipping.url + req.params.id, {
+		headers: {
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => response.text())
 		.then((data) => {
 			console.log(data)
 			res.send(data)
