@@ -343,12 +343,13 @@ app.get('/complete_invoice', (req, res) => {
 		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
 		.join('discount', 'invoice.discount_id', 'discount.discount_id')
 		.then((data) => {
-			console.log(data)
 			res.send(data)
 		})
 })
 
 app.get('/ship/:id', (req, res) => {
+	logger.info('Shipping fetch data %s', req.params.id)
+
 	fetch(config.shipping.url + req.params.id, {
 		headers: {
 			Authorization:
@@ -357,7 +358,23 @@ app.get('/ship/:id', (req, res) => {
 	})
 		.then((response) => response.text())
 		.then((data) => {
-			console.log(data)
+			res.send(data)
+		})
+})
+
+//http://localhost:3001/ship/service-points?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+
+app.get('/ship/service-points', (req, res) => {
+	logger.info('Shipping fetch data %s', req.url.substring(req.url.indexOf('?')))
+	const queries = req.url.substring(req.url.indexOf('?'))
+	fetch(config.shipping.url + 'service-points' + queries, {
+		headers: {
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => response.text())
+		.then((data) => {
 			res.send(data)
 		})
 })

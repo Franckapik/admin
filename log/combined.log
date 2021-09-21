@@ -6125,3 +6125,461 @@ undefined [32minfo[39m : Server listening on 3001
 undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-20T21:26:09.558Z ]
 undefined [32minfo[39m : Server listening on 3001
 undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-20T21:26:33.960Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:24:02.162Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:28:04.585Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:28:09.566Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:31:30.882Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:31:38.543Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:31:59.467Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:32:07.073Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:32:09.970Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:32:14.475Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:32:48.430Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:33:07.212Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:37:04.027Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:37:14.568Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:37:31.697Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:37:45.771Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:39:17.378Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:39:19.395Z ]
+undefined [32minfo[39m : Transporteurs carriers
+undefined [32minfo[39m : Transporteurs service_points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:39:56.983Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service_points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:40:14.278Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:40:18.609Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service_points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service_points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:41:56.698Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:42:17.204Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [33mwarn[39m : Shipping error undefined
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:42:24.931Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [33mwarn[39m : Shipping error {"error":{"code":400,"request":"api/v2/service-points/","message":"country: \"This field is required.\""}}
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:43:55.196Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:44:01.423Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:44:13.828Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:44:29.951Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [33mwarn[39m : Shipping error undefined
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [33mwarn[39m : Shipping error undefined
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:44:42.203Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [33mwarn[39m : Shipping error Response {
+  size: 0,
+  [Symbol(Body internals)]: [Object],
+  [Symbol(Response internals)]: [Object]
+}
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [33mwarn[39m : Shipping error Response {
+  size: 0,
+  [Symbol(Body internals)]: [Object],
+  [Symbol(Response internals)]: [Object]
+}
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:45:27.377Z ]
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:49:49.885Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:49:59.877Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:50:05.121Z ]
+undefined [32minfo[39m : Shipping fetch data { country: '"FR"' }
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:51:33.540Z ]
+undefined [32minfo[39m : Shipping fetch data {"country":"\"FR\""}
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T15:51:50.018Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:08:51.755Z ]
+undefined [32minfo[39m : Shipping fetch data /ship/service-points?country=%22FR%22
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:09:32.068Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:09:38.352Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:16:17.913Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=%22FR%22
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:17:31.955Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=%22FR%22
+undefined [32minfo[39m : Shipping fetch data ?country=%22GR%22
+undefined [32minfo[39m : Shipping fetch data ?country=%22FR%22
+undefined [32minfo[39m : Shipping fetch data ?country=%22FR%22&latitude=%2248.2772321689434%22&longitude=%22-1.6697866335057476%22
+undefined [32minfo[39m : Shipping fetch data ?country=%27FR&latitude=%2248.2772321689434%22&longitude=%22-1.6697866335057476%22
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:24:22.878Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:24:33.982Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=%27FR&latitude=%2248.2772321689434%22&longitude=%22-1.6697866335057476%22
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:26:04.429Z ]
+undefined [32minfo[39m : Shipping fetch data ?latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:27:03.403Z ]
+undefined [32minfo[39m : Shipping fetch data ?latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:27:52.796Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:28:14.047Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:28:48.520Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:29:32.428Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:30:08.273Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:30:53.877Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:31:11.096Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:31:19.210Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:32:20.812Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:32:25.045Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:32:55.021Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:33:17.890Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:33:22.356Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:33:48.867Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:34:32.149Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:34:48.856Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:35:14.348Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:36:29.042Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&distance=1000&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:36:41.282Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&distance=100&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:36:58.443Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&distance=10&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:50:21.998Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:50:59.408Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:51:40.599Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:51:56.929Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&distance=10&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:52:36.643Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:56:07.889Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:56:14.962Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:57:01.109Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:57:35.327Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&distance=10&latitude=48.2772321689434&longitude=-1.6697866335057476
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:58:32.971Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T16:59:16.842Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:00:11.499Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:00:22.262Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:01:09.357Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:01:16.623Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:01:50.345Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:03:28.151Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T17:13:10.916Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:11:03.083Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:11:29.824Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:12:21.769Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:12:30.485Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:13:35.362Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:13:45.769Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:14:06.583Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:19:21.874Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:19:43.058Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:23:50.318Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:24:10.760Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:24:25.364Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:24:37.100Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:24:56.314Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:25:09.179Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:25:27.297Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:25:39.180Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:25:50.108Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:27:03.234Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:27:23.049Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:27:30.575Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:28:14.519Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:29:37.777Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:29:42.544Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:34:14.552Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:34:29.139Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:34:35.359Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:34:53.019Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:35:14.626Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:35:17.261Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:35:25.208Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:35:41.462Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:35:44.893Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:41:05.337Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:41:25.173Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:44:29.825Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:45:27.880Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:45:41.891Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:45:53.315Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:46:36.594Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:46:46.671Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:47:39.352Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:48:22.465Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:48:28.882Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:48:34.675Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:48:41.296Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:48:48.189Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:48:54.624Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:49:05.281Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:49:13.526Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:52:18.564Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:52:53.613Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-21T20:53:00.269Z ]
