@@ -5,6 +5,9 @@ import React, { useEffect, useState } from 'react'
 // reactstrap components
 import { Card, CardBody, CardHeader, Container, Row, Table } from 'reactstrap'
 import { Map, Marker } from 'pigeon-maps'
+import { useForm } from 'react-hook-form'
+import { Button, Form } from 'reactstrap'
+import FindRelaisInputs from 'components/Forms/FindRelaisInputs'
 
 const Ship = () => {
 	const { response: carriersList } = useFetch('/ship/carriers')
@@ -20,6 +23,19 @@ const Ship = () => {
 
 	const [center, setCenter] = useState([50.879, 4.6997])
 	const [zoom, setZoom] = useState(11)
+
+	const {
+		register,
+		formState: { errors },
+		handleSubmit,
+		watch,
+	} = useForm({})
+
+	const handleRegistration = (data) => console.log(data)
+
+	const handleError = (errors) => console.log('error', errors)
+
+	const essai = watch('customer.address', 'rien')
 
 	return (
 		<>
@@ -51,9 +67,25 @@ const Ship = () => {
 				</Row>
 				<Row className="mt-5">
 					<div className="col">
+						<Card className="shadow">
+							<CardHeader className="bg-transparent border-0">
+								<h3 className="mb-0">Rechercher un relais</h3>
+							</CardHeader>
+							<CardBody>
+								<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
+									<FindRelaisInputs errors={errors} register={register}></FindRelaisInputs>
+									<Button>Rechercher</Button>
+								</Form>
+								{essai}
+							</CardBody>
+						</Card>
+					</div>
+				</Row>
+				<Row className="mt-5">
+					<div className="col">
 						<Card className="bg-default shadow">
 							<CardHeader className="bg-transparent border-0">
-								<h3 className="text-white mb-0">Liste des transporteurs disponibles (carriers)</h3>
+								<h3 className="mb-0">Liste des transporteurs disponibles (carriers)</h3>
 							</CardHeader>
 							<CardBody>
 								<Map

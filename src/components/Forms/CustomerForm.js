@@ -9,7 +9,6 @@ const CustomerForm = ({ customerList }) => {
 		register,
 		formState: { errors },
 		handleSubmit,
-		reset,
 	} = useForm({
 		defaultValues: {
 			user_id: customerList[customerList.length - 1].user_id + 1,
