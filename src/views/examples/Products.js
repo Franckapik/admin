@@ -62,10 +62,10 @@ const Products = () => {
 												<i className="far fa-trash-alt" />
 											</th>
 											<th scope="col">
-												<i class="far fa-list-alt"></i>
+												<i className="far fa-list-alt"></i>
 											</th>
 											<th scope="col">
-												<i class="far fa-edit"></i>
+												<i className="far fa-edit"></i>
 											</th>
 											<th scope="col">Id</th>
 											<th scope="col">Nom</th>
@@ -98,7 +98,7 @@ const Products = () => {
 															setModif()
 														}}
 													>
-														<i class="far fa-edit text-info"></i>
+														<i className="far fa-edit text-info"></i>
 													</td>
 													<td>{a.product_id}</td>
 													<td>{a.name}</td>

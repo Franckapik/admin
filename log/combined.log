@@ -6715,3 +6715,12 @@ undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
 undefined [33mwarn[39m : [Knex] Données transaction manquantes (length): 0
 undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
 undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:42:56.604Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données transaction manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2

@@ -46,7 +46,7 @@ const Customers = () => {
 												<i className="far fa-trash-alt" />
 											</th>
 											<th scope="col">
-												<i class="far fa-edit"></i>
+												<i className="far fa-edit"></i>
 											</th>
 											{Object.keys(userState[0]).map((a, i) => {
 												return <th scope="col">{a}</th>
@@ -67,7 +67,7 @@ const Customers = () => {
 															setModif()
 														}}
 													>
-														<i class="far fa-edit text-info"></i>
+														<i className="far fa-edit text-info"></i>
 													</td>
 													{Object.keys(a).map((b, c) => {
 														return <td>{a[b]}</td>
