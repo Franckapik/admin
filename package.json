@@ -60,6 +60,7 @@
     "interweave": "^12.7.2",
     "js-cookie": "^2.2.1",
     "knex": "^0.95.6",
+    "leaflet-geosearch": "^3.5.0",
     "moment": "^2.29.1",
     "node-fetch": "^3.0.0",
     "node-sass": "4.14.1",

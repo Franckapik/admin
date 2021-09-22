@@ -8,6 +8,9 @@ import { Map, Marker } from 'pigeon-maps'
 import { useForm } from 'react-hook-form'
 import { Button, Form } from 'reactstrap'
 import FindRelaisInputs from 'components/Forms/FindRelaisInputs'
+// import
+import { OpenStreetMapProvider } from 'leaflet-geosearch'
+import Autocomplete from 'layouts/Autocomplete'
 
 const Ship = () => {
 	const { response: carriersList } = useFetch('/ship/carriers')
@@ -16,6 +19,9 @@ const Ship = () => {
 	)
 
 	const [service, setService] = useState([])
+
+	const [input, setInput] = useState([])
+	const [suggestion, setSuggestion] = useState([])
 
 	useEffect(() => {
 		serviceList && serviceList.length && setService(serviceList)
@@ -36,6 +42,16 @@ const Ship = () => {
 	const handleError = (errors) => console.log('error', errors)
 
 	const essai = watch('customer.address', 'rien')
+
+	// setup
+	const provider = new OpenStreetMapProvider()
+
+	// search
+	provider.search({ query: input }).then((res) => {
+		const res2 = res.map((a, i) => a['label'])
+		console.log(res2)
+		setSuggestion(res)
+	})
 
 	return (
 		<>
@@ -72,6 +88,7 @@ const Ship = () => {
 								<h3 className="mb-0">Rechercher un relais</h3>
 							</CardHeader>
 							<CardBody>
+								<Autocomplete suggestions={suggestion} setInput={setInput} input={input} />
 								<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
 									<FindRelaisInputs errors={errors} register={register}></FindRelaisInputs>
 									<Button>Rechercher</Button>
