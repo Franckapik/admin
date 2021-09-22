@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { FormGroup } from 'reactstrap'
-const Autocomplete = (props) => {
+const Autocomplete = ({ suggestions, input, setInput }) => {
 	const [active, setActive] = useState(0)
 	const [filtered, setFiltered] = useState([])
 	const [isShow, setIsShow] = useState(false)
-	const [input, setInput] = useState('')
-
+	console.log(suggestions)
 	const onChange = (e) => {
-		const { suggestions } = props
 		const input = e.currentTarget.value
 		const newFilteredSuggestions = suggestions.filter(
 			(suggestion) => suggestion.toLowerCase().indexOf(input.toLowerCase()) > -1

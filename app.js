@@ -364,7 +364,7 @@ app.get('/ship/:id', (req, res) => {
 
 //http://localhost:3001/ship/service-points?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
 
-app.get('/ship/service-points', (req, res) => {
+app.get('/service-points', (req, res) => {
 	logger.info('Shipping fetch data %s', req.url.substring(req.url.indexOf('?')))
 	const queries = req.url.substring(req.url.indexOf('?'))
 	fetch(config.shipping.url + 'service-points' + queries, {

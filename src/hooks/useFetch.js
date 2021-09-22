@@ -18,7 +18,7 @@ const useFetch = (url) => {
 			setLoading(false)
 		}
 
-		fetchInfo()
+		url && fetchInfo()
 	}, [url, setResponse])
 
 	return { error, loading, response }
