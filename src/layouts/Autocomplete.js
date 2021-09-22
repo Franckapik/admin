@@ -4,6 +4,7 @@ const Autocomplete = (props) => {
 	const [active, setActive] = useState(0)
 	const [filtered, setFiltered] = useState([])
 	const [isShow, setIsShow] = useState(false)
+	const [input, setInput] = useState('')
 
 	const onChange = (e) => {
 		const { suggestions } = props
@@ -14,20 +15,20 @@ const Autocomplete = (props) => {
 		setActive(0)
 		setFiltered(newFilteredSuggestions)
 		setIsShow(true)
-		props.setInput(e.currentTarget.value)
+		setInput(e.currentTarget.value)
 	}
 	const onClick = (e) => {
 		setActive(0)
 		setFiltered([])
 		setIsShow(false)
-		props.setInput(e.currentTarget.innerText)
+		setInput(e.currentTarget.innerText)
 	}
 	const onKeyDown = (e) => {
 		if (e.keyCode === 13) {
 			// enter key
 			setActive(0)
 			setIsShow(false)
-			props.setInput(filtered[active])
+			setInput(filtered[active])
 		} else if (e.keyCode === 38) {
 			// up arrow
 			return active === 0 ? null : setActive(active - 1)
@@ -37,7 +38,7 @@ const Autocomplete = (props) => {
 		}
 	}
 	const renderAutocomplete = () => {
-		if (isShow && props.input) {
+		if (isShow && input) {
 			if (filtered.length) {
 				return (
 					<ul className="autocomplete">
@@ -68,7 +69,7 @@ const Autocomplete = (props) => {
 		<>
 			<FormGroup>
 				{' '}
-				<input className="form-control" type="text" onChange={onChange} onKeyDown={onKeyDown} value={props.input} />
+				<input className="form-control" type="text" onChange={onChange} onKeyDown={onKeyDown} value={input} />
 				{renderAutocomplete()}
 			</FormGroup>
 		</>

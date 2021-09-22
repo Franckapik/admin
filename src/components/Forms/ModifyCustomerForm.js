@@ -32,21 +32,21 @@ const ModifyCustomerForm = ({ c_selected }) => {
 	return (
 		<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
 			<FormGroup>
-				<label className="form-control-label" for="user_id">
+				<label className="form-control-label" htmlFor="user_id">
 					{' '}
 					Id{' '}
 				</label>
 				<input className="form-control" type="number" {...register('user_id')} />
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="session_id">
+				<label className="form-control-label" htmlFor="session_id">
 					{' '}
 					Session Id{' '}
 				</label>
 				<input className="form-control" type="text" {...register('session_id')} />
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_name">
+				<label className="form-control-label" htmlFor="c_name">
 					{' '}
 					Nom{' '}
 				</label>
@@ -55,7 +55,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'maxLength' && 'Le nom est trop long'}
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_firstname">
+				<label className="form-control-label" htmlFor="c_firstname">
 					{' '}
 					Prénom{' '}
 				</label>
@@ -64,7 +64,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'maxLength' && 'Le prénom est trop long'}
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_address">
+				<label className="form-control-label" htmlFor="c_address">
 					{' '}
 					Adresse{' '}
 				</label>
@@ -73,7 +73,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'maxLength' && "L'adresse est trop longue"}
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_postal">
+				<label className="form-control-label" htmlFor="c_postal">
 					{' '}
 					Postal{' '}
 				</label>
@@ -82,7 +82,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'maxLength' && 'Le code postal est trop long'}
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_mail">
+				<label className="form-control-label" htmlFor="c_mail">
 					{' '}
 					Mail{' '}
 				</label>
@@ -98,7 +98,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'pattern' && "L'adresse mail est erronée"}
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_city">
+				<label className="form-control-label" htmlFor="c_city">
 					{' '}
 					City{' '}
 				</label>
@@ -107,7 +107,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'maxLength' && 'Le nom de ville est trop long'}
 			</FormGroup>
 			<FormGroup>
-				<label className="form-control-label" for="c_country">
+				<label className="form-control-label" htmlFor="c_country">
 					{' '}
 					Pays{' '}
 				</label>

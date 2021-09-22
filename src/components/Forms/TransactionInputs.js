@@ -3,21 +3,21 @@ import { FormGroup } from 'reactstrap'
 const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nextInvoiceId }) => (
 	<>
 		<FormGroup>
-			<label className="form-control-label" for="transaction_id">
+			<label className="form-control-label" htmlFor="transaction_id">
 				{' '}
 				Transaction Id{' '}
 			</label>
 			<input className="form-control" type="text" {...register('transaction.user_id')} />
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_invoiceid">
+			<label className="form-control-label" htmlFor="t_invoiceid">
 				{' '}
 				Invoice Id{' '}
 			</label>
 			<input className="form-control" type="text" {...register('transaction.invoice_id')} />
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_amount">
+			<label className="form-control-label" htmlFor="t_amount">
 				{' '}
 				Montant{' '}
 			</label>
@@ -25,7 +25,7 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 			{errors.name?.type === 'required' && 'Un montant est requis'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_status">
+			<label className="form-control-label" htmlFor="t_status">
 				{' '}
 				Statut{' '}
 			</label>
@@ -33,7 +33,7 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 			{errors.name?.type === 'required' && 'Un statut est requis'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_mode">
+			<label className="form-control-label" htmlFor="t_mode">
 				{' '}
 				Mode{' '}
 			</label>
@@ -41,7 +41,7 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 			{errors.name?.type === 'required' && 'Un mode est requis'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_datec">
+			<label className="form-control-label" htmlFor="t_datec">
 				{' '}
 				Date de transaction{' '}
 			</label>
@@ -49,7 +49,7 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 			{errors.name?.type === 'required' && 'Une date est requise'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_datep">
+			<label className="form-control-label" htmlFor="t_datep">
 				{' '}
 				Date de paiement{' '}
 			</label>
@@ -57,21 +57,21 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 			{errors.name?.type === 'required' && 'Une date est requise'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_last">
+			<label className="form-control-label" htmlFor="t_last">
 				{' '}
 				Derniers nombres{' '}
 			</label>
 			<input className="form-control" type="number" {...register('transaction.last_numbers')} />
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_brand">
+			<label className="form-control-label" htmlFor="t_brand">
 				{' '}
 				Marque de carte{' '}
 			</label>
 			<input className="form-control" type="text" {...register('transaction.card_brand')} />
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="t_desc">
+			<label className="form-control-label" htmlFor="t_desc">
 				{' '}
 				Description{' '}
 			</label>

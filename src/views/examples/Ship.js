@@ -37,21 +37,17 @@ const Ship = () => {
 		watch,
 	} = useForm({})
 
-	const handleRegistration = (data) => console.log(data)
-
-	const handleError = (errors) => console.log('error', errors)
-
 	const essai = watch('customer.address', 'rien')
 
 	// setup
 	const provider = new OpenStreetMapProvider()
 
 	// search
-	provider.search({ query: input }).then((res) => {
-		const res2 = res.map((a, i) => a['label'])
-		console.log(res2)
-		setSuggestion(res)
-	})
+	/* 	provider.search({ query: input }).then((res) => console.log(res)) */
+
+	const handleRegistration = (data) => console.log(data)
+
+	const handleError = (errors) => console.log('error', errors)
 
 	return (
 		<>
@@ -68,8 +64,8 @@ const Ship = () => {
 									<tbody>
 										{Array.from(carriersList).map((a, i) => {
 											return (
-												<tr>
-													<td key={'carrier' + i}>{a}</td>
+												<tr key={'carrier' + i}>
+													<td>{a}</td>
 												</tr>
 											)
 										})}
@@ -88,7 +84,7 @@ const Ship = () => {
 								<h3 className="mb-0">Rechercher un relais</h3>
 							</CardHeader>
 							<CardBody>
-								<Autocomplete suggestions={suggestion} setInput={setInput} input={input} />
+								{/* <Autocomplete suggestions={['Alabama', 'Alaska']} /> */}
 								<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
 									<FindRelaisInputs errors={errors} register={register}></FindRelaisInputs>
 									<Button>Rechercher</Button>

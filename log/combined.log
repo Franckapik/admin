@@ -6674,3 +6674,44 @@ undefined [32minfo[39m : Server listening on 3001
 undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:14:12.219Z ]
 undefined [32minfo[39m : Shipping fetch data carriers
 undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:34:40.793Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:35:00.250Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:35:28.951Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:37:09.674Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:39:49.233Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:40:39.623Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-22T07:41:22.937Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data service-points
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données transaction manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2

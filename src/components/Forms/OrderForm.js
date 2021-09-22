@@ -72,7 +72,7 @@ const OrderForm = ({
 	return (
 		<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
 			<FormGroup>
-				<label for="prod_ident">Identifiant facture</label>
+				<label htmlFor="prod_ident">Identifiant facture</label>
 				<input className="form-control" type="text" placeholder={nextInvoiceId} disabled></input>
 			</FormGroup>
 			<FormGroup
@@ -80,7 +80,7 @@ const OrderForm = ({
 					display: !newClient ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label for="collection_id">Client</label>
+				<label htmlFor="collection_id">Client</label>
 				<InputGroup>
 					<select className="form-control" type="select" {...register('invoice.user_id', { required: true })}>
 						<option disabled selected value="">
@@ -113,7 +113,7 @@ const OrderForm = ({
 					display: !newDiscount ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label for="collection_id">Remise</label>
+				<label htmlFor="collection_id">Remise</label>
 				<InputGroup>
 					<select className="form-control" type="select" {...register('invoice.discount_id', { required: true })}>
 						<option disabled selected value="">
@@ -146,7 +146,7 @@ const OrderForm = ({
 					display: !newStatus ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label for="status_id">Statut</label>
+				<label htmlFor="status_id">Statut</label>
 				<InputGroup>
 					<select className="form-control" type="select" {...register('invoice.status_id', { required: true })}>
 						<option disabled selected value="">
@@ -179,7 +179,7 @@ const OrderForm = ({
 					display: !newTransporter ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label for="status_id">Transporteur</label>
+				<label htmlFor="status_id">Transporteur</label>
 				<InputGroup>
 					<select className="form-control" type="select" {...register('invoice.transporter_id', { required: true })}>
 						<option disabled selected value="">
@@ -212,7 +212,7 @@ const OrderForm = ({
 					display: !newTransaction ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label for="status_id">Transaction</label>
+				<label htmlFor="status_id">Transaction</label>
 				<InputGroup>
 					<select className="form-control" type="select" {...register('invoice.transaction_id', { required: true })}>
 						<option disabled selected value="">

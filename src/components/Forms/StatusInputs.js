@@ -16,12 +16,12 @@ export const StatusInputs = ({ register, errors, setValue, nextId, unregister })
 	return (
 		<>
 			<FormGroup>
-				<label for="s_id">Identifiant Statut</label>
+				<label htmlFor="s_id">Identifiant Statut</label>
 				<input className="form-control" type="text" placeholder={nextId} disabled></input>
 			</FormGroup>
 			3
 			<FormGroup>
-				<label for="s_msg">Mesage de statut</label>
+				<label htmlFor="s_msg">Mesage de statut</label>
 				<input className="form-control" type="date" {...register('status.msg', { required: true })}></input>
 			</FormGroup>
 		</>

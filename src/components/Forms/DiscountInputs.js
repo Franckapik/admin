@@ -16,19 +16,19 @@ export const DiscountInputs = ({ register, errors, setValue, nextId, unregister 
 	return (
 		<>
 			<FormGroup>
-				<label for="d_id">Identifiant Discount</label>
+				<label htmlFor="d_id">Identifiant Discount</label>
 				<input className="form-control" type="text" placeholder={nextId} disabled></input>
 			</FormGroup>
 			<FormGroup>
-				<label for="d_red">Reduction (%)</label>
+				<label htmlFor="d_red">Reduction (%)</label>
 				<input className="form-control" type="number" {...register('discount.reduction', { required: true })}></input>
 			</FormGroup>
 			<FormGroup>
-				<label for="d_code">Code</label>
+				<label htmlFor="d_code">Code</label>
 				<input className="form-control" type="text" {...register('discount.code', { required: true })}></input>
 			</FormGroup>
 			<FormGroup>
-				<label for="d_exp">Date d'expiration</label>
+				<label htmlFor="d_exp">Date d'expiration</label>
 				<input className="form-control" type="date" {...register('discount.expiration', { required: true })}></input>
 			</FormGroup>
 		</>

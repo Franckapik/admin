@@ -3,7 +3,7 @@ import { FormGroup } from 'reactstrap'
 const FindRelaisInputs = ({ errors, register, setValue, nextId, unregister }) => (
 	<>
 		<FormGroup>
-			<label className="form-control-label" for="c_address">
+			<label className="form-control-label" htmlhtmlFor="c_address">
 				{' '}
 				Adresse{' '}
 			</label>
@@ -12,7 +12,7 @@ const FindRelaisInputs = ({ errors, register, setValue, nextId, unregister }) =>
 			{errors.name?.type === 'maxLength' && "L'adresse est trop longue"}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="c_postal">
+			<label className="form-control-label" htmlhtmlFor="c_postal">
 				{' '}
 				Postal{' '}
 			</label>
@@ -21,7 +21,7 @@ const FindRelaisInputs = ({ errors, register, setValue, nextId, unregister }) =>
 			{errors.name?.type === 'maxLength' && 'Le code postal est trop long'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="c_city">
+			<label className="form-control-label" htmlhtmlFor="c_city">
 				{' '}
 				City{' '}
 			</label>
@@ -30,7 +30,7 @@ const FindRelaisInputs = ({ errors, register, setValue, nextId, unregister }) =>
 			{errors.name?.type === 'maxLength' && 'Le nom de ville est trop long'}
 		</FormGroup>
 		<FormGroup>
-			<label className="form-control-label" for="c_country">
+			<label className="form-control-label" htmlhtmlFor="c_country">
 				{' '}
 				Pays{' '}
 			</label>
