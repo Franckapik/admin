@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { useFormContext } from 'react-hook-form'
 import { FormGroup } from 'reactstrap'
 
 export const TransporterInputs = ({ register, errors, setValue, nextId, unregister }) => {

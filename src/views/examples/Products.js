@@ -80,7 +80,7 @@ const Products = () => {
 									<tbody>
 										{Array.from(productState).map((a, i) => {
 											return (
-												<tr>
+												<tr key={a + i}>
 													<td onClick={() => removeProduct(a.product_id)}>
 														<i className="far fa-trash-alt text-danger"></i>
 													</td>

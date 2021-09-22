@@ -18,7 +18,6 @@ const Customers = () => {
 
 	useEffect(() => {
 		customerList && customerList.length && setUserState(customerList)
-		console.log(userState)
 	}, [customerList])
 
 	const removeCustomer = (id) => {
@@ -49,20 +48,23 @@ const Customers = () => {
 												<i className="far fa-edit"></i>
 											</th>
 											{Object.keys(userState[0]).map((a, i) => {
-												return <th scope="col">{a}</th>
+												return (
+													<th key={a + i} scope="col">
+														{a}
+													</th>
+												)
 											})}
 										</tr>
 									</thead>
 									<tbody>
 										{Array.from(userState).map((a, i) => {
 											return (
-												<tr>
+												<tr key={a + i}>
 													<td onClick={() => removeCustomer(a.user_id)}>
 														<i className="far fa-trash-alt text-danger"></i>
 													</td>
 													<td
 														onClick={() => {
-															console.log(a)
 															setSelection(a)
 															setModif()
 														}}
@@ -70,7 +72,7 @@ const Customers = () => {
 														<i className="far fa-edit text-info"></i>
 													</td>
 													{Object.keys(a).map((b, c) => {
-														return <td>{a[b]}</td>
+														return <td key={b + c}>{a[b]}</td>
 													})}
 												</tr>
 											)

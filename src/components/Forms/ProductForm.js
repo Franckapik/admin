@@ -2,7 +2,7 @@ import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
-import { Alert, Button, Card, CardBody, CardTitle, CustomInput, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
+import { Alert, Button, Card, CardBody, CardTitle, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
 import { CollectionForm } from './CollectionForm'
 import { PackagingForm } from './PackagingForm'
 import { PerformanceForm } from './PerformanceForm'
@@ -87,13 +87,22 @@ export default function ProductForm({ productList, collectionList, packagingList
 				>
 					<label htmlFor="collection_id">Collection</label>
 					<InputGroup>
-						<select className="form-control" type="select" {...register('product.collection_id', { required: true })}>
-							<option disabled selected value="">
+						<select
+							className="form-control"
+							type="select"
+							defaultValue=""
+							{...register('product.collection_id', { required: true })}
+						>
+							<option disabled value="">
 								{' '}
 								-- Choisir une collection --{' '}
 							</option>
 							{Array.from(collectionList).map((a, i) => {
-								return <option value={a.collection_id}>{a.col_name}</option>
+								return (
+									<option key={a + i} value={a.collection_id}>
+										{a.col_name}
+									</option>
+								)
 							})}
 						</select>
 						<InputGroupAddon addonType="append">
@@ -132,14 +141,23 @@ export default function ProductForm({ productList, collectionList, packagingList
 					<FormGroup>
 						<label htmlFor="product_perf">Performance</label>
 						<InputGroup>
-							<select className="form-control" type="select" {...register('product.performance_id', { required: true })}>
-								<option disabled selected value="">
+							<select
+								className="form-control"
+								type="select"
+								defaultValue=""
+								{...register('product.performance_id', { required: true })}
+							>
+								<option disabled value="">
 									{' '}
 									-- Choisir une performance --{' '}
 								</option>
 
 								{Array.from(performanceList).map((a, i) => {
-									return <option value={a.performance_id}>{a.spectre}</option>
+									return (
+										<option key={a + i} value={a.performance_id}>
+											{a.spectre}
+										</option>
+									)
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
@@ -165,14 +183,23 @@ export default function ProductForm({ productList, collectionList, packagingList
 					<FormGroup>
 						<label htmlFor="product_pack">Packaging</label>
 						<InputGroup>
-							<select className="form-control" type="select" {...register('product.packaging_id', { required: true })}>
-								<option disabled selected value="">
+							<select
+								className="form-control"
+								type="select"
+								defaultValue=""
+								{...register('product.packaging_id', { required: true })}
+							>
+								<option disabled value="">
 									{' '}
 									-- Choisir un packaging --{' '}
 								</option>
 
 								{Array.from(packagingList).map((a, i) => {
-									return <option value={a.packaging_id}>{a.reference}</option>
+									return (
+										<option key={a + i} value={a.packaging_id}>
+											{a.reference}
+										</option>
+									)
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
@@ -198,14 +225,23 @@ export default function ProductForm({ productList, collectionList, packagingList
 					<FormGroup>
 						<label htmlFor="product_prop">Propriétés</label>
 						<InputGroup>
-							<select className="form-control" type="select" {...register('product.property_id', { required: true })}>
-								<option disabled selected value="">
+							<select
+								className="form-control"
+								type="select"
+								defaultValue=""
+								{...register('product.property_id', { required: true })}
+							>
+								<option disabled value="">
 									{' '}
 									-- Choisir une propriété --{' '}
 								</option>
 
 								{Array.from(propertyList).map((a, i) => {
-									return <option value={a.property_id}>{a.type}</option>
+									return (
+										<option key={a + i} value={a.property_id}>
+											{a.type}
+										</option>
+									)
 								})}
 							</select>
 							<InputGroupAddon addonType="append">

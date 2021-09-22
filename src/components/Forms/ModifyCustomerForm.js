@@ -1,8 +1,6 @@
 import postData from 'hooks/postData'
 import { useForm } from 'react-hook-form'
-import { Button, Form, FormGroup, input } from 'reactstrap'
-import Cookies from 'js-cookie'
-import { useEffect } from 'react'
+import { Button, Form, FormGroup } from 'reactstrap'
 
 const ModifyCustomerForm = ({ c_selected }) => {
 	console.log(c_selected)

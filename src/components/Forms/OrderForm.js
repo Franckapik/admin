@@ -1,7 +1,6 @@
 import { Alert } from 'bootstrap'
 import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
-import Cookies from 'js-cookie'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
@@ -82,13 +81,22 @@ const OrderForm = ({
 			>
 				<label htmlFor="collection_id">Client</label>
 				<InputGroup>
-					<select className="form-control" type="select" {...register('invoice.user_id', { required: true })}>
-						<option disabled selected value="">
+					<select
+						className="form-control"
+						type="select"
+						defaultValue=""
+						{...register('invoice.user_id', { required: true })}
+					>
+						<option disabled value="">
 							{' '}
 							-- Choisir un client --{' '}
 						</option>
 						{Array.from(customerList).map((a, i) => {
-							return <option value={a.user_id}>{a.name}</option>
+							return (
+								<option key={a + i} value={a.user_id}>
+									{a.name}
+								</option>
+							)
 						})}
 					</select>
 					<InputGroupAddon addonType="append">
@@ -115,13 +123,22 @@ const OrderForm = ({
 			>
 				<label htmlFor="collection_id">Remise</label>
 				<InputGroup>
-					<select className="form-control" type="select" {...register('invoice.discount_id', { required: true })}>
-						<option disabled selected value="">
+					<select
+						className="form-control"
+						type="select"
+						defaultValue=""
+						{...register('invoice.discount_id', { required: true })}
+					>
+						<option disabled value="">
 							{' '}
 							-- Choisir une remise --{' '}
 						</option>
 						{Array.from(discountList).map((a, i) => {
-							return <option value={a.discount_id}>{a.reduction}</option>
+							return (
+								<option key={a + i} value={a.discount_id}>
+									{a.reduction}
+								</option>
+							)
 						})}
 					</select>
 					<InputGroupAddon addonType="append">
@@ -148,13 +165,22 @@ const OrderForm = ({
 			>
 				<label htmlFor="status_id">Statut</label>
 				<InputGroup>
-					<select className="form-control" type="select" {...register('invoice.status_id', { required: true })}>
-						<option disabled selected value="">
+					<select
+						className="form-control"
+						type="select"
+						defaultValue=""
+						{...register('invoice.status_id', { required: true })}
+					>
+						<option disabled value="">
 							{' '}
 							-- Choisir un statut --{' '}
 						</option>
 						{Array.from(statusList).map((a, i) => {
-							return <option value={a.status_id}>{a.status_msg}</option>
+							return (
+								<option key={a + i} value={a.status_id}>
+									{a.status_msg}
+								</option>
+							)
 						})}
 					</select>
 					<InputGroupAddon addonType="append">
@@ -181,13 +207,22 @@ const OrderForm = ({
 			>
 				<label htmlFor="status_id">Transporteur</label>
 				<InputGroup>
-					<select className="form-control" type="select" {...register('invoice.transporter_id', { required: true })}>
-						<option disabled selected value="">
+					<select
+						className="form-control"
+						type="select"
+						defaultValue=""
+						{...register('invoice.transporter_id', { required: true })}
+					>
+						<option disabled value="">
 							{' '}
 							-- Choisir un transporteur --{' '}
 						</option>
 						{Array.from(transporterList).map((a, i) => {
-							return <option value={a.transporter_id}>{a.reference}</option>
+							return (
+								<option key={a + i} value={a.transporter_id}>
+									{a.reference}
+								</option>
+							)
 						})}
 					</select>
 					<InputGroupAddon addonType="append">
@@ -214,13 +249,22 @@ const OrderForm = ({
 			>
 				<label htmlFor="status_id">Transaction</label>
 				<InputGroup>
-					<select className="form-control" type="select" {...register('invoice.transaction_id', { required: true })}>
-						<option disabled selected value="">
+					<select
+						className="form-control"
+						type="select"
+						defaultValue=""
+						{...register('invoice.transaction_id', { required: true })}
+					>
+						<option disabled value="">
 							{' '}
 							-- Choisir une transaction --{' '}
 						</option>
 						{Array.from(transactionList).map((a, i) => {
-							return <option value={a.transaction_id}>{a.desc}</option>
+							return (
+								<option key={a + i} value={a.transaction_id}>
+									{a.desc}
+								</option>
+							)
 						})}
 					</select>
 					<InputGroupAddon addonType="append">

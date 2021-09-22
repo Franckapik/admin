@@ -1,14 +1,11 @@
-import CustomerForm from 'components/Forms/CustomerForm'
+import OrderForm from 'components/Forms/OrderForm'
 import Header from 'components/Headers/Header.js'
+import easyinvoice from 'easyinvoice'
+import delData from 'hooks/delData'
+import useFetch from 'hooks/useFetch'
+import useToggle from 'hooks/useToggle'
 import React, { useEffect, useState } from 'react'
 import { Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
-import easyinvoice from 'easyinvoice'
-import { Button } from 'bootstrap'
-import useFetch from 'hooks/useFetch'
-import { List } from 'layouts/List'
-import useToggle from 'hooks/useToggle'
-import delData from 'hooks/delData'
-import OrderForm from 'components/Forms/OrderForm'
 
 const Orders = () => {
 	const { response: transporterList } = useFetch('/transporter')
@@ -143,7 +140,7 @@ const Orders = () => {
 								<tbody>
 									{Array.from(invoiceState).map((a, i) => {
 										return (
-											<tr>
+											<tr key={a + i}>
 												<td onClick={() => removeProduct(a.product_id)}>
 													<i className="far fa-trash-alt text-danger"></i>
 												</td>
