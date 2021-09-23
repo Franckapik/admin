@@ -342,7 +342,9 @@ app.get('/complete_invoice', (req, res) => {
 		.join('status', 'invoice.status_id', 'status.status_id')
 		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
 		.join('discount', 'invoice.discount_id', 'discount.discount_id')
+		.join('delivery', 'invoice.delivery_id', 'delivery.delivery_id')
 		.then((data) => {
+			console.log(data)
 			res.send(data)
 		})
 })

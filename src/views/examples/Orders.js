@@ -15,6 +15,7 @@ const Orders = () => {
 	const { response: productList } = useFetch('/product')
 	const { response: discountList } = useFetch('/discount')
 	const { response: customerList } = useFetch('/customer')
+	const { response: deliveryList } = useFetch('/delivery')
 
 	var data = {
 		documentTitle: 'Facture',
@@ -95,7 +96,6 @@ const Orders = () => {
 
 	useEffect(() => {
 		invoiceList && invoiceList.length && setInvoiceState(invoiceList)
-		console.log(invoiceState)
 	}, [invoiceList])
 
 	const removeProduct = (pid) => {
@@ -192,7 +192,8 @@ const Orders = () => {
 								transactionList &&
 								productList &&
 								discountList &&
-								customerList ? (
+								customerList &&
+								deliveryList ? (
 									<OrderForm
 										invoiceList={invoiceState}
 										transporterList={transporterList}
@@ -202,6 +203,7 @@ const Orders = () => {
 										productList={productList}
 										discountList={discountList}
 										customerList={customerList}
+										deliveryList={deliveryList}
 									/>
 								) : (
 									'Aucune facturation possible'

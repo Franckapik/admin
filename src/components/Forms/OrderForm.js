@@ -9,6 +9,7 @@ import { DiscountInputs } from './DiscountInputs'
 import { StatusInputs } from './StatusInputs'
 import TransactionInputs from './TransactionInputs'
 import { TransporterInputs } from './TransporterInputs'
+import { DeliveryInputs } from './DeliveryInputs'
 
 const OrderForm = ({
 	invoiceList,
@@ -19,6 +20,7 @@ const OrderForm = ({
 	productList,
 	customerList,
 	transactionList,
+	deliveryList,
 }) => {
 	const nextInvoiceId = invoiceList[invoiceList.length - 1].invoice_id + 1
 
@@ -27,6 +29,7 @@ const OrderForm = ({
 	const nextDiscountId = discountList[discountList.length - 1].discount_id + 1
 	const nextTransporterId = transporterList[transporterList.length - 1].transporter_id + 1
 	const nextTransactionId = transactionList.length && transactionList[transactionList.length - 1].transaction_id + 1
+	const nextDeliveryId = deliveryList.length && deliveryList[deliveryList.length - 1].delivery_id + 1
 
 	const {
 		register,
@@ -54,6 +57,9 @@ const OrderForm = ({
 			transaction: {
 				transaction_id: nextTransactionId,
 			},
+			delivery: {
+				delivery_id: nextDeliveryId,
+			},
 		},
 	})
 
@@ -64,6 +70,7 @@ const OrderForm = ({
 	const [newStatus, addStatus] = useToggle()
 	const [newTransporter, addTransporter] = useToggle()
 	const [newTransaction, addTransaction] = useToggle()
+	const [newDelivery, addDelivery] = useToggle()
 
 	const handleRegistration = (data) => postData('/addInvoice', data)
 
@@ -118,10 +125,53 @@ const OrderForm = ({
 			) : null}
 			<FormGroup
 				style={{
+					display: !newDelivery ? 'block' : 'none', // toggle the visbility of an input
+				}}
+			>
+				<label htmlFor="delivery_id">Livraison</label>
+				<InputGroup>
+					<select
+						className="form-control"
+						type="select"
+						defaultValue=""
+						{...register('delivery.delivery_id', { required: true })}
+					>
+						<option disabled value="">
+							{' '}
+							-- Choisir une livraison --{' '}
+						</option>
+						{Array.from(deliveryList).map((a, i) => {
+							return (
+								<option key={a + i} value={a.delivery_id}>
+									{a.recipient}
+								</option>
+							)
+						})}
+					</select>
+					<InputGroupAddon addonType="append">
+						<Button onClick={addDelivery}>Ajouter</Button>
+					</InputGroupAddon>
+				</InputGroup>
+				{errorsForm && errorsForm.invoice && errorsForm.invoice.delivery_id?.type === 'required' && (
+					<Alert color="warning">Une livraison est requise</Alert>
+				)}
+			</FormGroup>
+			{newDelivery ? (
+				<DeliveryInputs
+					errors={errors}
+					register={register}
+					setValue={setValue}
+					nextId={nextDeliveryId}
+					nextInvoiceId={nextInvoiceId}
+					unregister={unregister}
+				></DeliveryInputs>
+			) : null}
+			<FormGroup
+				style={{
 					display: !newDiscount ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label htmlFor="collection_id">Remise</label>
+				<label htmlFor="discount_id">Remise</label>
 				<InputGroup>
 					<select
 						className="form-control"
@@ -205,7 +255,7 @@ const OrderForm = ({
 					display: !newTransporter ? 'block' : 'none', // toggle the visbility of an input
 				}}
 			>
-				<label htmlFor="status_id">Transporteur</label>
+				<label htmlFor="transporter_id">Transporteur</label>
 				<InputGroup>
 					<select
 						className="form-control"
@@ -285,6 +335,7 @@ const OrderForm = ({
 					unregister={unregister}
 				></TransactionInputs>
 			) : null}
+
 			<Button>Ajouter</Button>
 		</Form>
 	)

@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import { Button, Form, FormGroup } from 'reactstrap'
 
 const ModifyCustomerForm = ({ c_selected }) => {
-	console.log(c_selected)
 	const {
 		register,
 		formState: { errors },

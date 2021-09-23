@@ -180,7 +180,7 @@ const Ship = () => {
 											<Marker
 												width={50}
 												anchor={[Number(a.latitude), Number(a.longitude)]}
-												color={relaisSelected === a.id ? 'yellow' : 'blue'}
+												color={relaisSelected.id === a.id ? 'yellow' : 'blue'}
 												onClick={() => setRelaisSelected(a.id)}
 											/>
 										)
@@ -197,10 +197,10 @@ const Ship = () => {
 										{Array.from(service).map((a, i) => {
 											return (
 												<tr>
-													<td onClick={() => setRelaisSelected(a.id)}>
+													<td onClick={() => setRelaisSelected(a)}>
 														<Card
 															className="bg-transparent"
-															style={{ color: relaisSelected === a.id ? 'red' : 'white' }}
+															style={{ color: relaisSelected.id === a.id ? 'red' : 'white' }}
 														>
 															<CardTitle>{a.name}</CardTitle>
 															<CardBody className="p-0">
@@ -233,38 +233,36 @@ const Ship = () => {
 								<h3 className="mb-0">Relais selectionné</h3>
 							</CardHeader>
 							<CardBody>
-								<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
-									<FormGroup>
-										<label className="form-control-label" htmlFor="r_address">
-											{' '}
-											Adresse recherchée{' '}
-										</label>
-										<input className="form-control" type="text" {...register('relais.input')} />
-										{errors.name?.type === 'required' && 'Une adresse est requise'}
-										{errors.name?.type === 'maxLength' && "L'adresse est trop longue"}
-									</FormGroup>
-									<ListGroup>
-										{addressListState.map((a, i) => (
-											<ListGroupItem
-												key={a + i}
-												color="info"
-												onClick={() => {
-													setValue('relais.input', a.properties.label)
-													setValue('relais.address', a.properties.name)
-													setValue('relais.postal', a.properties.citycode)
-													setValue('relais.city', a.properties.city)
-													setValue('relais.geo', a.geometry.coordinates)
-												}}
-												style={{ cursor: 'pointer' }}
-											>
-												{a.properties.label}
+								<Row>
+									<Col>
+										<ListGroup>
+											<ListGroupItem>
+												{relaisSelected.name} [{relaisSelected.id} ]
 											</ListGroupItem>
-										))}
-									</ListGroup>
-									<FindRelaisInputs errors={errors} register={register}></FindRelaisInputs>
-
-									<Button>Rechercher</Button>
-								</Form>
+											<ListGroupItem>
+												{relaisSelected.house_number} {relaisSelected.street} {relaisSelected.postal_code}{' '}
+												{relaisSelected.city}
+											</ListGroupItem>
+											<ListGroupItem>{relaisSelected.carrier}</ListGroupItem>
+											<ListGroupItem>{relaisSelected.code}</ListGroupItem>
+											<ListGroupItem>{relaisSelected.open_tomorrow ? 'Ouvert demain' : 'Fermé demain'}</ListGroupItem>
+											<ListGroupItem>
+												{relaisSelected.open_upcoming_week
+													? 'Ouvert la semaine prochaine'
+													: 'Fermé la semaine prochaine'}
+											</ListGroupItem>
+										</ListGroup>
+									</Col>
+									<Col>
+										{' '}
+										{relaisSelected &&
+											['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'].map((a, i) => (
+												<ListGroupItem>
+													<strong>{a} </strong> {relaisSelected.formatted_opening_times[i].map((a, i) => a + ' ')}
+												</ListGroupItem>
+											))}
+									</Col>
+								</Row>
 							</CardBody>
 						</Card>
 					</div>
