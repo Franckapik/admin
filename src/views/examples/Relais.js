@@ -1,30 +1,30 @@
 // core components
+import FindRelaisInputs from 'components/Forms/FindRelaisInputs'
 import Header from 'components/Headers/Header'
 import useFetch from 'hooks/useFetch'
+// import
+import { OpenStreetMapProvider } from 'leaflet-geosearch'
+import { Map, Marker } from 'pigeon-maps'
 import React, { useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
 // reactstrap components
 import {
+	Button,
 	Card,
 	CardBody,
 	CardHeader,
 	CardTitle,
 	Col,
 	Container,
+	Form,
 	FormGroup,
 	ListGroup,
 	ListGroupItem,
 	Row,
 	Table,
 } from 'reactstrap'
-import { Map, Marker } from 'pigeon-maps'
-import { useForm } from 'react-hook-form'
-import { Button, Form } from 'reactstrap'
-import FindRelaisInputs from 'components/Forms/FindRelaisInputs'
-// import
-import { OpenStreetMapProvider } from 'leaflet-geosearch'
-import Autocomplete from 'layouts/Autocomplete'
 
-const Ship = () => {
+const Relais = () => {
 	const [center, setCenter] = useState([48.27, -1.669])
 	const [house, setHouse] = useState([48.27, -1.669])
 	const [zoom, setZoom] = useState(12)
@@ -35,7 +35,6 @@ const Ship = () => {
 	})
 
 	const { response: carriersList } = useFetch('/ship/carriers')
-
 	const { response: serviceList } = useFetch(
 		'/service-points?country=FR&ne_latitude=' +
 			bounds.ne[0] +
@@ -53,7 +52,6 @@ const Ship = () => {
 
 	useEffect(() => {
 		serviceList && serviceList.length && setService(serviceList)
-		console.log(serviceList)
 	}, [serviceList])
 
 	const {
@@ -70,14 +68,7 @@ const Ship = () => {
 
 	useEffect(() => {
 		addressList && addressList.features && setAddress(addressList.features.map((a, i) => a))
-		console.log(addressListState)
 	}, [addressList])
-
-	// setup
-	const provider = new OpenStreetMapProvider()
-
-	// search
-	/* 	provider.search({ query: input }).then((res) => console.log(res)) */
 
 	const handleRegistration = (data) => {
 		setHouse([data.relais.geo[1], data.relais.geo[0]])
@@ -233,67 +224,49 @@ const Ship = () => {
 								<h3 className="mb-0">Relais selectionné</h3>
 							</CardHeader>
 							<CardBody>
-								<Row>
-									<Col>
-										<ListGroup>
-											<ListGroupItem>
-												{relaisSelected.name} [{relaisSelected.id} ]
-											</ListGroupItem>
-											<ListGroupItem>
-												{relaisSelected.house_number} {relaisSelected.street} {relaisSelected.postal_code}{' '}
-												{relaisSelected.city}
-											</ListGroupItem>
-											<ListGroupItem>{relaisSelected.carrier}</ListGroupItem>
-											<ListGroupItem>{relaisSelected.code}</ListGroupItem>
-											<ListGroupItem>{relaisSelected.open_tomorrow ? 'Ouvert demain' : 'Fermé demain'}</ListGroupItem>
-											<ListGroupItem>
-												{relaisSelected.open_upcoming_week
-													? 'Ouvert la semaine prochaine'
-													: 'Fermé la semaine prochaine'}
-											</ListGroupItem>
-										</ListGroup>
-									</Col>
-									<Col>
-										{' '}
-										{relaisSelected &&
-											['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'].map((a, i) => (
+								{relaisSelected ? (
+									<Row>
+										<Col>
+											<ListGroup>
 												<ListGroupItem>
-													<strong>{a} </strong> {relaisSelected.formatted_opening_times[i].map((a, i) => a + ' ')}
+													{relaisSelected.name} [{relaisSelected.id} ]
 												</ListGroupItem>
-											))}
-									</Col>
-								</Row>
+												<ListGroupItem>
+													{relaisSelected.house_number} {relaisSelected.street} {relaisSelected.postal_code}{' '}
+													{relaisSelected.city}
+												</ListGroupItem>
+												<ListGroupItem>{relaisSelected.carrier}</ListGroupItem>
+												<ListGroupItem>{relaisSelected.code}</ListGroupItem>
+												<ListGroupItem>
+													{relaisSelected.open_tomorrow ? 'Ouvert demain' : 'Fermé demain'}
+												</ListGroupItem>
+												<ListGroupItem>
+													{relaisSelected.open_upcoming_week
+														? 'Ouvert la semaine prochaine'
+														: 'Fermé la semaine prochaine'}
+												</ListGroupItem>
+											</ListGroup>
+										</Col>
+										<Col>
+											{' '}
+											{relaisSelected &&
+												['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'].map((a, i) => (
+													<ListGroupItem>
+														<strong>{a} </strong> {relaisSelected.formatted_opening_times[i].map((a, i) => a + ' ')}
+													</ListGroupItem>
+												))}
+										</Col>
+									</Row>
+								) : (
+									'Aucun relais selectionné'
+								)}
 							</CardBody>
 						</Card>
 					</div>
 				</Row>
-				{/* 				<Row className="mt-5">
-					<div className="col">
-						<Card className="bg-default shadow">
-							<CardHeader className="bg-transparent border-0">
-								<h3 className="text-white mb-0">Liste des transporteurs disponibles (carriers)</h3>
-							</CardHeader>
-							{service && service.length && service.length > 0 ? (
-								<Table className="align-items-center table-dark table-flush" responsive>
-									<tbody>
-										{Array.from(service).map((a, i) => {
-											return (
-												<tr>
-													<td>{a.id}</td>
-												</tr>
-											)
-										})}
-									</tbody>
-								</Table>
-							) : (
-								'Aucun transporteur disponible'
-							)}
-						</Card>
-					</div>
-				</Row> */}
 			</Container>
 		</>
 	)
 }
 
-export default Ship
+export default Relais

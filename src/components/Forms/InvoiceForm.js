@@ -11,7 +11,7 @@ import TransactionInputs from './TransactionInputs'
 import { TransporterInputs } from './TransporterInputs'
 import { DeliveryInputs } from './DeliveryInputs'
 
-const OrderForm = ({
+const InvoiceForm = ({
 	invoiceList,
 	transporterList,
 	statusList,
@@ -30,7 +30,7 @@ const OrderForm = ({
 	const nextTransporterId = transporterList[transporterList.length - 1].transporter_id + 1
 	const nextTransactionId = transactionList.length && transactionList[transactionList.length - 1].transaction_id + 1
 	const nextDeliveryId = deliveryList.length && deliveryList[deliveryList.length - 1].delivery_id + 1
-
+	const order_number = Math.floor(Math.random() * (10000 - 2500) + 2500)
 	const {
 		register,
 		formState: { errors },
@@ -41,6 +41,7 @@ const OrderForm = ({
 		defaultValues: {
 			invoice: {
 				invoice_id: nextInvoiceId,
+				order_number: order_number,
 			},
 			customer: {
 				user_id: nextCustomerId,
@@ -80,6 +81,10 @@ const OrderForm = ({
 			<FormGroup>
 				<label htmlFor="prod_ident">Identifiant facture</label>
 				<input className="form-control" type="text" placeholder={nextInvoiceId} disabled></input>
+			</FormGroup>
+			<FormGroup>
+				<label htmlFor="prod_ident">Numero de commande</label>
+				<input className="form-control" type="text" placeholder={order_number} disabled></input>
 			</FormGroup>
 			<FormGroup
 				style={{
@@ -341,4 +346,4 @@ const OrderForm = ({
 	)
 }
 
-export default OrderForm
+export default InvoiceForm

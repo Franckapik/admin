@@ -343,8 +343,8 @@ app.get('/complete_invoice', (req, res) => {
 		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
 		.join('discount', 'invoice.discount_id', 'discount.discount_id')
 		.join('delivery', 'invoice.delivery_id', 'delivery.delivery_id')
+		.join('transaction', 'invoice.transaction_id', 'transaction.transaction_id')
 		.then((data) => {
-			console.log(data)
 			res.send(data)
 		})
 })
@@ -359,6 +359,51 @@ app.get('/ship/:id', (req, res) => {
 		},
 	})
 		.then((response) => response.text())
+		.then((data) => {
+			res.send(data)
+		})
+})
+
+app.post('/addParcel', (req, res) => {
+	logger.info('Add a parcel %o', req.body.parcel.name)
+	fetch('https://panel.sendcloud.sc/api/v2/parcels', {
+		method: 'post',
+		body: JSON.stringify(req.body),
+		headers: {
+			'Content-Type': 'application/json',
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => {
+			if (response.ok) {
+				logger.info('Parcel added %s', response.statusText)
+			} else {
+				logger.error('Parcel error%s', response.statusText)
+			}
+			response.text()
+		})
+		.then((data) => {
+			res.send(data)
+		})
+})
+
+app.get('/getParcel', (req, res) => {
+	logger.info('Fetch all parcels')
+	fetch('https://panel.sendcloud.sc/api/v2/parcels', {
+		headers: {
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => {
+			if (response.ok) {
+				logger.info('Parcel fetched %s', response.statusText)
+			} else {
+				logger.error('Parcel fetch error%s', response.statusText)
+			}
+			return response.json()
+		})
 		.then((data) => {
 			res.send(data)
 		})

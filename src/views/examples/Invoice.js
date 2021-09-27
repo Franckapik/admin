@@ -1,4 +1,4 @@
-import OrderForm from 'components/Forms/OrderForm'
+import InvoiceForm from 'components/Forms/InvoiceForm'
 import Header from 'components/Headers/Header.js'
 import easyinvoice from 'easyinvoice'
 import delData from 'hooks/delData'
@@ -194,7 +194,7 @@ const Orders = () => {
 								discountList &&
 								customerList &&
 								deliveryList ? (
-									<OrderForm
+									<InvoiceForm
 										invoiceList={invoiceState}
 										transporterList={transporterList}
 										statusList={statusList}

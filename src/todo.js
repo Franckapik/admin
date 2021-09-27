@@ -1,3 +1,18 @@
+const { default: InvoiceForm } = require("components/Forms/InvoiceForm")
+
+-verifier ts les formulaires existants avec la bonne reaction au fetch vides
+-laisser les fonctionnalités sup de lapi sendcloud pour plus tard et rester sur l'import de colis auto slmt. dc pas de order, del parcels, etc...
+-relais consultation dans un new tab
+-relais en modalbox pour le order form.
+-ajouter les items du invoice en séparé bas du form invoice
+-ajouter la generation de pdf depuis la liste des invoices
+
+-concevoir laffichage de produit 3d
+
+
+
+
+
 -- version 5 ---
 alt shift o : effracer les dep non utilisées
 ctrl+l : join line

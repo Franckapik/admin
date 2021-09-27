@@ -1,17 +1,17 @@
-import Index from 'views/Index.js'
-import Profile from 'views/examples/Profile.js'
-import Maps from 'views/examples/Maps.js'
-import Register from 'views/examples/Register.js'
-import Login from 'views/examples/Login.js'
-import Tables from 'views/examples/Tables.js'
-import Icons from 'views/examples/Icons.js'
-import Products from 'views/examples/Products.js'
-import Database from 'views/examples/Database.js'
-import Customers from 'views/examples/Customers.js'
 import ReactGA from 'react-ga'
-import Orders from 'views/examples/Orders'
-import Ship from 'views/examples/Ship'
+import Customers from 'views/examples/Customers.js'
+import Database from 'views/examples/Database.js'
 import Delivery from 'views/examples/Delivery'
+import Icons from 'views/examples/Icons.js'
+import Invoice from 'views/examples/Invoice'
+import Login from 'views/examples/Login.js'
+import Parcel from 'views/examples/Parcel'
+import Products from 'views/examples/Products.js'
+import Profile from 'views/examples/Profile.js'
+import Register from 'views/examples/Register.js'
+import Relais from 'views/examples/Relais'
+import Tables from 'views/examples/Tables.js'
+import Index from 'views/Index.js'
 
 {
 	ReactGA.initialize('UA-112792874-1')
@@ -50,10 +50,10 @@ var routes = [
 		layout: '/admin',
 	},
 	{
-		path: '/orders',
+		path: '/Invoice',
 		name: 'Commandes',
 		icon: 'ni ni-bullet-list-67 text-red',
-		component: Orders,
+		component: Invoice,
 		layout: '/admin',
 	},
 	{
@@ -64,10 +64,17 @@ var routes = [
 		layout: '/admin',
 	},
 	{
-		path: '/ship',
+		path: '/Parcel',
 		name: 'Expeditions',
 		icon: 'ni ni-bullet-list-67 text-red',
-		component: Ship,
+		component: Parcel,
+		layout: '/admin',
+	},
+	{
+		path: '/Relais',
+		name: 'Relais',
+		icon: 'ni ni-bullet-list-67 text-red',
+		component: Relais,
 		layout: '/admin',
 	},
 	{
