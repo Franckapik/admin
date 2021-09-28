@@ -14,7 +14,7 @@ const logger = require('./log/logger')
 
 const moment = require('moment')
 const session = require('express-session')
-const { sessionStore, upsert, query, insert } = require('./db/db')
+const { sessionStore, upsert, query, insert, insertForce } = require('./db/db')
 const cors = require('cors')
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
@@ -219,6 +219,30 @@ app.post('/addProduct', (req, res) => {
 		})
 })
 
+app.post('/addInvoice', (req, res) => {
+	console.log(req.body)
+	const cust = req.body.customer ? insert('customer', 'user_id', req.body.customer) : Promise.resolve()
+	const stat = req.body.status ? insert('status', 'status_id', req.body.status) : Promise.resolve()
+	const deli = req.body.delivery ? insert('delivery', 'delivery_id', req.body.delivery) : Promise.resolve()
+	const tran = req.body.transaction ? insert('transaction', 'transaction_id', req.body.transaction) : Promise.resolve()
+	const disc = req.body.discount ? insert('discount', 'discount_id', req.body.discount) : Promise.resolve()
+	const item = req.body.items
+		? req.body.items.map((a, i) => {
+				return insertForce('item', a)
+		  })
+		: Promise.resolve()
+
+	Promise.all([cust, stat, deli, tran, disc, item])
+		.then((values) => {
+			insert('invoice', 'invoice_id', req.body.invoice)
+				.then((id) => res.json({ 'New invoice': values }))
+				.catch((error) => res.sendStatus(500))
+		})
+		.catch((err) => {
+			console.log(err)
+		})
+})
+
 app.post('/modifyProduct', (req, res) => {
 	const col = req.body.collection ? insert('collection', 'collection_id', req.body.collection) : Promise.resolve()
 	const perf = req.body.performance ? insert('collection', 'collection_id', req.body.collection) : Promise.resolve()
@@ -340,7 +364,6 @@ app.get('/complete_invoice', (req, res) => {
 	knex('invoice')
 		.join('customer', 'invoice.user_id', 'customer.user_id')
 		.join('status', 'invoice.status_id', 'status.status_id')
-		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
 		.join('discount', 'invoice.discount_id', 'discount.discount_id')
 		.join('delivery', 'invoice.delivery_id', 'delivery.delivery_id')
 		.join('transaction', 'invoice.transaction_id', 'transaction.transaction_id')

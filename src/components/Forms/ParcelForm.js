@@ -66,7 +66,7 @@ const ParcelForm = ({ invoiceList }) => {
 			</InputGroup>
 			<ParcelInputs register={register}></ParcelInputs>
 			<div className="text-center">
-				<Button>Ajouter le colis</Button>
+				<Button>+ le colis</Button>
 			</div>
 		</Form>
 	)

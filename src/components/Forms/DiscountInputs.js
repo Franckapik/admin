@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
+import { useFormContext } from 'react-hook-form'
 import { Col, FormGroup, Row } from 'reactstrap'
 
-export const DiscountInputs = ({ register, errors, setValue, nextId, unregister }) => {
+export const DiscountInputs = ({ nextId }) => {
+	const { register, setValue, unregister } = useFormContext()
 	useEffect(() => {
 		setValue('discount.discount_id', nextId)
 		setValue('invoice.discount_id', nextId)
@@ -19,7 +21,7 @@ export const DiscountInputs = ({ register, errors, setValue, nextId, unregister 
 					{' '}
 					<FormGroup>
 						<label htmlFor="d_id">Identifiant Discount</label>
-						<input className="form-control" type="text" placeholder={nextId} disabled></input>
+						<input className="form-control" type="text" placeholder={nextId}></input>
 					</FormGroup>
 				</Col>
 				<Col md={3}>

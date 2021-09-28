@@ -113,7 +113,7 @@ const ModifyCustomerForm = ({ c_selected }) => {
 				{errors.name?.type === 'maxLength' && 'Le nom de pays est trop long'}
 			</FormGroup>
 
-			<Button>Ajouter</Button>
+			<Button>+</Button>
 		</Form>
 	)
 }

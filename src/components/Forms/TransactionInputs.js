@@ -1,14 +1,22 @@
 import { useEffect } from 'react'
+import { useFormContext } from 'react-hook-form'
 import { Col, FormGroup, Row } from 'reactstrap'
 
-const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nextInvoiceId }) => {
+const TransactionInputs = ({ nextId }) => {
+	const {
+		register,
+		formState: { errors },
+		setValue,
+		unregister,
+	} = useFormContext()
+
 	useEffect(() => {
-		setValue('discount.discount_id', nextId)
-		setValue('invoice.discount_id', nextId)
+		setValue('transaction.transaction_id', nextId)
+		setValue('invoice.transaction_id', nextId)
 
 		return () => {
-			unregister('discount')
-			unregister('invoice.discount_id')
+			unregister('transaction')
+			unregister('invoice.transaction_id')
 		}
 	}, [setValue, unregister, nextId])
 	return (
@@ -21,34 +29,10 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 							{' '}
 							Transaction Id{' '}
 						</label>
-						<input
-							className="form-control"
-							type="text"
-							{...register('transaction.user_id')}
-							placeholder={nextId}
-							disabled
-						/>
+						<input className="form-control" type="text" {...register('transaction.transaction_id')} placeholder={nextId} />
 					</FormGroup>
 				</Col>
 				<Col md={6}>
-					{' '}
-					<FormGroup>
-						<label className="form-control-label" htmlFor="t_invoiceid">
-							{' '}
-							Invoice Id{' '}
-						</label>
-						<input
-							className="form-control"
-							type="text"
-							{...register('transaction.invoice_id')}
-							placeholder={nextId}
-							disabled
-						/>
-					</FormGroup>
-				</Col>
-			</Row>
-			<Row form>
-				<Col md={4}>
 					{' '}
 					<FormGroup>
 						<label className="form-control-label" htmlFor="t_amount">
@@ -59,7 +43,9 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 						{errors.name?.type === 'required' && 'Un montant est requis'}
 					</FormGroup>
 				</Col>
-				<Col md={4}>
+			</Row>
+			<Row form>
+				<Col md={6}>
 					{' '}
 					<FormGroup>
 						<label className="form-control-label" htmlFor="t_status">
@@ -70,7 +56,7 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 						{errors.name?.type === 'required' && 'Un statut est requis'}
 					</FormGroup>
 				</Col>
-				<Col md={4}>
+				<Col md={6}>
 					{' '}
 					<FormGroup>
 						<label className="form-control-label" htmlFor="t_mode">
@@ -134,7 +120,7 @@ const TransactionInputs = ({ errors, register, setValue, nextId, unregister, nex
 							{' '}
 							Description{' '}
 						</label>
-						<input className="form-control" type="text" {...register('transaction.desc')} />
+						<input className="form-control" type="text" {...register('transaction.desc', { maxLength: '100' })} />
 					</FormGroup>
 				</Col>
 			</Row>

@@ -118,7 +118,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 							})}
 						</select>
 						<InputGroupAddon addonType="append">
-							<Button onClick={addCollection}>Ajouter</Button>
+							<Button onClick={addCollection}>+</Button>
 						</InputGroupAddon>
 					</InputGroup>
 					{errorsForm && errorsForm.product && errorsForm.product.collection_id?.type === 'required' && (
@@ -165,7 +165,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addPerformance}>Ajouter</Button>
+								<Button onClick={addPerformance}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.performance_id?.type === 'required' && (
@@ -203,7 +203,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addPackaging}>Ajouter</Button>
+								<Button onClick={addPackaging}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.packaging_id?.type === 'required' && (
@@ -241,7 +241,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addProperty}>Ajouter</Button>
+								<Button onClick={addProperty}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.property_id?.type === 'required' && (
@@ -274,7 +274,7 @@ export default function ProductForm({ productList, collectionList, packagingList
 					</Col>
 				</Row>
 
-				<Button>Ajouter</Button>
+				<Button>+</Button>
 			</Form>
 		</FormProvider>
 	)

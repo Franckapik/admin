@@ -6,6 +6,7 @@ import useFetch from 'hooks/useFetch'
 import useToggle from 'hooks/useToggle'
 import React, { useEffect, useState } from 'react'
 import { Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
+import { invoicePdf } from 'variables/invoicePdf'
 
 const Orders = () => {
 	const { response: statusList } = useFetch('/status')
@@ -16,73 +17,22 @@ const Orders = () => {
 	const { response: customerList } = useFetch('/customer')
 	const { response: deliveryList } = useFetch('/delivery')
 
-	var data = {
-		documentTitle: 'Facture',
-		locale: 'fr-FR',
-		currency: 'EUR', //See documentation 'Locales and Currency' for more info
-		taxNotation: 'vat', //or gst
-		marginTop: 25,
-		marginRight: 25,
-		marginLeft: 25,
-		marginBottom: 25,
-		logo: 'https://public.easyinvoice.cloud/img/logo_en_original.png', //or base64
-		background: 'https://public.easyinvoice.cloud/img/watermark-draft.jpg', //or base64 //img or pdf
-		sender: {
-			company: 'Quadratik.fr',
-			address: '1 rue d aubigné',
-			zip: '35440',
-			city: 'Feins',
-			country: 'France',
-			//"custom1": "custom value 1",
-			//"custom2": "custom value 2",
-			//"custom3": "custom value 3"
-		},
-		client: {
-			company: 'Mr Franck Girard',
-			address: '1 rue des lilas',
-			zip: '54212',
-			city: 'Ici les moulineaux',
-			country: 'France',
-			//"custom1": "custom value 1",
-			//"custom2": "custom value 2",
-			//"custom3": "custom value 3"
-		},
-		invoiceNumber: '#125485',
-		invoiceDate: '12.09.2021',
-		products: [
-			{
-				quantity: '2',
-				description: 'Woodik-7',
-				tax: 0,
-				price: 68,
-			},
-			{
-				quantity: '4',
-				description: 'Quadrablack',
-				tax: 0,
-				price: 62,
-			},
-		],
-		bottomNotice:
-			'TVA non applicable, article 293 B du CGI | Escompte pour réglement anticipé de 0% - Pénalité en cas de retard de paiement: 1.5 fois le taux d intéret légal | IBAN : FR76 1380 7005 8132 3192 3592 810 BIC/SWIFT : CCBPFRPPNAN',
-		translate: {
-			invoiceNumber: 'Facture n°',
-			invoiceDate: 'Date de facturation',
-			products: 'Produits',
-			quantity: 'Quantité',
-			price: 'Prix',
-			subtotal: 'Sous-total',
-			total: 'Total',
-		},
-	}
+	const facturation = (invoice) => {
+		//get invoice data
+		invoicePdf.client.company = invoice.name + ' ' + invoice.firstname
+		invoicePdf.client.address = invoice.address
+		invoicePdf.client.zip = invoice.postal
+		invoicePdf.client.city = invoice.city
+		invoicePdf.client.country = invoice.country
+		invoicePdf.invoiceNumber = invoice.order_number
+		invoicePdf.invoiceDate = invoice.order_date
 
-	//Create your invoice! Easy!
-	const facturation = () =>
-		easyinvoice.createInvoice(data, function (result) {
+		//send to pdf
+		easyinvoice.createInvoice(invoicePdf, function (result) {
 			//The response will contain a base64 encoded PDF file
-			easyinvoice.download('myInvoice.pdf', result.pdf)
-			console.log(result.pdf)
+			result && easyinvoice.download('myInvoice.pdf', result.pdf)
 		})
+	}
 
 	const { response: invoiceList } = useFetch('/complete_invoice')
 
@@ -121,7 +71,7 @@ const Orders = () => {
 											<i className="far fa-trash-alt" />
 										</th>
 										<th scope="col">
-											<i className="far fa-list-alt"></i>
+											<i className="far fa-file-pdf"></i>
 										</th>
 										<th scope="col">
 											<i className="far fa-edit"></i>
@@ -130,7 +80,6 @@ const Orders = () => {
 										<th scope="col">Client</th>
 										<th scope="col">Statut</th>
 										<th scope="col">FDP</th>
-										<th scope="col">Transporteur</th>
 										<th scope="col">Date</th>
 										<th scope="col">Réduction</th>
 										<th scope="col">Items</th>
@@ -143,27 +92,16 @@ const Orders = () => {
 												<td onClick={() => removeProduct(a.product_id)}>
 													<i className="far fa-trash-alt text-danger"></i>
 												</td>
-												<td
-													onClick={() => {
-														setSelection(a)
-														setModal()
-													}}
-												>
-													<i className="far fa-list-alt text-info"></i>
+												<td onClick={() => facturation(a)}>
+													<i className="far fa-file-pdf text-yellow"></i>
 												</td>
-												<td
-													onClick={() => {
-														setSelection(a)
-														setModif()
-													}}
-												>
+												<td>
 													<i className="far fa-edit text-info"></i>
 												</td>
 												<td>{a.invoice_id}</td>
 												<td>{a.name}</td>
 												<td>{a.status_msg}</td>
 												<td>{a.fdp} €</td>
-												<td>{a.reference}</td>
 												<td>{a.order_date}</td>
 												<td>{a.reduction} €</td>
 												<td>produits</td>
@@ -182,8 +120,6 @@ const Orders = () => {
 								<h3 className="mb-0">Ajouter un devis/facture</h3>
 							</CardHeader>
 							<CardBody>
-								{/* 								<span onClick={facturation}>Generer une facture en pdf</span>
-								 */}{' '}
 								{invoiceState &&
 								invoiceState.length &&
 								statusList &&

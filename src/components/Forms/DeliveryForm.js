@@ -1,19 +1,12 @@
 import postData from 'hooks/postData'
-import { useForm } from 'react-hook-form'
+import { FormProvider, useForm } from 'react-hook-form'
 import { Button, Form } from 'reactstrap'
 import { DeliveryInputs } from './DeliveryInputs'
 
 const DeliveryForm = ({ deliveryList }) => {
 	const nextDeliveryId = deliveryList.length && deliveryList[deliveryList.length - 1].delivery_id + 1
 
-	const {
-		register,
-		formState: { errors },
-		handleSubmit,
-		unregister,
-		setValue,
-		watch,
-	} = useForm({
+	const methods = useForm({
 		defaultValues: {
 			delivery: {
 				delivery_id: nextDeliveryId,
@@ -26,17 +19,12 @@ const DeliveryForm = ({ deliveryList }) => {
 	const handleError = (errors) => console.log('error', errors)
 
 	return (
-		<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
-			<DeliveryInputs
-				errors={errors}
-				nextId={nextDeliveryId}
-				register={register}
-				setValue={setValue}
-				unregister={unregister}
-				watch={watch}
-			></DeliveryInputs>
-			<Button>Ajouter</Button>
-		</Form>
+		<FormProvider {...methods}>
+			<Form onSubmit={methods.handleSubmit(handleRegistration, handleError)}>
+				<DeliveryInputs nextId={nextDeliveryId}></DeliveryInputs>
+				<Button>+</Button>
+			</Form>
+		</FormProvider>
 	)
 }
 

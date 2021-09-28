@@ -2,10 +2,13 @@ import useGeo from 'hooks/useGeo'
 import useToggle from 'hooks/useToggle'
 import ModalBox from 'layouts/ModalBox'
 import { useEffect, useState } from 'react'
+import { useFormContext } from 'react-hook-form'
 import { Button, Col, FormGroup, InputGroup, InputGroupAddon, ListGroup, ListGroupItem, Row } from 'reactstrap'
 import FindRelaisMap from './FindRelaisMap'
 
-export const DeliveryInputs = ({ register, watch, setValue, nextId, unregister }) => {
+export const DeliveryInputs = ({ nextId }) => {
+	const { register, setValue, unregister, watch } = useFormContext()
+
 	useEffect(() => {
 		setValue('delivery.delivery_id', nextId)
 		setValue('invoice.delivery_id', nextId)
@@ -40,7 +43,7 @@ export const DeliveryInputs = ({ register, watch, setValue, nextId, unregister }
 					{' '}
 					<FormGroup>
 						<label htmlFor="d_id">Identifiant livraison</label>
-						<input className="form-control" type="text" placeholder={nextId} disabled></input>
+						<input className="form-control" type="text" placeholder={nextId}></input>
 					</FormGroup>
 				</Col>
 				<Col md={6}>
