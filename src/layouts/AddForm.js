@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { Card, CardBody, CardTitle, FormGroup } from 'reactstrap'
+import { Card, CardBody, CardTitle } from 'reactstrap'
 
 export const AddForm = ({ children, toggleFunction, title }) => (
 	<Card color="lighter mb-3">

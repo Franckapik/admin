@@ -1,6 +1,6 @@
 import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
-import { AddForm } from 'layouts/addForm'
+import { AddForm } from 'layouts/AddForm'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Alert, Button, Card, CardBody, CardTitle, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'

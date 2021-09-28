@@ -1,7 +1,7 @@
 import { Alert } from 'bootstrap'
 import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
-import { AddForm } from 'layouts/addForm'
+import { AddForm } from 'layouts/AddForm'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button, Col, Form, FormGroup, InputGroup, InputGroupAddon, Row } from 'reactstrap'
