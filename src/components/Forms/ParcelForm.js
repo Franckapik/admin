@@ -1,15 +1,7 @@
-import { Alert } from 'bootstrap'
 import postData from 'hooks/postData'
-import useToggle from 'hooks/useToggle'
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Button, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
-import CustomerInputs from './CustomerInputs'
-import { DiscountInputs } from './DiscountInputs'
-import { StatusInputs } from './StatusInputs'
-import TransactionInputs from './TransactionInputs'
-import { TransporterInputs } from './TransporterInputs'
-import { DeliveryInputs } from './DeliveryInputs'
+import { Button, Form, InputGroup } from 'reactstrap'
 import { ParcelInputs } from './ParcelInputs'
 
 const ParcelForm = ({ invoiceList }) => {
@@ -49,7 +41,7 @@ const ParcelForm = ({ invoiceList }) => {
 	const handleError = (errors) => console.log('error', errors)
 	return (
 		<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
-			<InputGroup>
+			<InputGroup className="mb-5">
 				<select
 					className="form-control"
 					type="select"
@@ -73,8 +65,9 @@ const ParcelForm = ({ invoiceList }) => {
 				</select>
 			</InputGroup>
 			<ParcelInputs register={register}></ParcelInputs>
-
-			<Button>Ajouter le colis</Button>
+			<div className="text-center">
+				<Button>Ajouter le colis</Button>
+			</div>
 		</Form>
 	)
 }

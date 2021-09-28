@@ -3,7 +3,7 @@ import useToggle from 'hooks/useToggle'
 import { AddForm } from 'layouts/AddForm'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
-import { Alert, Button, Card, CardBody, CardTitle, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
+import { Alert, Button, Card, CardBody, CardTitle, Col, Form, FormGroup, InputGroup, InputGroupAddon, Row } from 'reactstrap'
 import { CollectionForm } from './CollectionForm'
 import { PackagingForm } from './PackagingForm'
 import { PerformanceForm } from './PerformanceForm'
@@ -43,43 +43,54 @@ export default function ProductForm({ productList, collectionList, packagingList
 	return (
 		<FormProvider {...methods}>
 			<Form onSubmit={methods.handleSubmit(handleRegistration, handleError)}>
-				<FormGroup>
-					<label htmlFor="prod_ident">Identifiant produit</label>
-					<input className="form-control" type="text" placeholder={nextProductId} disabled></input>
-				</FormGroup>
-				<FormGroup>
-					<label htmlFor="product_name">Nom</label>
-					<input className="form-control" {...register('product.name', { required: true, maxLength: 20 })} />
+				<Row form>
+					<Col md={4}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="prod_ident">Identifiant produit</label>
+							<input className="form-control" type="text" placeholder={nextProductId} disabled></input>
+						</FormGroup>
+					</Col>
+					<Col md={4}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_name">Nom</label>
+							<input className="form-control" {...register('product.name', { required: true, maxLength: 20 })} />
 
-					{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'required' && (
-						<Alert color="warning">Un nom est requis</Alert>
-					)}
+							{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'required' && (
+								<Alert color="warning">Un nom est requis</Alert>
+							)}
 
-					{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'maxLength' && (
-						<Alert color="warning">Le nom est trop long</Alert>
-					)}
-				</FormGroup>
-				<FormGroup>
-					<label htmlFor="product_price">Prix</label>
-					<input
-						className="form-control"
-						type="number"
-						{...register('product.price', {
-							required: true,
-							min: 0,
-							max: 1000,
-						})}
-					/>
-					{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'required' && (
-						<Alert color="warning">Un prix est requis</Alert>
-					)}
-					{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'min' && (
-						<Alert color="warning">Prix positif seulement</Alert>
-					)}
-					{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'max' && (
-						<Alert color="warning">Prix trop important</Alert>
-					)}
-				</FormGroup>
+							{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'maxLength' && (
+								<Alert color="warning">Le nom est trop long</Alert>
+							)}
+						</FormGroup>
+					</Col>
+					<Col md={4}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_price">Prix</label>
+							<input
+								className="form-control"
+								type="number"
+								{...register('product.price', {
+									required: true,
+									min: 0,
+									max: 1000,
+								})}
+							/>
+							{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'required' && (
+								<Alert color="warning">Un prix est requis</Alert>
+							)}
+							{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'min' && (
+								<Alert color="warning">Prix positif seulement</Alert>
+							)}
+							{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'max' && (
+								<Alert color="warning">Prix trop important</Alert>
+							)}
+						</FormGroup>
+					</Col>
+				</Row>
 
 				<FormGroup
 					style={{
@@ -239,21 +250,30 @@ export default function ProductForm({ productList, collectionList, packagingList
 					</FormGroup>
 				)}
 
-				<FormGroup>
-					<label htmlFor="product_stock">Stock</label>
-					<select className="form-control" type="select" {...register('product.stock')}>
-						<option>Disponible</option>
-						<option>En cours de fabrication</option>
-						<option>En rupture de stock</option>
-					</select>
-				</FormGroup>
-				<FormGroup>
-					<label htmlFor="product_publish">Publication</label>
-					<select className="form-control" type="select" {...register('product.product_publish')}>
-						<option value="true">Publication en boutique</option>
-						<option value="false">Stockage caché</option>
-					</select>
-				</FormGroup>
+				<Row form>
+					<Col md={6}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_stock">Stock</label>
+							<select className="form-control" type="select" {...register('product.stock')}>
+								<option>Disponible</option>
+								<option>En cours de fabrication</option>
+								<option>En rupture de stock</option>
+							</select>
+						</FormGroup>
+					</Col>
+					<Col md={6}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_publish">Publication</label>
+							<select className="form-control" type="select" {...register('product.product_publish')}>
+								<option value="true">Publication en boutique</option>
+								<option value="false">Stockage caché</option>
+							</select>
+						</FormGroup>
+					</Col>
+				</Row>
+
 				<Button>Ajouter</Button>
 			</Form>
 		</FormProvider>

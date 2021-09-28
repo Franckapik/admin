@@ -87,7 +87,7 @@ const CustomerInputs = ({ errors, register, setValue, nextId, unregister }) => (
 				<FormGroup>
 					<label className="form-control-label" htmlFor="c_city">
 						{' '}
-						City{' '}
+						Ville{' '}
 					</label>
 					<input className="form-control" type="text" {...register('customer.city', { required: true, maxLength: 80 })} />
 					{errors.name?.type === 'required' && 'Une ville est requise'}
