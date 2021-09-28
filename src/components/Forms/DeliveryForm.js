@@ -33,6 +33,7 @@ const DeliveryForm = ({ deliveryList }) => {
 				register={register}
 				setValue={setValue}
 				unregister={unregister}
+				watch={watch}
 			></DeliveryInputs>
 			<Button>Ajouter</Button>
 		</Form>

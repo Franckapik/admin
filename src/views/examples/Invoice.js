@@ -8,7 +8,6 @@ import React, { useEffect, useState } from 'react'
 import { Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
 
 const Orders = () => {
-	const { response: transporterList } = useFetch('/transporter')
 	const { response: statusList } = useFetch('/status')
 	const { response: itemList } = useFetch('/item')
 	const { response: transactionList } = useFetch('/transaction')
@@ -186,7 +185,6 @@ const Orders = () => {
 								<span onClick={facturation}>Generer une facture en pdf</span>
 								{invoiceState &&
 								invoiceState.length &&
-								transporterList &&
 								statusList &&
 								itemList &&
 								transactionList &&
@@ -196,7 +194,6 @@ const Orders = () => {
 								deliveryList ? (
 									<InvoiceForm
 										invoiceList={invoiceState}
-										transporterList={transporterList}
 										statusList={statusList}
 										itemList={itemList}
 										transactionList={transactionList}
