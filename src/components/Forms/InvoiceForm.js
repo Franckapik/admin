@@ -5,15 +5,13 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
 import CustomerInputs from './CustomerInputs'
+import { DeliveryInputs } from './DeliveryInputs'
 import { DiscountInputs } from './DiscountInputs'
 import { StatusInputs } from './StatusInputs'
 import TransactionInputs from './TransactionInputs'
-import { TransporterInputs } from './TransporterInputs'
-import { DeliveryInputs } from './DeliveryInputs'
 
 const InvoiceForm = ({
 	invoiceList,
-	transporterList,
 	statusList,
 	itemList,
 	discountList,
@@ -27,7 +25,6 @@ const InvoiceForm = ({
 	const nextCustomerId = customerList[customerList.length - 1].user_id + 1
 	const nextStatusId = statusList[statusList.length - 1].status_id + 1
 	const nextDiscountId = discountList[discountList.length - 1].discount_id + 1
-	const nextTransporterId = transporterList[transporterList.length - 1].transporter_id + 1
 	const nextTransactionId = transactionList.length && transactionList[transactionList.length - 1].transaction_id + 1
 	const nextDeliveryId = deliveryList.length && deliveryList[deliveryList.length - 1].delivery_id + 1
 	const order_number = Math.floor(Math.random() * (10000 - 2500) + 2500)
@@ -37,6 +34,7 @@ const InvoiceForm = ({
 		handleSubmit,
 		setValue,
 		unregister,
+		watch,
 	} = useForm({
 		defaultValues: {
 			invoice: {
@@ -52,9 +50,7 @@ const InvoiceForm = ({
 			discount: {
 				discount_id: nextDiscountId,
 			},
-			transporter: {
-				transporter_id: nextTransporterId,
-			},
+
 			transaction: {
 				transaction_id: nextTransactionId,
 			},
@@ -69,7 +65,6 @@ const InvoiceForm = ({
 	const [newClient, addClient] = useToggle()
 	const [newDiscount, addDiscount] = useToggle()
 	const [newStatus, addStatus] = useToggle()
-	const [newTransporter, addTransporter] = useToggle()
 	const [newTransaction, addTransaction] = useToggle()
 	const [newDelivery, addDelivery] = useToggle()
 
@@ -169,6 +164,7 @@ const InvoiceForm = ({
 					nextId={nextDeliveryId}
 					nextInvoiceId={nextInvoiceId}
 					unregister={unregister}
+					watch={watch}
 				></DeliveryInputs>
 			) : null}
 			<FormGroup
@@ -255,48 +251,7 @@ const InvoiceForm = ({
 					unregister={unregister}
 				></StatusInputs>
 			) : null}
-			<FormGroup
-				style={{
-					display: !newTransporter ? 'block' : 'none', // toggle the visbility of an input
-				}}
-			>
-				<label htmlFor="transporter_id">Transporteur</label>
-				<InputGroup>
-					<select
-						className="form-control"
-						type="select"
-						defaultValue=""
-						{...register('invoice.transporter_id', { required: true })}
-					>
-						<option disabled value="">
-							{' '}
-							-- Choisir un transporteur --{' '}
-						</option>
-						{Array.from(transporterList).map((a, i) => {
-							return (
-								<option key={a + i} value={a.transporter_id}>
-									{a.reference}
-								</option>
-							)
-						})}
-					</select>
-					<InputGroupAddon addonType="append">
-						<Button onClick={addTransporter}>Ajouter</Button>
-					</InputGroupAddon>
-				</InputGroup>
-				{errorsForm && errorsForm.invoice && errorsForm.invoice.transporter_id?.type === 'required' && (
-					<Alert color="warning">Un transporter est requis</Alert>
-				)}
-			</FormGroup>
-			{newTransporter ? (
-				<TransporterInputs
-					errors={errors}
-					register={register}
-					setValue={setValue}
-					nextId={nextTransporterId}
-					unregister={unregister}
-				></TransporterInputs>
-			) : null}
+
 			<FormGroup
 				style={{
 					display: !newTransaction ? 'block' : 'none', // toggle the visbility of an input

@@ -1,10 +1,9 @@
 // core components
 import FindRelaisInputs from 'components/Forms/FindRelaisInputs'
+import FindRelaisMap from 'components/Forms/FindRelaisMap'
 import Header from 'components/Headers/Header'
 import useFetch from 'hooks/useFetch'
-// import
-import { OpenStreetMapProvider } from 'leaflet-geosearch'
-import { Map, Marker } from 'pigeon-maps'
+import useGeo from 'hooks/useGeo'
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 // reactstrap components
@@ -13,7 +12,6 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	CardTitle,
 	Col,
 	Container,
 	Form,
@@ -25,34 +23,16 @@ import {
 } from 'reactstrap'
 
 const Relais = () => {
-	const [center, setCenter] = useState([48.27, -1.669])
-	const [house, setHouse] = useState([48.27, -1.669])
-	const [zoom, setZoom] = useState(12)
-	const [relaisSelected, setRelaisSelected] = useState(0)
-	const [bounds, setBounds] = useState({
-		ne: [48.2742846248208, -1.655197352409374],
-		sw: [48.26574358366042, -1.6828455629348866],
-	})
-
 	const { response: carriersList } = useFetch('/ship/carriers')
-	const { response: serviceList } = useFetch(
-		'/service-points?country=FR&ne_latitude=' +
-			bounds.ne[0] +
-			'&ne_longitude=' +
-			bounds.ne[1] +
-			'&sw_latitude=' +
-			bounds.sw[0] +
-			'&sw_longitude=' +
-			bounds.sw[1]
-	)
 
-	const [service, setService] = useState([])
+	const [relaisSelected, setRelaisSelected] = useState(0)
+	const [addressSelected, setAddressSelected] = useState(0)
 
-	const [addressListState, setAddress] = useState([])
+	const handleRegistration = (data) => {
+		setAddressSelected(data.relais)
+	}
 
-	useEffect(() => {
-		serviceList && serviceList.length && setService(serviceList)
-	}, [serviceList])
+	const handleError = (errors) => console.log('error', errors)
 
 	const {
 		register,
@@ -62,20 +42,9 @@ const Relais = () => {
 		setValue,
 	} = useForm({})
 
-	const input = watch('relais.input')
+	const addressTyped = watch('relais.input')
 
-	const { response: addressList } = useFetch(input ? 'https://api-adresse.data.gouv.fr/search/?q=' + input : false)
-
-	useEffect(() => {
-		addressList && addressList.features && setAddress(addressList.features.map((a, i) => a))
-	}, [addressList])
-
-	const handleRegistration = (data) => {
-		setHouse([data.relais.geo[1], data.relais.geo[0]])
-		setCenter([data.relais.geo[1], data.relais.geo[0]])
-	}
-
-	const handleError = (errors) => console.log('error', errors)
+	const { response: addressList } = useGeo(addressTyped)
 
 	return (
 		<>
@@ -123,22 +92,23 @@ const Relais = () => {
 										{errors.name?.type === 'maxLength' && "L'adresse est trop longue"}
 									</FormGroup>
 									<ListGroup>
-										{addressListState.map((a, i) => (
-											<ListGroupItem
-												key={a + i}
-												color="info"
-												onClick={() => {
-													setValue('relais.input', a.properties.label)
-													setValue('relais.address', a.properties.name)
-													setValue('relais.postal', a.properties.citycode)
-													setValue('relais.city', a.properties.city)
-													setValue('relais.geo', a.geometry.coordinates)
-												}}
-												style={{ cursor: 'pointer' }}
-											>
-												{a.properties.label}
-											</ListGroupItem>
-										))}
+										{addressList &&
+											addressList.map((a, i) => (
+												<ListGroupItem
+													key={a + i}
+													color="info"
+													onClick={() => {
+														setValue('relais.input', a.properties.label)
+														setValue('relais.address', a.properties.name)
+														setValue('relais.postal', a.properties.citycode)
+														setValue('relais.city', a.properties.city)
+														setValue('relais.geo', a.geometry.coordinates)
+													}}
+													style={{ cursor: 'pointer' }}
+												>
+													{a.properties.label}
+												</ListGroupItem>
+											))}
 									</ListGroup>
 									<FindRelaisInputs errors={errors} register={register}></FindRelaisInputs>
 
@@ -148,75 +118,11 @@ const Relais = () => {
 						</Card>
 					</div>
 				</Row>
-				<Row className="mt-5">
-					<Col>
-						<Card className="bg-default shadow">
-							<CardHeader className="bg-transparent border-0">
-								<h3 className="text-white mb-0">Carte des points relais disponibles</h3>
-							</CardHeader>
-							<CardBody>
-								<Map
-									height={500}
-									center={center}
-									zoom={zoom}
-									onBoundsChanged={({ center, zoom, bounds }) => {
-										setCenter(center)
-										setZoom(zoom)
-										setBounds(bounds)
-									}}
-								>
-									<Marker width={50} anchor={house} color="red" onClick={() => console.log('ici')} />
-									{Array.from(service).map((a, i) => {
-										return (
-											<Marker
-												width={50}
-												anchor={[Number(a.latitude), Number(a.longitude)]}
-												color={relaisSelected.id === a.id ? 'yellow' : 'blue'}
-												onClick={() => setRelaisSelected(a.id)}
-											/>
-										)
-									})}
-								</Map>
-							</CardBody>
-						</Card>
-					</Col>
-					<Col lg="5">
-						<Card style={{ overflowY: 'scroll', overflowX: 'hidden', height: '600px' }} className="bg-default shadow">
-							{service && service.length && service.length > 0 ? (
-								<Table className="align-items-center table-dark table-flush" responsive>
-									<tbody>
-										{Array.from(service).map((a, i) => {
-											return (
-												<tr>
-													<td onClick={() => setRelaisSelected(a)}>
-														<Card
-															className="bg-transparent"
-															style={{ color: relaisSelected.id === a.id ? 'red' : 'white' }}
-														>
-															<CardTitle>{a.name}</CardTitle>
-															<CardBody className="p-0">
-																<ListGroup className="mt-0">
-																	<ListGroupItem className="bg-transparent text-white">
-																		{a.house_number} {a.street}{' '}
-																	</ListGroupItem>
-																	<ListGroupItem className="bg-transparent text-white">
-																		{a.postal_code} {a.city}{' '}
-																	</ListGroupItem>
-																</ListGroup>
-															</CardBody>
-														</Card>
-													</td>
-												</tr>
-											)
-										})}
-									</tbody>
-								</Table>
-							) : (
-								'Aucun transporteur disponible'
-							)}
-						</Card>
-					</Col>
-				</Row>
+				<FindRelaisMap
+					addressSelected={addressSelected}
+					setRelaisSelected={setRelaisSelected}
+					relaisSelected={relaisSelected}
+				></FindRelaisMap>
 				<Row className="mt-5">
 					<div className="col">
 						<Card className="shadow">
@@ -252,7 +158,7 @@ const Relais = () => {
 											{relaisSelected &&
 												['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'].map((a, i) => (
 													<ListGroupItem>
-														<strong>{a} </strong> {relaisSelected.formatted_opening_times[i].map((a, i) => a + ' ')}
+														<strong>{a} </strong> {relaisSelected.formatted_opening_times[i].map((a) => a + ' ')}
 													</ListGroupItem>
 												))}
 										</Col>

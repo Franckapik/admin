@@ -10441,3 +10441,1391 @@ undefined [34mdebug[39m : [Knex] Données Table collection chargées (length):
 undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 5
 undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 6
 undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 5
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5862431230545155&sw_latitude=48.213066114401336&sw_longitude=-1.752100199699413
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:05:05.525Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:06:40.911Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:08:07.211Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:08:34.050Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:09:21.295Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:09:32.142Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:10:43.375Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:10:55.341Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:11:17.094Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:11:38.117Z ]
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:13:08.853Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:13:46.865Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:14:05.108Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:32:18.178Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:32:26.838Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:32:34.708Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:34:02.874Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T18:34:39.351Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:45:33.468Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:47:59.143Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:48:01.619Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:49:20.896Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:50:43.808Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:51:39.413Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:51:57.590Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:52:08.405Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:53:33.589Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:54:32.335Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:54:37.411Z ]
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T19:58:35.056Z ]
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:00:11.041Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:01:29.763Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:02:52.529Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:03:10.557Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:03:48.246Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:04:50.087Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:05:59.313Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:08:05.121Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:08:46.482Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:08:59.918Z ]
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:09:46.703Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:09:57.302Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-27T20:15:07.487Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.600163787841808&sw_latitude=48.213066114401336&sw_longitude=-1.7381795349121205
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.354483532032404&ne_longitude=-1.4456685485840524&sw_latitude=47.89707019019893&sw_longitude=-1.9977315368653024
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.35448353203237&ne_longitude=-1.4456685485840524&sw_latitude=47.8970701901989&sw_longitude=-1.9977315368653024
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.35017212586273&ne_longitude=-1.268471571519541&sw_latitude=47.900880204430244&sw_longitude=-2.1718980631935665
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.35125451023711&ne_longitude=-1.268098830482927&sw_latitude=47.90159918333226&sw_longitude=-2.1722719189697273
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.37886284013718&ne_longitude=-1.264402420404025&sw_latitude=47.92980080405929&sw_longitude=-2.167873475203976
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.47911449460641&ne_longitude=-1.2441679062987703&sw_latitude=48.03093440199508&sw_longitude=-2.147638961098721
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.47643176006346&ne_longitude=-1.2428189386917552&sw_latitude=48.02822804852617&sw_longitude=-2.1462899934916777
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29611140319716&ne_longitude=-1.552306142236688&sw_latitude=48.18200951660437&sw_longitude=-1.7822465566653989
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29724874053697&ne_longitude=-1.5500195812573168&sw_latitude=48.180874174028645&sw_longitude=-1.784539955957996
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.314949895580035&ne_longitude=-1.560174252203666&sw_latitude=48.19861564714299&sw_longitude=-1.7946946269043451
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.39231699459429&ne_longitude=-1.4663792143592502&sw_latitude=48.16428872253749&sw_longitude=-1.926260043216672
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31337635979842&ne_longitude=-1.5620804320106458&sw_latitude=48.199313028784&sw_longitude=-1.7920208464393568
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.39080476334743&ne_longitude=-1.4650596665030378&sw_latitude=48.162769726457924&sw_longitude=-1.9249404953604596
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:28:42.513Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4580710830688588&sw_latitude=48.213066114401336&sw_longitude=-1.8802722396850697
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.360643070840986&ne_longitude=-1.5844943227768056&sw_latitude=48.132473141697815&sw_longitude=-1.9162084760666005
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.36054508607518&ne_longitude=-1.5846365111379725&sw_latitude=48.13257117069853&sw_longitude=-1.9160656978269515
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.360633809489975&ne_longitude=-1.584507762187087&sw_latitude=48.1324824072459&sw_longitude=-1.9161949809019632
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:30:23.574Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.360633809489975&ne_longitude=-1.584507762187087&sw_latitude=48.1324824072459&sw_longitude=-1.9161949809019632
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:30:33.143Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.360633809489975&ne_longitude=-1.584507762187087&sw_latitude=48.1324824072459&sw_longitude=-1.9161949809019632
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:32:24.248Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.360633809489975&ne_longitude=-1.584507762187087&sw_latitude=48.1324824072459&sw_longitude=-1.9161949809019632
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:33:03.253Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.299153027252835&ne_longitude=-1.5620549621582143&sw_latitude=48.2421372907404&sw_longitude=-1.714146942138683
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29918065895291&ne_longitude=-1.5619814427966787&sw_latitude=48.24210973882867&sw_longitude=-1.714220627645659
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:33:12.085Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29918065895291&ne_longitude=-1.5619814427966787&sw_latitude=48.24210973882867&sw_longitude=-1.714220627645659
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:33:26.646Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29918065895291&ne_longitude=-1.5619814427966787&sw_latitude=48.24210973882867&sw_longitude=-1.714220627645659
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.317179511222015&ne_longitude=-1.5155606337042116&sw_latitude=48.203124674687004&sw_longitude=-1.819744593665149
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31711474712927&ne_longitude=-1.5157330115372076&sw_latitude=48.203189323720196&sw_longitude=-1.8195718262777234
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:34:38.794Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:37:02.030Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:37:08.796Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:37:13.690Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:37:43.079Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:37:56.779Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:38:19.659Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:38:25.316Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:38:28.841Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:38:33.025Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:40:02.844Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:40:48.208Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.31715654107967&ne_longitude=-1.5156217716715048&sw_latitude=48.20314760403945&sw_longitude=-1.819683317532963
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:41:06.736Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:41:28.046Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:41:37.598Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:41:55.884Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:42:00.068Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:42:21.428Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:48:17.405Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:48:21.709Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:49:01.087Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:49:23.351Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:49:29.501Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:49:52.482Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:50:12.589Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:50:39.487Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:50:40.679Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:50:59.540Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:51:06.155Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:51:31.859Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:52:41.002Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:52:52.155Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:53:05.744Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:56:15.882Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:56:22.181Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:56:35.438Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:57:47.420Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:59:09.787Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:59:43.275Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T05:59:54.925Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:00:11.725Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:00:17.515Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:00:26.210Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:00:32.717Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:01:00.357Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:01:05.673Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:01:09.835Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:02:07.179Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:02:18.111Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:02:59.930Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:03:08.078Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:03:33.044Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:03:44.011Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:04:40.894Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:04:55.535Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:05:12.852Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:05:19.397Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:05:25.762Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:05:34.954Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:05:36.606Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:05:40.392Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:06:13.797Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:06:29.729Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:06:53.391Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:09:53.027Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:11:02.886Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:11:20.519Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:11:37.641Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:11:59.595Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:12:12.966Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:12:20.638Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:13:09.887Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:13:39.662Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.41534635853857&ne_longitude=-1.3779505425133038&sw_latitude=48.187421126062496&sw_longitude=-1.9863184624351788
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:13:59.214Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.41534635853857&ne_longitude=-1.3779505425133038&sw_latitude=48.187421126062496&sw_longitude=-1.9863184624351788
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=49.073689381399625&ne_longitude=-0.637043147383821&sw_latitude=48.16773756720673&sw_longitude=-3.070514827071321
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.52398570903879&ne_longitude=-1.4614450086238833&sw_latitude=48.29654705793281&sw_longitude=-2.0698129285457583
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.52815268536786&ne_longitude=-1.4477682552141857&sw_latitude=48.29047194871801&sw_longitude=-2.0835205898727907
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.41730975290091&ne_longitude=-1.3788831264023997&sw_latitude=48.17911018303106&sw_longitude=-2.0146354610610047
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.41207083862186&ne_longitude=-1.405432603131942&sw_latitude=48.17384676866304&sw_longitude=-2.0411849377905753
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29811021588533&ne_longitude=-1.3796006798275187&sw_latitude=48.0593536991034&sw_longitude=-2.015353014486152
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.19474910461486&ne_longitude=-1.5741236964796883&sw_latitude=48.137616910510594&sw_longitude=-1.726215676460157
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2307436368653&ne_longitude=-1.6022761623000008&sw_latitude=48.17365157150043&sw_longitude=-1.7543681422804696
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2769198623024&ne_longitude=-1.5512927333449227&sw_latitude=48.16277512994156&sw_longitude=-1.8554766933058602
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.277148353749396&ne_longitude=-1.5509494105910164&sw_latitude=48.16300413142793&sw_longitude=-1.855133370551954
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29496753824321&ne_longitude=-1.5533526698683602&sw_latitude=48.180863097572974&sw_longitude=-1.8575366298292977
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:14:26.210Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29496753824321&ne_longitude=-1.5533526698683602&sw_latitude=48.180863097572974&sw_longitude=-1.8575366298292977
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:15:20.913Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29496753824321&ne_longitude=-1.5533526698683602&sw_latitude=48.180863097572974&sw_longitude=-1.8575366298292977
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:15:26.653Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29496753824321&ne_longitude=-1.5533526698683602&sw_latitude=48.180863097572974&sw_longitude=-1.8575366298292977
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:15:30.463Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29496753824321&ne_longitude=-1.5533526698683602&sw_latitude=48.180863097572974&sw_longitude=-1.8575366298292977
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29496753824321&ne_longitude=-1.5533526698683886&sw_latitude=48.180863097572974&sw_longitude=-1.857536629829326
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.35568877887589&ne_longitude=-1.467521981391826&sw_latitude=48.127496698719305&sw_longitude=-2.075889901313701
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.291769680865144&ne_longitude=-1.633690194282451&sw_latitude=48.17765810010514&sw_longitude=-1.9378741542433886
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.291836763656875&ne_longitude=-1.6335117335740108&sw_latitude=48.17759113637905&sw_longitude=-1.9380530182528446
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:15:44.553Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:15:50.438Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:16:03.724Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:16:13.868Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:16:40.412Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:16:55.786Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.29179305618597&ne_longitude=-1.633628008818448&sw_latitude=48.17763476629323&sw_longitude=-1.9379364802395003
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:19:40.219Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:19:50.449Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:19:54.555Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:20:01.046Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:20:07.254Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:20:10.201Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.42743758744691&ne_longitude=-1.3643010559081574&sw_latitude=48.19956646922951&sw_longitude=-1.9726689758300324
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.35744932886505&ne_longitude=-1.6029103698730012&sw_latitude=48.243484467384846&sw_longitude=-1.9070943298339387
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.43973827073099&ne_longitude=-1.35674795532222&sw_latitude=48.211922214668036&sw_longitude=-1.965115875244095
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.43961462725065&ne_longitude=-1.3570778411381639&sw_latitude=48.21204591458496&sw_longitude=-1.964785243923501
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.43969573365636&ne_longitude=-1.3568614460516528&sw_latitude=48.21196477122624&sw_longitude=-1.965002128038435
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:21:53.210Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.43969573365636&ne_longitude=-1.3568614460516528&sw_latitude=48.21196477122624&sw_longitude=-1.965002128038435
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:22:22.404Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:22:38.383Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.43969573365636&ne_longitude=-1.3568614460516528&sw_latitude=48.21196477122624&sw_longitude=-1.965002128038435
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:24:43.716Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:25:09.291Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:25:17.257Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:25:55.549Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:26:41.472Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:27:31.314Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:27:38.475Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:27:41.962Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:28:04.484Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:28:34.970Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:29:06.052Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:29:11.023Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:29:39.483Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:29:48.277Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:30:04.175Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:30:13.459Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:30:20.298Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:30:25.342Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:30:41.583Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:30:56.235Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:31:06.456Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:31:15.062Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:31:23.071Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:31:49.238Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:35:08.403Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:35:23.060Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=49.31620742901921&ne_longitude=4.171368318603527&sw_latitude=49.20440130685993&sw_longitude=3.8671843586425894
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:36:35.865Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:36:40.182Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:38:57.738Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=44.81969129926295&ne_longitude=-0.2669166813964807&sw_latitude=44.698042457045986&sw_longitude=-0.5711006413574182
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:40:27.904Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=44.81969129926295&ne_longitude=-0.2669166813964807&sw_latitude=44.698042457045986&sw_longitude=-0.5711006413574182
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:40:55.947Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=44.81969129926295&ne_longitude=-0.2669166813964807&sw_latitude=44.698042457045986&sw_longitude=-0.5711006413574182
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:41:03.457Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=44.81969129926295&ne_longitude=-0.2669166813964807&sw_latitude=44.698042457045986&sw_longitude=-0.5711006413574182
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:41:59.556Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=44.81969129926295&ne_longitude=-0.2669166813964807&sw_latitude=44.698042457045986&sw_longitude=-0.5711006413574182
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38423882047218&ne_longitude=-1.4914516813964838&sw_latitude=48.270333846177415&sw_longitude=-1.7956356413574213
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.781981970371305&ne_longitude=7.416295318603517&sw_latitude=43.658166190128654&sw_longitude=7.112111358642579
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:43:31.813Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.781981970371305&ne_longitude=7.416295318603517&sw_latitude=43.658166190128654&sw_longitude=7.112111358642579
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:44:14.061Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=49.31620742901921&ne_longitude=4.171368318603527&sw_latitude=49.20440130685993&sw_longitude=3.8671843586425894
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:45:45.209Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=49.31620742901921&ne_longitude=4.171368318603527&sw_latitude=49.20440130685993&sw_longitude=3.8671843586425894
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:46:44.504Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=49.31620742901921&ne_longitude=4.171368318603527&sw_latitude=49.20440130685993&sw_longitude=3.8671843586425894
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:48:51.605Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=49.31620742901921&ne_longitude=4.171368318603527&sw_latitude=49.20440130685993&sw_longitude=3.8671843586425894
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:50:41.349Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:50:49.599Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:51:34.987Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:51:58.699Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:52:01.495Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:52:14.056Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:52:16.503Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:53:26.792Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:53:42.228Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:53:57.837Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:54:42.676Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:55:22.815Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:55:47.725Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:57:20.841Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:57:28.089Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:58:05.135Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:58:15.792Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T06:58:35.312Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:00:54.424Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:01:02.824Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:01:15.904Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:01:23.837Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:02:10.423Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:02:40.451Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:02:50.798Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:03:11.133Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:03:18.536Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:03:26.756Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:07:26.348Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:07:39.574Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:07:49.540Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:08:56.986Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:09:07.421Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:09:40.577Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:09:54.618Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:10:28.411Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:10:33.192Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:11:22.011Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.41125993496083&ne_longitude=-1.3000997009277455&sw_latitude=48.183316416018585&sw_longitude=-1.9084676208496205
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.57598505280238&ne_longitude=-0.870946258544933&sw_latitude=48.12055662254976&sw_longitude=-2.087682098388683
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.57491102594015&ne_longitude=-0.8700182582741434&sw_latitude=48.11980742066092&sw_longitude=-2.0858645206659503
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.61834788428711&ne_longitude=-0.6438065122064245&sw_latitude=48.163393980729914&sw_longitude=-1.860291809476081
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.718091408989906&ne_longitude=-0.5106247132954138&sw_latitude=48.26403398649245&sw_longitude=-1.7271100105650703
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.547536198145984&ne_longitude=-0.9478377712756867&sw_latitude=48.32020313521345&sw_longitude=-1.5562056911975617
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.547666415034044&ne_longitude=-0.9474896070282455&sw_latitude=48.320072857262815&sw_longitude=-1.556554642256856
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.547584951019665&ne_longitude=-0.9477074195665978&sw_latitude=48.32015435955635&sw_longitude=-1.556336337486755
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.46038721893658&ne_longitude=-1.1610942240384645&sw_latitude=48.34665260873273&sw_longitude=-1.465278183999402
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.54864642801425&ne_longitude=-0.9482341166165895&sw_latitude=48.32131834373089&sw_longitude=-1.5566020365384645
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.55819104166358&ne_longitude=-0.878882920327527&sw_latitude=48.330905762226045&sw_longitude=-1.487250840249402
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.46949321247816&ne_longitude=-1.075950181069743&sw_latitude=48.35577898828753&sw_longitude=-1.3801341410306804
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.46953335081537&ne_longitude=-1.075843027407842&sw_latitude=48.355738920965614&sw_longitude=-1.3802415368477625
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.50163973724167&ne_longitude=-1.076876792722004&sw_latitude=48.38791957440724&sw_longitude=-1.3812691120821796
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.4712197379603&ne_longitude=-1.190328512801699&sw_latitude=48.41439634726876&sw_longitude=-1.3424204927821677
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.47124061210502&ne_longitude=-1.190272785113848&sw_latitude=48.414375533340056&sw_longitude=-1.3424763464083185
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.486536955594&ne_longitude=-1.1839835290615213&sw_latitude=48.42968904672998&sw_longitude=-1.3361870011181054
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.52336013362282&ne_longitude=-1.0621932960907827&sw_latitude=48.409766562756616&sw_longitude=-1.3663772560517202
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.5233069120021&ne_longitude=-1.0623355279155078&sw_latitude=48.40981969021589&sw_longitude=-1.3662347027991188
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.5233487838857&ne_longitude=-1.06222362764521&sw_latitude=48.40977789242273&sw_longitude=-1.3663468559514058
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.52923658004867&ne_longitude=-1.1094094131508427&sw_latitude=48.415678879783634&sw_longitude=-1.4135326414570386
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.792010767833794&ne_longitude=-0.4764963969748237&sw_latitude=48.33852482462232&sw_longitude=-1.6932322368185737
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.77671691749368&ne_longitude=-0.501495586698212&sw_latitude=48.339851913592746&sw_longitude=-1.6734736276424371
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.62568592680197&ne_longitude=-0.5345649445126526&sw_latitude=48.1875125141055&sw_longitude=-1.7065429854568777
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.4656560293119&ne_longitude=-0.8901609463766817&sw_latitude=48.237956024786335&sw_longitude=-1.4985288662985567
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.466584566788434&ne_longitude=-0.8758023837461337&sw_latitude=48.23794366663539&sw_longitude=-1.4866896883097525
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.50588598940512&ne_longitude=-0.7606577112155151&sw_latitude=48.277421890132004&sw_longitude=-1.3715450157791338
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38165174499908&ne_longitude=-1.0865640103141914&sw_latitude=48.32472816601198&sw_longitude=-1.2386559902946601
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.3859840010577&ne_longitude=-1.0845040737907539&sw_latitude=48.32906526480828&sw_longitude=-1.2365960537712226
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.36357770020091&ne_longitude=-1.1364770129218869&sw_latitude=48.33511376034531&sw_longitude=-1.2125230029121212
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.3636119427101&ne_longitude=-1.1363192746384811&sw_latitude=48.33496501594208&sw_longitude=-1.2128540576277942
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.36843268752311&ne_longitude=-1.1479808950713846&sw_latitude=48.33978847156021&sw_longitude=-1.2245156780606692
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.39363751839103&ne_longitude=-1.1032946973023456&sw_latitude=48.3367273382905&sw_longitude=-1.2553866772828144
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.39360694552611&ne_longitude=-1.1033761930868877&sw_latitude=48.33675782288953&sw_longitude=-1.2553049973270447
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.39349308287978&ne_longitude=-1.092573129128482&sw_latitude=48.33664383308115&sw_longitude=-1.2445019333686673
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.390304825331356&ne_longitude=-1.0862284725180302&sw_latitude=48.333452014971144&sw_longitude=-1.2381572767581872
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.37346739449599&ne_longitude=-1.132563238329766&sw_latitude=48.345008980517015&sw_longitude=-1.2086092283200003
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.37347866370783&ne_longitude=-1.132533210729349&sw_latitude=48.34499775010756&sw_longitude=-1.20863932377938
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.373468400888605&ne_longitude=-1.1325605567267303&sw_latitude=48.34500797758981&sw_longitude=-1.2086119159831412
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.381733487558066&ne_longitude=-1.1473954621693565&sw_latitude=48.35326990775573&sw_longitude=-1.2234675968080637
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38481276073205&ne_longitude=-1.1501429884768584&sw_latitude=48.35635090246247&sw_longitude=-1.2262151231155372
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.388519046184804&ne_longitude=-1.1351174539827582&sw_latitude=48.360059260101565&sw_longitude=-1.211189588621437
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:14:56.605Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:15:10.973Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:15:28.622Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:15:46.819Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32607157959505&ne_longitude=-1.667455047607433&sw_latitude=48.269085900207706&sw_longitude=-1.8195470275879018
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32609557137893&ne_longitude=-1.667391179248682&sw_latitude=48.26906197769216&sw_longitude=-1.8196110402818988
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=50.483445945411255&ne_longitude=2.694288027660491&sw_latitude=50.42886369305899&sw_longitude=2.5420681666273026
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:16:50.204Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=50.483445945411255&ne_longitude=2.694288027660491&sw_latitude=50.42886369305899&sw_longitude=2.5420681666273026
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:16:58.331Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:17:08.738Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=50.483445945411255&ne_longitude=2.694288027660491&sw_latitude=50.42886369305899&sw_longitude=2.5420681666273026
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:17:26.067Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=50.483445945411255&ne_longitude=2.694288027660491&sw_latitude=50.42886369305899&sw_longitude=2.5420681666273026
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:17:36.958Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=50.483445945411255&ne_longitude=2.694288027660491&sw_latitude=50.42886369305899&sw_longitude=2.5420681666273026
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:18:43.854Z ]
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:18:58.738Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=50.483445945411255&ne_longitude=2.694288027660491&sw_latitude=50.42886369305899&sw_longitude=2.5420681666273026
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.350752318290006&ne_longitude=-1.4388826813964783&sw_latitude=48.23677248972863&sw_longitude=-1.7430666413574158
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.11009307174805&ne_longitude=0.822172318603549&sw_latitude=42.98489594175278&sw_longitude=0.5179883586426115
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:21:16.541Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.11009307174805&ne_longitude=0.822172318603549&sw_latitude=42.98489594175278&sw_longitude=0.5179883586426115
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:21:37.449Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.11009307174805&ne_longitude=0.822172318603549&sw_latitude=42.98489594175278&sw_longitude=0.5179883586426115
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:22:03.309Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:22:11.503Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:31:40.985Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.11009307174805&ne_longitude=0.822172318603549&sw_latitude=42.98489594175278&sw_longitude=0.5179883586426115
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.08930934352802&ne_longitude=0.8110713186035525&sw_latitude=42.96406975823736&sw_longitude=0.506887358642615
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:36:33.615Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.08930934352802&ne_longitude=0.8110713186035525&sw_latitude=42.96406975823736&sw_longitude=0.506887358642615
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:37:17.710Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:37:37.897Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:38:13.699Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:38:21.897Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:38:40.159Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:40:07.700Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:43:12.362Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:45:15.890Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:45:35.082Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:46:50.335Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:46:57.410Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:47:06.021Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:47:15.423Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:47:54.373Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:47:58.667Z ]
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:48:44.709Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:48:52.271Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:48:59.478Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:49:07.754Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:49:50.889Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:49:55.505Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4990552368164174&sw_latitude=48.213066114401336&sw_longitude=-1.8392880859375111
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:50:37.896Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:50:48.586Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:51:00.884Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4990552368164174&sw_latitude=48.213066114401336&sw_longitude=-1.8392880859375111
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:55:26.900Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:56:56.219Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T07:57:16.903Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:03:58.786Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:04:17.160Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:04:45.934Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:05:26.211Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:06:03.121Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:06:09.564Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:07:09.059Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:07:30.722Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:07:36.854Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:08:29.310Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:09:14.935Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:10:18.092Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:10:22.136Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:10:27.748Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:11:30.074Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:12:40.109Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:15:26.088Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:16:57.705Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:17:06.556Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:18:53.027Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:19:03.591Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:19:34.055Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:21:19.567Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:21:38.509Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:22:15.547Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:22:29.786Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:22:36.140Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:22:49.367Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:23:05.526Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:23:17.099Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:24:05.835Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:25:01.058Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:25:27.467Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:26:18.530Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:27:22.733Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:29:19.275Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:32:00.479Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.47303317642176&ne_longitude=0.8701127631835845&sw_latitude=47.357105340066255&sw_longitude=0.5298799140624908
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.420270033382124&ne_longitude=0.7538550956420806&sw_latitude=47.391282944535575&sw_longitude=0.6687968833618072
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.43442893312325&ne_longitude=0.8016987999267258&sw_latitude=47.37645439316879&sw_longitude=0.6315823753661789
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:33:20.429Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:34:29.724Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:34:50.478Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:35:00.147Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:36:31.431Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.385201741914614&ne_longitude=-1.4884376813964764&sw_latitude=48.27129892066998&sw_longitude=-1.7926216413574139
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.46312050135501&ne_longitude=-1.2553215314941326&sw_latitude=48.23540914146573&sw_longitude=-1.8636894514160076
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.63884247084153&ne_longitude=-0.8980294097089825&sw_latitude=48.18397857415004&sw_longitude=-2.1147652495527325
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.6449794356043&ne_longitude=-0.8738931298265129&sw_latitude=48.19059181110117&sw_longitude=-2.089507360242834
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.76007423833904&ne_longitude=-0.2622544570433263&sw_latitude=48.30651702302194&sw_longitude=-1.4784128736006608
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.606538869436186&ne_longitude=-0.7067784320092301&sw_latitude=48.37947051361624&sw_longitude=-1.315146351931105
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.60665542021855&ne_longitude=-0.706466443304322&sw_latitude=48.37935390773331&sw_longitude=-1.3154590456952064
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.606571004701316&ne_longitude=-0.7066924108675039&sw_latitude=48.37943836321239&sw_longitude=-1.315232567470872
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.68235815923358&ne_longitude=-0.6393821000919502&sw_latitude=48.45556597827301&sw_longitude=-1.2479222566953752
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.62721527699536&ne_longitude=-0.8647293517820742&sw_latitude=48.5138546093697&sw_longitude=-1.1689133117430117
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.627257172334176&ne_longitude=-0.8646171584778131&sw_latitude=48.513812787924756&sw_longitude=-1.169025758591431
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.6272153214824&ne_longitude=-0.8647292326483864&sw_latitude=48.51385456496115&sw_longitude=-1.16891343114591
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.66536670888121&ne_longitude=1.6120383186035099&sw_latitude=43.54130994673304&sw_longitude=1.3078543586425724
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.61631946801635&ne_longitude=1.4831835894600829&sw_latitude=43.585303958972844&sw_longitude=1.4071375994698485
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.62166321102326&ne_longitude=1.4928824572579344&sw_latitude=43.59065045757435&sw_longitude=1.4168364672677
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:38:49.290Z ]
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:39:27.942Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.63974819869109&ne_longitude=3.9944217631835954&sw_latitude=43.51563856569584&sw_longitude=3.6541889140625017
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.60880692018796&ne_longitude=3.9117668101806657&sw_latitude=43.54675216691067&sw_longitude=3.741650385620119
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.64595938679416&ne_longitude=3.992705149414064&sw_latitude=43.52186257000986&sw_longitude=3.6524723002929704
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:40:46.615Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.64595938679416&ne_longitude=3.992705149414064&sw_latitude=43.52186257000986&sw_longitude=3.6524723002929704
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.63974819869109&ne_longitude=3.9944217631835954&sw_latitude=43.51563856569584&sw_longitude=3.6541889140625017
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:40:56.006Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.63974819869109&ne_longitude=3.9944217631835954&sw_latitude=43.51563856569584&sw_longitude=3.6541889140625017
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:42:17.268Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=43.63974819869109&ne_longitude=3.9944217631835954&sw_latitude=43.51563856569584&sw_longitude=3.6541889140625017
+undefined [34mdebug[39m : [Knex] Données Table transporter chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 2
+undefined [33mwarn[39m : [Knex] Données item manquantes (length): 0
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 1
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.28552588806209&ne_longitude=-1.3728852368164155&sw_latitude=47.169185421382814&sw_longitude=-1.7131180859375092
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:44:25.572Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.31323270223836&ne_longitude=-1.3720269299316499&sw_latitude=47.080418182555434&sw_longitude=-2.0524926281738374
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.47220714780467&ne_longitude=-1.3648171520995902&sw_latitude=47.006956632701446&sw_longitude=-2.725748548583965
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.468711570025015&ne_longitude=-1.3750561294295665&sw_latitude=47.01046870323028&sw_longitude=-2.7154888864512827
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.33289607243483&ne_longitude=-1.847038851897679&sw_latitude=47.216659731191534&sw_longitude=-2.1872717010187728
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.28552588806209&ne_longitude=-1.3728852368164155&sw_latitude=47.169185421382814&sw_longitude=-1.7131180859375092
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:46:09.425Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:46:19.370Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.28552588806209&ne_longitude=-1.3728852368164155&sw_latitude=47.169185421382814&sw_longitude=-1.7131180859375092
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.28552588806209&ne_longitude=-1.3728852368164155&sw_latitude=47.169185421382814&sw_longitude=-1.7131180859375092
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:47:11.861Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:47:28.822Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:47:33.398Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:47:38.495Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:48:20.664Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.28552588806209&ne_longitude=-1.3728852368164155&sw_latitude=47.169185421382814&sw_longitude=-1.7131180859375092
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=47.363486969212374&ne_longitude=-1.3569207287597749&sw_latitude=47.13089351851609&sw_longitude=-2.0703454113769624
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:49:53.498Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:50:00.919Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:50:21.019Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38572979106859&ne_longitude=-1.3457616271972768&sw_latitude=48.1576720529084&sw_longitude=-2.0591863098144643
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38561815080894&ne_longitude=-1.3461106116625672&sw_latitude=48.157783743732786&sw_longitude=-2.0588366529320865
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38571063819633&ne_longitude=-1.3458214986180224&sw_latitude=48.15769121449017&sw_longitude=-2.059126323034519
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:51:01.127Z ]
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.38481776324952&ne_longitude=-1.2931010011874093&sw_latitude=48.156755945614556&sw_longitude=-2.006525683804597
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.4908154907226674&sw_latitude=48.213066114401336&sw_longitude=-1.8475278320312611
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-28T08:52:04.553Z ]

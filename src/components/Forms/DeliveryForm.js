@@ -12,6 +12,7 @@ const DeliveryForm = ({ deliveryList }) => {
 		handleSubmit,
 		unregister,
 		setValue,
+		watch,
 	} = useForm({
 		defaultValues: {
 			delivery: {
