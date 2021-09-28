@@ -13,13 +13,6 @@ import Relais from 'views/examples/Relais'
 import Tables from 'views/examples/Tables.js'
 import Index from 'views/Index.js'
 
-{
-	ReactGA.initialize('UA-112792874-1')
-}
-{
-	ReactGA.pageview(window.location.pathname + window.location.search)
-}
-
 var routes = [
 	{
 		path: '/index',

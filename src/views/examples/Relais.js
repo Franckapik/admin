@@ -4,7 +4,7 @@ import FindRelaisMap from 'components/Forms/FindRelaisMap'
 import Header from 'components/Headers/Header'
 import useFetch from 'hooks/useFetch'
 import useGeo from 'hooks/useGeo'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 // reactstrap components
 import {

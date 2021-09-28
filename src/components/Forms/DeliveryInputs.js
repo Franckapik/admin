@@ -1,4 +1,3 @@
-import useFetch from 'hooks/useFetch'
 import useGeo from 'hooks/useGeo'
 import useToggle from 'hooks/useToggle'
 import ModalBox from 'layouts/ModalBox'
