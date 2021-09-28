@@ -1,9 +1,10 @@
 import { Alert } from 'bootstrap'
 import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
+import { AddForm } from 'layouts/addForm'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Button, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
+import { Button, Col, Form, FormGroup, InputGroup, InputGroupAddon, Row } from 'reactstrap'
 import CustomerInputs from './CustomerInputs'
 import { DeliveryInputs } from './DeliveryInputs'
 import { DiscountInputs } from './DiscountInputs'
@@ -73,14 +74,23 @@ const InvoiceForm = ({
 	const handleError = (errors) => console.log('error', errors)
 	return (
 		<Form onSubmit={handleSubmit(handleRegistration, handleError)}>
-			<FormGroup>
-				<label htmlFor="prod_ident">Identifiant facture</label>
-				<input className="form-control" type="text" placeholder={nextInvoiceId} disabled></input>
-			</FormGroup>
-			<FormGroup>
-				<label htmlFor="prod_ident">Numero de commande</label>
-				<input className="form-control" type="text" placeholder={order_number} disabled></input>
-			</FormGroup>
+			<Row form>
+				<Col md={6}>
+					{' '}
+					<FormGroup>
+						<label htmlFor="prod_ident">Identifiant facture</label>
+						<input className="form-control" type="text" placeholder={nextInvoiceId} disabled></input>
+					</FormGroup>
+				</Col>
+				<Col md={6}>
+					{' '}
+					<FormGroup>
+						<label htmlFor="prod_ident">Numero de commande</label>
+						<input className="form-control" type="text" placeholder={order_number} disabled></input>
+					</FormGroup>
+				</Col>
+			</Row>
+
 			<FormGroup
 				style={{
 					display: !newClient ? 'block' : 'none', // toggle the visbility of an input
@@ -115,13 +125,16 @@ const InvoiceForm = ({
 				)}
 			</FormGroup>
 			{newClient ? (
-				<CustomerInputs
-					errors={errors}
-					register={register}
-					setValue={setValue}
-					nextId={nextCustomerId}
-					unregister={unregister}
-				></CustomerInputs>
+				<AddForm toggleFunction={addClient} title="Client">
+					{' '}
+					<CustomerInputs
+						errors={errors}
+						register={register}
+						setValue={setValue}
+						nextId={nextCustomerId}
+						unregister={unregister}
+					></CustomerInputs>{' '}
+				</AddForm>
 			) : null}
 			<FormGroup
 				style={{
@@ -157,15 +170,18 @@ const InvoiceForm = ({
 				)}
 			</FormGroup>
 			{newDelivery ? (
-				<DeliveryInputs
-					errors={errors}
-					register={register}
-					setValue={setValue}
-					nextId={nextDeliveryId}
-					nextInvoiceId={nextInvoiceId}
-					unregister={unregister}
-					watch={watch}
-				></DeliveryInputs>
+				<AddForm toggleFunction={addDelivery} title="Livraison">
+					{' '}
+					<DeliveryInputs
+						errors={errors}
+						register={register}
+						setValue={setValue}
+						nextId={nextDeliveryId}
+						nextInvoiceId={nextInvoiceId}
+						unregister={unregister}
+						watch={watch}
+					></DeliveryInputs>
+				</AddForm>
 			) : null}
 			<FormGroup
 				style={{
@@ -201,13 +217,16 @@ const InvoiceForm = ({
 				)}
 			</FormGroup>
 			{newDiscount ? (
-				<DiscountInputs
-					errors={errors}
-					register={register}
-					setValue={setValue}
-					nextId={nextDiscountId}
-					unregister={unregister}
-				></DiscountInputs>
+				<AddForm toggleFunction={addDiscount} title="Réduction">
+					{' '}
+					<DiscountInputs
+						errors={errors}
+						register={register}
+						setValue={setValue}
+						nextId={nextDiscountId}
+						unregister={unregister}
+					></DiscountInputs>
+				</AddForm>
 			) : null}
 			<FormGroup
 				style={{
@@ -243,13 +262,16 @@ const InvoiceForm = ({
 				)}
 			</FormGroup>
 			{newStatus ? (
-				<StatusInputs
-					errors={errors}
-					register={register}
-					setValue={setValue}
-					nextId={nextStatusId}
-					unregister={unregister}
-				></StatusInputs>
+				<AddForm toggleFunction={addStatus} title="Statut">
+					{' '}
+					<StatusInputs
+						errors={errors}
+						register={register}
+						setValue={setValue}
+						nextId={nextStatusId}
+						unregister={unregister}
+					></StatusInputs>
+				</AddForm>
 			) : null}
 
 			<FormGroup
@@ -286,17 +308,21 @@ const InvoiceForm = ({
 				)}
 			</FormGroup>
 			{newTransaction ? (
-				<TransactionInputs
-					errors={errors}
-					register={register}
-					setValue={setValue}
-					nextId={nextTransactionId}
-					nextInvoiceId={nextInvoiceId}
-					unregister={unregister}
-				></TransactionInputs>
+				<AddForm toggleFunction={addTransaction} title="Transaction">
+					{' '}
+					<TransactionInputs
+						errors={errors}
+						register={register}
+						setValue={setValue}
+						nextId={nextTransactionId}
+						nextInvoiceId={nextInvoiceId}
+						unregister={unregister}
+					></TransactionInputs>
+				</AddForm>
 			) : null}
-
-			<Button>Ajouter</Button>
+			<div class="text-center">
+				<Button className="text-center">Valider la commande</Button>
+			</div>
 		</Form>
 	)
 }

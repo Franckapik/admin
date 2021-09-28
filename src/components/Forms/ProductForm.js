@@ -1,5 +1,6 @@
 import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
+import { AddForm } from 'layouts/addForm'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
 import { Alert, Button, Card, CardBody, CardTitle, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
@@ -114,14 +115,10 @@ export default function ProductForm({ productList, collectionList, packagingList
 					)}
 				</FormGroup>
 				{newCollection ? (
-					<Card color="info">
-						<CardTitle>
-							Nouvelle Collection | <small onClick={addCollection}>Collection Existante</small>
-						</CardTitle>
-						<CardBody>
-							<CollectionForm nextId={nextCollectionId} errorsForm={errorsForm} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addCollection} title="Collection">
+						{' '}
+						<CollectionForm nextId={nextCollectionId} errorsForm={errorsForm} />
+					</AddForm>
 				) : null}
 
 				<FormGroup>
@@ -129,14 +126,10 @@ export default function ProductForm({ productList, collectionList, packagingList
 					<input className="form-control" type="file" {...register('product.img')} />
 				</FormGroup>
 				{newPerformance ? (
-					<Card color="info">
-						<CardTitle>
-							Nouvelle Performance | <small onClick={addPerformance}>Performance Existante</small>
-						</CardTitle>
-						<CardBody>
-							<PerformanceForm nextId={nextPerformanceId} errorsForm={errorsForm} register={register} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addPerformance} title="Performance">
+						{' '}
+						<PerformanceForm nextId={nextPerformanceId} errorsForm={errorsForm} register={register} />
+					</AddForm>
 				) : (
 					<FormGroup>
 						<label htmlFor="product_perf">Performance</label>
@@ -171,14 +164,10 @@ export default function ProductForm({ productList, collectionList, packagingList
 				)}
 
 				{newPackaging ? (
-					<Card color="info">
-						<CardTitle>
-							Nouveau Packaging | <small onClick={addPackaging}>Packaging Existant</small>
-						</CardTitle>
-						<CardBody>
-							<PackagingForm nextId={nextPackagingId} errorsForm={errorsForm} register={register} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addPackaging} title="Packaging">
+						{' '}
+						<PackagingForm nextId={nextPackagingId} errorsForm={errorsForm} register={register} />
+					</AddForm>
 				) : (
 					<FormGroup>
 						<label htmlFor="product_pack">Packaging</label>
@@ -213,14 +202,10 @@ export default function ProductForm({ productList, collectionList, packagingList
 				)}
 
 				{newProperty ? (
-					<Card color="info">
-						<CardTitle>
-							Nouvelle Propriété | <small onClick={addProperty}>Propriété Existante</small>
-						</CardTitle>
-						<CardBody>
-							<PropertyForm nextId={nextPropertyId} errorsForm={errorsForm} register={register} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addProperty} title="Propriétés">
+						{' '}
+						<PropertyForm nextId={nextPropertyId} errorsForm={errorsForm} register={register} />
+					</AddForm>
 				) : (
 					<FormGroup>
 						<label htmlFor="product_prop">Propriétés</label>

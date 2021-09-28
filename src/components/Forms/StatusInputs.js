@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { FormGroup } from 'reactstrap'
+import { Col, FormGroup, Row } from 'reactstrap'
 
 export const StatusInputs = ({ register, errors, setValue, nextId, unregister }) => {
 	useEffect(() => {
@@ -14,15 +14,22 @@ export const StatusInputs = ({ register, errors, setValue, nextId, unregister })
 
 	return (
 		<>
-			<FormGroup>
-				<label htmlFor="s_id">Identifiant Statut</label>
-				<input className="form-control" type="text" placeholder={nextId} disabled></input>
-			</FormGroup>
-			3
-			<FormGroup>
-				<label htmlFor="s_msg">Mesage de statut</label>
-				<input className="form-control" type="date" {...register('status.msg', { required: true })}></input>
-			</FormGroup>
+			<Row form>
+				<Col md={6}>
+					{' '}
+					<FormGroup>
+						<label htmlFor="s_id">Identifiant Statut</label>
+						<input className="form-control" type="text" placeholder={nextId} disabled></input>
+					</FormGroup>
+				</Col>
+				<Col md={6}>
+					{' '}
+					<FormGroup>
+						<label htmlFor="s_msg">Message de statut</label>
+						<input className="form-control" type="text" {...register('status.msg', { required: true })}></input>
+					</FormGroup>
+				</Col>
+			</Row>
 		</>
 	)
 }

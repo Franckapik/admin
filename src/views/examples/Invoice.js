@@ -182,7 +182,8 @@ const Orders = () => {
 								<h3 className="mb-0">Ajouter un devis/facture</h3>
 							</CardHeader>
 							<CardBody>
-								<span onClick={facturation}>Generer une facture en pdf</span>
+								{/* 								<span onClick={facturation}>Generer une facture en pdf</span>
+								 */}{' '}
 								{invoiceState &&
 								invoiceState.length &&
 								statusList &&
