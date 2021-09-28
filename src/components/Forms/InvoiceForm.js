@@ -134,7 +134,7 @@ const InvoiceForm = ({
 						className="form-control"
 						type="select"
 						defaultValue=""
-						{...register('delivery.delivery_id', { required: true })}
+						{...register('invoice.delivery_id', { required: true })}
 					>
 						<option disabled value="">
 							{' '}
