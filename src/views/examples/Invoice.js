@@ -16,16 +16,34 @@ const Orders = () => {
 	const { response: discountList } = useFetch('/discount')
 	const { response: customerList } = useFetch('/customer')
 	const { response: deliveryList } = useFetch('/delivery')
+	const { response: businessList } = useFetch('/business')
 
-	const facturation = (invoice) => {
+	const facturation = (template, invoice, items, business) => {
 		//get invoice data
-		invoicePdf.client.company = invoice.name + ' ' + invoice.firstname
-		invoicePdf.client.address = invoice.address
-		invoicePdf.client.zip = invoice.postal
-		invoicePdf.client.city = invoice.city
-		invoicePdf.client.country = invoice.country
-		invoicePdf.invoiceNumber = invoice.order_number
-		invoicePdf.invoiceDate = invoice.order_date
+		template.client.company = invoice.name + ' ' + invoice.firstname
+		template.client.address = invoice.address
+		template.client.zip = invoice.postal
+		template.client.city = invoice.city
+		template.client.country = invoice.country
+		template.invoiceNumber = invoice.order_number
+		template.invoiceDate = invoice.order_date
+		template.sender.company = business.business
+		template.sender.address = business.address
+		template.sender.zip = business.postal
+		template.sender.city = business.city
+		template.sender.country = business.country
+
+		const itemsFiltered = items.filter((a, i) => a.invoice_id === invoice.invoice_id)
+
+		itemsFiltered.map((a, i) => {
+			let p = {}
+			p.quantity = a.qty
+			p.description = productList.filter((b, i) => b.product_id === a.product_id)[0].name
+			p.tax = 0
+			p.price = a.price
+			template.products.push(p)
+			return null
+		})
 
 		//send to pdf
 		easyinvoice.createInvoice(invoicePdf, function (result) {
@@ -36,20 +54,15 @@ const Orders = () => {
 
 	const { response: invoiceList } = useFetch('/complete_invoice')
 
-	const [p_selected, setSelection] = useState(0)
-
-	const [modal, setModal] = useToggle()
-	const [modalModif, setModif] = useToggle()
-
 	const [invoiceState, setInvoiceState] = useState([]) //update when deleting
 
 	useEffect(() => {
 		invoiceList && invoiceList.length && setInvoiceState(invoiceList)
 	}, [invoiceList])
 
-	const removeProduct = (pid) => {
-		delData('/delProduct/' + pid)
-		setInvoiceState(invoiceState.filter((obj) => obj.product_id !== pid))
+	const remove = (pid) => {
+		delData('/delInvoice/' + pid)
+		setInvoiceState(invoiceState.filter((obj) => obj.invoice_id !== pid))
 	}
 
 	return (
@@ -89,10 +102,10 @@ const Orders = () => {
 									{Array.from(invoiceState).map((a, i) => {
 										return (
 											<tr key={a + i}>
-												<td onClick={() => removeProduct(a.product_id)}>
+												<td onClick={() => remove(a.invoice_id)}>
 													<i className="far fa-trash-alt text-danger"></i>
 												</td>
-												<td onClick={() => facturation(a)}>
+												<td onClick={() => facturation(invoicePdf, a, itemList, businessList[0])}>
 													<i className="far fa-file-pdf text-yellow"></i>
 												</td>
 												<td>
