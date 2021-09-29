@@ -13518,3 +13518,611 @@ undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
 undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
 undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
 undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Fetch all parcels
+undefined [32minfo[39m : Parcel fetched OK
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table invoice chargées (length): 8
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 8
+undefined [34mdebug[39m : [Knex] Données Table performance chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 8
+undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table packaging chargées (length): 5
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.2742846248208&ne_longitude=-1.655197352409374&sw_latitude=48.26574358366042&sw_longitude=-1.6828455629348866
+undefined [32minfo[39m : Shipping fetch data carriers
+undefined [32minfo[39m : Shipping fetch data ?country=FR&ne_latitude=48.32709879348006&ne_longitude=-1.5170796813964955&sw_latitude=48.213066114401336&sw_longitude=-1.821263641357433
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T06:49:41.347Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T06:53:12.046Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T06:56:51.579Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T06:57:04.667Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:00:24.050Z ]
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:02:45.360Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:04:19.217Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:06:07.217Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:06:11.210Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:08:10.752Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:08:46.038Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:08:55.858Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:09:11.129Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:09:57.357Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:10:55.194Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:13:15.559Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:13:41.986Z ]
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:14:10.723Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:14:43.572Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:15:28.958Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:16:08.804Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:19:00.293Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:21:17.526Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:21:23.201Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:21:42.772Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T07:22:22.298Z ]
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:12:35.686Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:13:58.274Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:14:35.085Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [33mwarn[39m : La facture 1 a été supprimée.
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [33mwarn[39m : La facture 4 a été supprimée.
+undefined [33mwarn[39m : La facture 5 a été supprimée.
+undefined [33mwarn[39m : La facture 6 a été supprimée.
+undefined [33mwarn[39m : La facture 7 a été supprimée.
+undefined [33mwarn[39m : La facture 8 a été supprimée.
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:16:11.638Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:17:54.325Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:18:18.804Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:18:41.341Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:21:06.997Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:22:43.795Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:22:46.630Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:23:23.743Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:23:40.770Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:26:45.983Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:28:46.551Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:29:56.701Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:30:16.199Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:30:24.308Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:31:06.250Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:31:23.491Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:31:32.089Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:33:05.267Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:33:17.998Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:33:46.750Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:34:03.127Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:34:29.596Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:34:52.584Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:35:31.985Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:36:04.199Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:36:46.802Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:37:06.052Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:37:46.624Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:37:53.368Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:38:13.428Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:39:21.736Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:40:31.795Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:40:57.466Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:42:04.827Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:43:58.016Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:44:25.502Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:44:36.177Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:46:01.382Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:50:01.554Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:50:30.975Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:52:10.778Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:52:49.127Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:53:13.417Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:53:38.738Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:54:24.021Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:54:39.085Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:55:03.505Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:57:00.019Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T14:59:50.238Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:00:21.569Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:01:45.408Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:02:28.883Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:03:05.506Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:03:12.507Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:03:36.459Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:03:56.266Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:08:17.174Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:09:07.459Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:11:24.052Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:11:36.014Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:13:41.361Z ]
+undefined [34mdebug[39m : [Knex] Données Table status chargées (length): 5
+undefined [34mdebug[39m : [Knex] Données Table item chargées (length): 7
+undefined [34mdebug[39m : [Knex] Données Table transaction chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table product chargées (length): 2
+undefined [34mdebug[39m : [Knex] Données Table discount chargées (length): 4
+undefined [34mdebug[39m : [Knex] Données Table customer chargées (length): 6
+undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
+undefined [34mdebug[39m : [Knex] Données Table delivery chargées (length): 4
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-09-29T15:18:58.417Z ]

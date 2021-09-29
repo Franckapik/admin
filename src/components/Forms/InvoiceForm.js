@@ -41,7 +41,10 @@ const InvoiceForm = ({
 
 	const [errorsForm, setErrors] = useState()
 	const [items, addItems] = useState([])
-
+	const removeItem = (items) => {
+		items.pop()
+		return items
+	}
 	const [newClient, addClient] = useToggle()
 	const [newDiscount, addDiscount] = useToggle()
 	const [newStatus, addStatus] = useToggle()
@@ -285,7 +288,7 @@ const InvoiceForm = ({
 									{' '}
 									<FormGroup>
 										<label htmlFor="invoice_item_id">Id</label>
-										<input className="form-control" type="number" value={i + 1} disabled></input>
+										<input className="form-control" type="number" value={i} disabled></input>
 										{methods.setValue(`items.${i}.invoice_id`, nextInvoiceId)}
 									</FormGroup>
 								</Col>
@@ -349,7 +352,7 @@ const InvoiceForm = ({
 										/>
 									</FormGroup>
 								</Col>
-								<Col md={2}>
+								<Col md={1}>
 									{' '}
 									<FormGroup>
 										<label htmlFor="invoice_item_qty">Quantité</label>
@@ -385,12 +388,40 @@ const InvoiceForm = ({
 										></input>
 									</FormGroup>
 								</Col>
+								<Col md={1}>
+									<label htmlFor="invoice_item_stotal">del</label>
+
+									<Button
+										onClick={() => {
+											console.log(i, items)
+											addItems(items.filter((c, d) => c !== i))
+										}}
+									>
+										-
+									</Button>
+								</Col>
 							</Row>
 						</Card>
 					))}
 				{/* 			{watch('items') && watch('items').reduce((a, c) => a.price + c.price)}
 				 */}{' '}
-				<span onClick={() => addItems((items) => [...items, items.length])}>Ajouter un item</span>
+				<Button
+					onClick={() =>
+						addItems((items) => {
+							return [...items, items.length]
+						})
+					}
+				>
+					+
+				</Button>
+				<Button
+					onClick={() => {
+						items.pop()
+						addItems((items) => [...items])
+					}}
+				>
+					-
+				</Button>
 				<div className="text-center">
 					<Button className="text-center">Valider la commande</Button>
 				</div>

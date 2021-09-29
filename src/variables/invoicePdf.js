@@ -31,20 +31,7 @@ export const invoicePdf = {
 	},
 	invoiceNumber: '',
 	invoiceDate: '',
-	products: [
-		{
-			quantity: '2',
-			description: 'Woodik-7',
-			tax: 0,
-			price: 68,
-		},
-		{
-			quantity: '4',
-			description: 'Quadrablack',
-			tax: 0,
-			price: 62,
-		},
-	],
+	products: [],
 	bottomNotice:
 		'TVA non applicable, article 293 B du CGI | Escompte pour réglement anticipé de 0% - Pénalité en cas de retard de paiement: 1.5 fois le taux d intéret légal | IBAN : FR76 1380 7005 8132 3192 3592 810 BIC/SWIFT : CCBPFRPPNAN',
 	translate: {
@@ -57,3 +44,18 @@ export const invoicePdf = {
 		total: 'Total',
 	},
 }
+
+/* products: [
+	{
+		quantity: '2',
+		description: 'Woodik-7',
+		tax: 0,
+		price: 68,
+	},
+	{
+		quantity: '4',
+		description: 'Quadrablack',
+		tax: 0,
+		price: 62,
+	},
+], */

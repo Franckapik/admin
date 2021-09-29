@@ -280,6 +280,16 @@ app.delete('/delCustomer/:id', (req, res) => {
 		})
 		.catch((err) => res.json({ error: err }))
 })
+app.delete('/delInvoice/:id', (req, res) => {
+	knex('invoice')
+		.where('invoice_id', req.params.id)
+		.del()
+		.then((deletedRows) => {
+			res.sendStatus(200)
+			logger.warn('La facture %s %s', req.params.id, 'a été supprimée.')
+		})
+		.catch((err) => res.json({ error: err }))
+})
 
 app.post('/addCustomer', (req, res) => {
 	upsert('customer', 'user_id', req.body).then(() => {
