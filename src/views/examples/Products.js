@@ -9,6 +9,7 @@ import { Button, Card, CardBody, CardHeader, Col, Container, ListGroup, ListGrou
 import delData from 'hooks/delData'
 import ModifyProductForm from 'components/Forms/ModifyProductForm'
 import ModalBox from 'layouts/ModalBox'
+import Preview3D from 'layouts/Preview3D'
 const Products = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
@@ -19,6 +20,7 @@ const Products = () => {
 	const [p_selected, setSelection] = useState(0)
 
 	const [modal, setModal] = useToggle()
+	const [modal3d, setModal3d] = useToggle()
 	const [modalModif, setModif] = useToggle()
 
 	const [productState, setProductState] = useState([]) //update when deleting
@@ -101,7 +103,14 @@ const Products = () => {
 														<i className="far fa-edit text-info"></i>
 													</td>
 													<td>{a.product_id}</td>
-													<td>{a.name}</td>
+													<td
+														onClick={() => {
+															setModal3d()
+															setSelection(a)
+														}}
+													>
+														{a.name}
+													</td>
 													<td>{a.col_name}</td>
 													<td>{a.price} €</td>
 													<td>
@@ -195,6 +204,15 @@ const Products = () => {
 						</ListGroup>
 					</Row>
 				</Container>
+			</ModalBox>
+			<ModalBox
+				title={'Aperçu du produit ' + p_selected.name}
+				isOpen={modal3d}
+				toggle={setModal3d}
+				button1="Fermer"
+				button2="Enregistrer"
+			>
+				<Preview3D style={{ width: '100vw', height: '100vh' }} p_selected={p_selected}></Preview3D>
 			</ModalBox>
 		</>
 	)

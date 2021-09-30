@@ -2,7 +2,7 @@ import { Button, Card, CardBody, CardHeader, Modal } from 'reactstrap'
 
 const ModalBox = ({ title, isOpen, toggle, button1, button2, children }) => {
 	return (
-		<Modal className="modal-dialog-centered" isOpen={isOpen} toggle={toggle} size="xl">
+		<Modal tag="xxl" className="modal-dialog-centered" isOpen={isOpen} toggle={toggle} size="xl">
 			<div className="modal-body">
 				<Card className="shadow">
 					<CardHeader className="bg-transparent">

@@ -45,6 +45,8 @@
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.2",
+    "@react-three/drei": "^7.12.5",
+    "@react-three/fiber": "^7.0.7",
     "bootstrap": "4.6.0",
     "chart.js": "2.9.4",
     "classnames": "2.2.6",
@@ -81,6 +83,7 @@
     "react-use-analytics-api": "^1.4.16",
     "reactstrap": "8.9.0",
     "rss-parser": "^3.12.0",
+    "three": "^0.132.2",
     "winston": "^3.3.3"
   },
   "devDependencies": {
