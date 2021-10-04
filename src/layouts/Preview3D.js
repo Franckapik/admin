@@ -1,8 +1,6 @@
 import { OrbitControls, Text } from '@react-three/drei'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import React, { useRef, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { Button, Form, FormGroup } from 'reactstrap'
 
 const LightenDarkenColor = (col, amt) => {
 	var usePound = false
@@ -77,19 +75,16 @@ const Cell = (props) => {
 	)
 }
 
-const Preview3D = ({ p_selected }) => {
-	const [width, setWidth] = useState(50)
-	const [length, setLength] = useState(50)
-	const [depth, setDepth] = useState(10)
-	const [prime, setPrime] = useState(7)
-
+const Preview3D = ({ p_selected, width, length, prime, depth, ratio, hor, vert, invert, amax, setAmax, cwidth, setCwidth }) => {
 	const e = 0.3 //epaisseur
 	const p = prime //type (type du diffuseur) Prime number (p)
 	const w = width //largeur
 	const l = length //largeur
 
 	const d = depth //profondeur
-	const c = (w - (p + 1) * e) / p //largeur cellule
+	setCwidth((w - (p + 1) * e) / p)
+
+	const c = cwidth //largeur cellule
 	const n = Math.floor(w / c) * Math.floor(l / c) // nb de cellules
 
 	const N2 = Math.ceil(l / (c + e)) //type (nombre de rangées)
@@ -102,18 +97,24 @@ const Preview3D = ({ p_selected }) => {
 			const an = (Math.pow(n, 2) + Math.pow(m, 2)) % p
 			return an
 		})
-	const amax = Math.max(...a)
+	setAmax(Math.max(...a))
 	const start = [-w / 2, -l / 2, d / 2]
 	return (
-		<div style={{ width: '90vw', height: '90vh' }}>
-			{console.log(p_selected)}
-			<Canvas>
+		<>
+			<Canvas camera={{ position: [0, 0, 80] }}>
 				<OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
 				<ambientLight />
 				<pointLight position={[10, 10, 10]} />
-				<mesh>
-					<sphereBufferGeometry></sphereBufferGeometry>
-				</mesh>
+
+				<Text color="teal" scale={50} position={[0, -l + l / 4, d / 2]}>
+					{width} cm
+				</Text>
+				<Text color="teal" scale={50} position={[-w + w / 4, 0, d / 2]} rotation={[0, 0, Math.PI / 2]}>
+					{length} cm
+				</Text>
+				<Text color="teal" scale={50} position={[w - w / 4, 0, d / 2]} rotation={[0, Math.PI / 2, 0]}>
+					{depth} cm
+				</Text>
 				{Array(p + 1) //largeur
 					.fill('')
 					.map((a, i) => (
@@ -129,17 +130,17 @@ const Preview3D = ({ p_selected }) => {
 					.map((a, i) => {
 						const n = i % p
 						const m = Math.floor(i / p)
+						const o = (Math.pow(n + hor, 2) + Math.pow(m + vert, 2)) % p
 						const x = start[0] + c / 2 + n * (c + e)
 						const z = start[1] + c / 2 + e + m * (c + e)
-						const y = (((Math.pow(n, 2) + Math.pow(m, 2)) % p) * d) / amax
-						console.log((y * 1000) / d)
+						const y = invert ? d - (o * d) / amax : (o * d) / amax
 						return (
 							<>
 								<Cell
 									args={[c, c, e]}
 									position={[x, z, y === d ? y - e : y + e]}
 									rotation={[0, 0, 0]}
-									color={LightenDarkenColor('#012000', (y * 200) / d)}
+									color={y === 0 ? 'red' : LightenDarkenColor('#012000', (y * 200) / d)}
 								/>
 								<Text
 									color="black" // default
@@ -150,27 +151,13 @@ const Preview3D = ({ p_selected }) => {
 								>
 									{/* {y.toFixed(2)}
 									 */}{' '}
-									{Math.round((y / d) * amax)}
+									{ratio ? Math.round((y / d) * amax) : Math.round(y * 100) / 100}
 								</Text>
 							</>
 						)
 					})}
 			</Canvas>
-			<Form>
-				<FormGroup>
-					<Button onClick={() => setPrime(7)}>7</Button>
-					<Button onClick={() => setPrime(11)}>11</Button>
-					<Button onClick={() => setPrime(13)}>13</Button>
-					<Button onClick={() => setPrime(17)}>17</Button>
-					<input type="range" min="1" max="200" className="form-control" onChange={(e) => setWidth(e.target.value)}></input>
-					{width} {c.toFixed(2)}
-					<input type="range" min="1" max="200" className="form-control" onChange={(e) => setLength(e.target.value)}></input>
-					{length}
-					<input type="range" min="1" max="50" className="form-control" onChange={(e) => setDepth(e.target.value)}></input>
-					{depth}
-				</FormGroup>
-			</Form>
-		</div>
+		</>
 	)
 }
 

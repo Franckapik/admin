@@ -5,7 +5,22 @@ import useFetch from 'hooks/useFetch'
 import React, { useEffect, useState } from 'react'
 import useToggle from 'hooks/useToggle'
 // reactstrap components
-import { Button, Card, CardBody, CardHeader, Col, Container, ListGroup, ListGroupItem, Modal, Row, Table } from 'reactstrap'
+import {
+	Button,
+	Card,
+	CardBody,
+	CardHeader,
+	CardTitle,
+	Col,
+	Container,
+	CustomInput,
+	FormGroup,
+	ListGroup,
+	ListGroupItem,
+	Modal,
+	Row,
+	Table,
+} from 'reactstrap'
 import delData from 'hooks/delData'
 import ModifyProductForm from 'components/Forms/ModifyProductForm'
 import ModalBox from 'layouts/ModalBox'
@@ -34,6 +49,27 @@ const Products = () => {
 		setProductState(productState.filter((obj) => obj.product_id !== pid))
 	}
 
+	const [width, setWidth] = useState(50)
+	const [length, setLength] = useState(50)
+	const [depth, setDepth] = useState(10)
+	const [prime, setPrime] = useState(7)
+	const [ratio, setRatio] = useToggle()
+	const [invert, setInvert] = useToggle()
+	const [vert, setVert] = useState(0)
+	const [hor, setHor] = useState(0)
+	const [amax, setAmax] = useState(4)
+	const [cwidth, setCwidth] = useState(31)
+
+	const fmin = Math.round((((344 / 2 / depth / 10) * amax) / prime) * 1000)
+	const fmax = Math.round(344 / 2 / (cwidth / 100))
+
+	useEffect(() => {
+		setWidth(p_selected.width)
+		setLength(p_selected.length)
+		setDepth(p_selected.depth)
+		setPrime(p_selected.prime_nb)
+	}, [p_selected])
+
 	return (
 		<>
 			{productList &&
@@ -60,14 +96,17 @@ const Products = () => {
 								<Table className="align-items-center table-dark table-flush" responsive>
 									<thead className="thead-dark">
 										<tr>
-											<th scope="col">
+											<th scope="col" className="p-2">
 												<i className="far fa-trash-alt" />
 											</th>
-											<th scope="col">
+											<th scope="col" className="p-2">
 												<i className="far fa-list-alt"></i>
 											</th>
-											<th scope="col">
+											<th scope="col" className="p-2">
 												<i className="far fa-edit"></i>
+											</th>
+											<th scope="col" className="p-2">
+												<i className="fas fa-cubes"></i>
 											</th>
 											<th scope="col">Id</th>
 											<th scope="col">Nom</th>
@@ -83,7 +122,7 @@ const Products = () => {
 										{Array.from(productState).map((a, i) => {
 											return (
 												<tr key={a + i}>
-													<td onClick={() => removeProduct(a.product_id)}>
+													<td onClick={() => removeProduct(a.product_id)} className="p-2">
 														<i className="far fa-trash-alt text-danger"></i>
 													</td>
 													<td
@@ -91,6 +130,7 @@ const Products = () => {
 															setSelection(a)
 															setModal()
 														}}
+														className="p-2"
 													>
 														<i className="far fa-list-alt text-info"></i>
 													</td>
@@ -99,18 +139,21 @@ const Products = () => {
 															setSelection(a)
 															setModif()
 														}}
+														className="p-2"
 													>
-														<i className="far fa-edit text-info"></i>
+														<i className="far fa-edit text-orange"></i>
 													</td>
-													<td>{a.product_id}</td>
 													<td
 														onClick={() => {
 															setModal3d()
 															setSelection(a)
 														}}
+														className="p-2"
 													>
-														{a.name}
+														<i className="fas fa-cubes text-pink"></i>
 													</td>
+													<td>{a.product_id}</td>
+													<td>{a.name}</td>
 													<td>{a.col_name}</td>
 													<td>{a.price} €</td>
 													<td>
@@ -205,14 +248,117 @@ const Products = () => {
 					</Row>
 				</Container>
 			</ModalBox>
-			<ModalBox
-				title={'Aperçu du produit ' + p_selected.name}
-				isOpen={modal3d}
-				toggle={setModal3d}
-				button1="Fermer"
-				button2="Enregistrer"
-			>
-				<Preview3D style={{ width: '100vw', height: '100vh' }} p_selected={p_selected}></Preview3D>
+			<ModalBox isOpen={modal3d} toggle={setModal3d} button1="Fermer" button2="Ajouter en Boutique" noheader>
+				<Container>
+					<h3 className="ml-8">
+						D2N{prime}P{Math.round(depth)}L{Math.round(width)}
+						{width !== length ? 'W' + Math.round(length) : null}P
+					</h3>
+					<Row>
+						<Col md={8}>
+							<div style={{ height: '25em' }}>
+								<Preview3D
+									p_selected={p_selected}
+									width={width}
+									length={length}
+									prime={prime}
+									depth={depth}
+									ratio={ratio}
+									hor={hor}
+									vert={vert}
+									invert={invert}
+									amax={amax}
+									setAmax={setAmax}
+									cwidth={cwidth}
+									setCwidth={setCwidth}
+								></Preview3D>
+							</div>
+						</Col>
+						<Col md={4}>
+							{' '}
+							<Row>
+								{' '}
+								<Row>
+									{' '}
+									<Button onClick={() => setPrime(7)}>7</Button>
+									<Button onClick={() => setPrime(11)}>11</Button>
+									<Button onClick={() => setPrime(13)}>13</Button>
+									<Button onClick={() => setPrime(17)}>17</Button>
+								</Row>
+								<label>Largeur</label>
+								<input
+									type="range"
+									min="1"
+									max="200"
+									className="form-control"
+									onChange={(e) => setWidth(e.target.value)}
+								></input>
+								<label>Longueur</label>
+								<input
+									type="range"
+									min="1"
+									max="200"
+									className="form-control"
+									onChange={(e) => setLength(e.target.value)}
+								></input>
+								<label>Profondeur</label>
+								<input
+									type="range"
+									min="1"
+									max="50"
+									className="form-control"
+									onChange={(e) => setDepth(e.target.value)}
+								></input>
+								<CustomInput type="switch" id="ratio" name="rationame" label="Ratio/Hauteur" onClick={setRatio} />
+								<CustomInput type="switch" id="inv" name="invname" label="Inverser" onClick={setInvert} />
+							</Row>
+							<Row>
+								<Table bordered responsive style={{ textAlign: 'center' }}>
+									<tbody>
+										<tr>
+											<td></td>
+											<td onClick={() => setVert(vert - 1)}>
+												<i className="fas fa-arrow-up m-0"></i>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td onClick={() => setHor(hor + 1)}>
+												<i className="fas fa-arrow-left"></i>
+											</td>
+											<td>
+												{vert} / {hor}
+											</td>
+
+											<td onClick={() => setHor(hor - 1)}>
+												<i className="fas fa-arrow-right"></i>
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td onClick={() => setVert(vert + 1)}>
+												<i className="fas fa-arrow-down"></i>
+											</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</Table>
+							</Row>
+							<Row>
+								<Card style={{ width: '100%' }}>
+									<CardHeader className="border-0">
+										<CardTitle className="m-0" tag="h4">
+											Spectre de traitement optimal
+										</CardTitle>
+									</CardHeader>
+									<CardBody>
+										{fmin} Hz -{fmax} Hz
+									</CardBody>
+								</Card>
+							</Row>
+						</Col>
+					</Row>
+				</Container>
 			</ModalBox>
 		</>
 	)
