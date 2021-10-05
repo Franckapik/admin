@@ -53,14 +53,14 @@ export const Product3D = ({ p_selected }) => {
 					<div
 						style={{
 							position: 'absolute',
-							width: '150px',
+							width: '200px',
 							top: '25%',
 							zIndex: '1000',
 							fontSize: '0.8em',
 						}}
 						onClick={() => console.log('hey')}
 					>
-						<ListGroup>
+						<ListGroup className="ml-2">
 							<ListGroupItem className="border-0 bg-transparent">
 								<i className="fas fa-ruler-combined mr-2"></i> {width} x {length} x {depth} cm
 							</ListGroupItem>
@@ -150,11 +150,32 @@ export const Product3D = ({ p_selected }) => {
 				</Card>
 				<Card style={{ width: '100%' }} className="m-2">
 					<label>Largeur</label>
-					<input type="range" min="1" max="200" className="form-control" onChange={(e) => setWidth(e.target.value)}></input>
+					<input
+						type="range"
+						min="1"
+						max="200"
+						className="form-control"
+						defaultValue={width}
+						onChange={(e) => setWidth(e.target.value)}
+					></input>
 					<label>Longueur</label>
-					<input type="range" min="1" max="200" className="form-control" onChange={(e) => setLength(e.target.value)}></input>
+					<input
+						type="range"
+						min="1"
+						max="200"
+						className="form-control"
+						defaultValue={length}
+						onChange={(e) => setLength(e.target.value)}
+					></input>
 					<label>Profondeur</label>
-					<input type="range" min="1" max="50" className="form-control" onChange={(e) => setDepth(e.target.value)}></input>
+					<input
+						type="range"
+						min="1"
+						max="50"
+						className="form-control"
+						defaultValue={depth}
+						onChange={(e) => setDepth(e.target.value)}
+					></input>
 					<CustomInput type="switch" id="ratio" name="rationame" label="Ratio/Hauteur" onClick={setRatio} />
 					<CustomInput type="switch" id="inv" name="invname" label="Inverser" onClick={setInvert} />
 				</Card>
