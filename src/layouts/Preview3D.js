@@ -1,4 +1,4 @@
-import { OrbitControls, Text } from '@react-three/drei'
+import { Html, OrbitControls, Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import React, { useRef, useState } from 'react'
 
@@ -75,8 +75,23 @@ const Cell = (props) => {
 	)
 }
 
-const Preview3D = ({ p_selected, width, length, prime, depth, ratio, hor, vert, invert, amax, setAmax, cwidth, setCwidth }) => {
-	const e = 0.3 //epaisseur
+const Preview3D = ({
+	p_selected,
+	width,
+	length,
+	prime,
+	depth,
+	ratio,
+	hor,
+	vert,
+	invert,
+	amax,
+	setAmax,
+	cwidth,
+	setCwidth,
+	thickness,
+}) => {
+	const e = thickness //epaisseur
 	const p = prime //type (type du diffuseur) Prime number (p)
 	const w = width //largeur
 	const l = length //largeur
