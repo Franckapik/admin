@@ -12,6 +12,7 @@ const useDimension = (product) => {
 	const [n2, setN2] = useState(0) // nb de rangées
 	const [a, setA] = useState(false) // ensemble des profondeurs (resultat du modulo)
 	const [aMax, setAmax] = useState(0) // profondeur max
+	const [ai, setAi] = useState(0) // aire
 
 	useEffect(() => {
 		if (product.product_id) {
@@ -23,6 +24,7 @@ const useDimension = (product) => {
 			setC(product.width_cel)
 			setN(Math.floor(w / c) * Math.floor(l / c))
 			setN2(Math.ceil(l / (c + e)))
+			setAi(l * d * (p + 1) + (l * d * (p + 1) + c * l * p))
 			setA(
 				n &&
 					Array(n)
@@ -39,9 +41,7 @@ const useDimension = (product) => {
 		}
 	}, [product, e, w, p, l, d, c, n, n2, a, aMax])
 
-	return { e, w, p, l, d, c, n, n2, a, aMax }
-
-	console.log({ e, w, p, l, d, c, n, n2, a, aMax })
+	return { e, w, p, l, d, c, n, n2, a, aMax, ai }
 }
 
 export default useDimension

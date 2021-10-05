@@ -5,13 +5,14 @@ import useFetch from 'hooks/useFetch'
 import React, { useEffect, useState } from 'react'
 // reactstrap components
 import { Card, Col, Container, Row } from 'reactstrap'
+import Dropzone from 'layouts/Dropzone'
 const Price = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
 
 	const [p_selected, setSelection] = useState(0)
 
-	const { e, w, p, l, d, c, n, n2, a, aMax } = useDimension(p_selected)
+	const { e, w, p, l, d, c, n, n2, a, aMax, ai } = useDimension(p_selected)
 
 	const [productState, setProductState] = useState([]) //update when deleting
 
@@ -53,7 +54,8 @@ const Price = () => {
 							) : (
 								'Pas de produits disponibles'
 							)}
-							Aire {l * d * (p + 1) + (l * d * (p + 1) + c * l * p)}
+							Aire {ai}
+							<Dropzone></Dropzone>
 						</Card>{' '}
 					</Col>
 				</Row>
