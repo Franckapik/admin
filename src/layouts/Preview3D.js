@@ -102,7 +102,7 @@ const Preview3D = ({
 	const c = cwidth //largeur cellule
 	const n = Math.floor(w / c) * Math.floor(l / c) // nb de cellules
 
-	const N2 = Math.ceil(l / (c + e)) //type (nombre de rangées)
+	const n2 = Math.ceil(l / (c + e)) //type (nombre de rangées)
 
 	const a = Array(n)
 		.fill('')
@@ -135,7 +135,7 @@ const Preview3D = ({
 					.map((a, i) => (
 						<Part args={[e, l, d]} position={[start[0] + (c + e) * i, 0, start[2]]} rotation={[0, 0, 0]} />
 					))}
-				{Array(N2) //longueur
+				{Array(n2) //longueur
 					.fill('')
 					.map((a, i) => (
 						<Part args={[w, e, d]} position={[0, start[1] + e + (c + e) * i, start[2]]} rotation={[0, 0, 0]} />

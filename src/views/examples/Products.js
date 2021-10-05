@@ -10,6 +10,7 @@ import {
 	CardBody,
 	CardHeader,
 	Col,
+	Container,
 	Container as Modal3D,
 	FormGroup,
 	ListGroup,
@@ -60,7 +61,7 @@ const Products = () => {
 			)}
 
 			{/* Page content */}
-			<Modal3D className="mt--7" fluid>
+			<Container className="mt--7" fluid>
 				{/* Dark table */}
 				<Row className="mt-5">
 					<div className="col">
@@ -177,7 +178,7 @@ const Products = () => {
 						</Card>
 					</Col>
 				</Row>
-			</Modal3D>
+			</Container>
 			<ModalBox title="Modification du produit" isOpen={modalModif} toggle={setModif} button1="Fermer" button2="Enregistrer">
 				<ModifyProductForm
 					p_selected={p_selected}
