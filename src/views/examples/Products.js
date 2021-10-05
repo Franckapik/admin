@@ -21,7 +21,7 @@ import {
 import delData from 'hooks/delData'
 import ModifyProductForm from 'components/Forms/ModifyProductForm'
 import ModalBox from 'layouts/ModalBox'
-import { Product3D } from './Product3D'
+import { Product3D } from '../../layouts/Product3D'
 const Products = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')

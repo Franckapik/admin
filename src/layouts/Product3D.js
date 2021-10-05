@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import useToggle from 'hooks/useToggle'
 import { Button, Card, CardBody, CardHeader, CardTitle, Col, CustomInput, ListGroup, ListGroupItem, Row, Table } from 'reactstrap'
 import Preview3D from 'layouts/Preview3D'
+import logo from '../assets/img/brand/logo_cercle.svg'
 
 export const Product3D = ({ p_selected }) => {
 	const [width, setWidth] = useState(50)
@@ -29,6 +30,19 @@ export const Product3D = ({ p_selected }) => {
 	return (
 		<Row>
 			<Col md={8}>
+				<div
+					style={{
+						position: 'absolute',
+						zIndex: '0',
+						width: '100%',
+						height: '100%',
+						backgroundImage: `url(${logo})`,
+						backgroundRepeat: 'no-repeat',
+						backgroundSize: '50%',
+						backgroundPosition: 'center',
+						filter: 'opacity(5%)',
+					}}
+				></div>
 				<Card className="m-2 p-2">
 					<h3 style={{ textAlign: 'center' }}>
 						D2N{prime}P{Math.round(depth)}L{Math.round(width)}
