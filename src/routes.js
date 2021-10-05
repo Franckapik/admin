@@ -6,6 +6,7 @@ import Icons from 'views/examples/Icons.js'
 import Invoice from 'views/examples/Invoice'
 import Login from 'views/examples/Login.js'
 import Parcel from 'views/examples/Parcel'
+import Price from 'views/examples/Price'
 import Products from 'views/examples/Products.js'
 import Profile from 'views/examples/Profile.js'
 import Register from 'views/examples/Register.js'
@@ -45,7 +46,7 @@ var routes = [
 	{
 		path: '/Invoice',
 		name: 'Commandes',
-		icon: 'ni ni-cart text-blue',
+		icon: 'ni ni-cart text-indigo',
 		component: Invoice,
 		layout: '/admin',
 	},
@@ -68,6 +69,13 @@ var routes = [
 		name: 'Relais',
 		icon: 'ni ni-square-pin text-teal',
 		component: Relais,
+		layout: '/admin',
+	},
+	{
+		path: '/Price',
+		name: 'Prix',
+		icon: 'ni ni-money-coins text-pink',
+		component: Price,
 		layout: '/admin',
 	},
 	{

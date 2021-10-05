@@ -25,6 +25,7 @@ export const Product3D = ({ p_selected }) => {
 		setLength(p_selected.length)
 		setDepth(p_selected.depth)
 		setPrime(p_selected.prime_nb)
+		setThickness(p_selected.thickness)
 	}, [p_selected])
 
 	return (

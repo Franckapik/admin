@@ -69,11 +69,11 @@ const AdminNavbar = (props) => {
 							</DropdownToggle>
 							<DropdownMenu className="dropdown-menu-arrow" right>
 								<DropdownItem className="noti-title" header tag="div">
-									<h6 className="text-overflow m-0">Welcome!</h6>
+									<h6 className="text-overflow m-0">Bienvenue!</h6>
 								</DropdownItem>
 								<DropdownItem to="/admin/user-profile" tag={Link}>
 									<i className="ni ni-single-02" />
-									<span>My profile</span>
+									<span>Mon profil</span>
 								</DropdownItem>
 								<DropdownItem to="/admin/user-profile" tag={Link}>
 									<i className="ni ni-settings-gear-65" />
@@ -90,7 +90,7 @@ const AdminNavbar = (props) => {
 								<DropdownItem divider />
 								<DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
 									<i className="ni ni-user-run" />
-									<span>Logout</span>
+									<span>Se deconnecter</span>
 								</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>
