@@ -1,11 +1,9 @@
-import useDimension from 'hooks/useDimension'
+import dimension from 'hooks/useDimension'
 import React, { useEffect, useRef, useState } from 'react'
+import { Polygon, Svg, Text } from 'react-svg-path'
 import { Button, Container } from 'reactstrap'
-import { Circle, Polygon, Rect, Svg } from 'react-svg-path'
 
 export const Product2D = ({ p_selected }) => {
-	const { e, w, p, l, d, c, n, n2, isready } = useDimension(p_selected)
-
 	const canvasRef = useRef(null)
 
 	const snapshot = () => {
@@ -18,16 +16,22 @@ export const Product2D = ({ p_selected }) => {
 	const [peigneCourt, setPeigneCourt] = useState([])
 	const [peigneLong, setPeigneLong] = useState([])
 	const [cellule, setCellule] = useState([])
+	const [cel_width, setCelWidth] = useState(0)
 
 	useEffect(() => {
+		const { e, w, p, l, d, c, n, n2 } = dimension(p_selected)
+		setCelWidth(c)
+
 		let x = 0
 		let y = 0
 		let s = 50 // depart
 		let t = d / 4 // espacement entre pieces
 		let m = 1 // marge de decoupe
 
-		if (isready) {
+		if (w && n2) {
 			console.log(e, w, p, l, d, c, n, n2)
+
+			//Cadre long
 			const j = [
 				[(x = s), (y = s)],
 				[(x += d / 3), y],
@@ -44,6 +48,7 @@ export const Product2D = ({ p_selected }) => {
 			]
 			setCadreLong((old) => [...old, ...j])
 
+			//Cadre court
 			const b = [
 				[(x = s + d * 1 + t), (y = s - e)],
 				[(x += d / 3), y],
@@ -60,6 +65,8 @@ export const Product2D = ({ p_selected }) => {
 			]
 
 			setCadreCourt((old) => [...old, ...b])
+
+			//Peigne Court
 
 			const f = [
 				[(x = s + (d + t) * 2), (y = s)],
@@ -82,6 +89,7 @@ export const Product2D = ({ p_selected }) => {
 
 			setPeigneCourt((old) => [...old, ...f])
 
+			//Peigne Long
 			const g = [
 				[(x = s + (d + t) * 3), (y = s)],
 				[(x += d), y],
@@ -103,6 +111,7 @@ export const Product2D = ({ p_selected }) => {
 
 			setPeigneLong((old) => [...old, ...g])
 
+			//Cellule
 			const h = [
 				[(x = s + (d + t) * 4), (y = s)],
 				[(x += c + m), y],
@@ -111,7 +120,7 @@ export const Product2D = ({ p_selected }) => {
 			]
 			setCellule((old) => [...old, ...h])
 		}
-	}, [e, w, p, l, d, c, n, n2, isready])
+	}, [p_selected])
 
 	const containerRef = useRef(null)
 
@@ -140,6 +149,7 @@ export const Product2D = ({ p_selected }) => {
 					</Svg>
 				) : null}
 			</div>
+			<div>Mise à l'echelle avec les dimensions de la cellule : {cel_width.toFixed(4)} mm</div>
 			<Button onClick={() => exportToFile()}>Export</Button>
 		</Container>
 	)

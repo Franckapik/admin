@@ -91,7 +91,7 @@ const Preview3D = ({
 	setCwidth,
 	thickness,
 }) => {
-	const e = thickness //epaisseur
+	const e = thickness / 10 //epaisseur
 	const p = prime //type (type du diffuseur) Prime number (p)
 	const w = width //largeur
 	const l = length //largeur
@@ -130,12 +130,12 @@ const Preview3D = ({
 				<Text color="teal" scale={50} position={[w - w / 4, 0, d / 2]} rotation={[0, Math.PI / 2, 0]}>
 					{depth} cm
 				</Text>
-				{Array(p + 1) //largeur
+				{Array(p + 1) //peignes longs
 					.fill('')
 					.map((a, i) => (
 						<Part args={[e, l, d]} position={[start[0] + (c + e) * i, 0, start[2]]} rotation={[0, 0, 0]} />
 					))}
-				{Array(n2) //longueur
+				{Array(n2) //peignes courts
 					.fill('')
 					.map((a, i) => (
 						<Part args={[w, e, d]} position={[0, start[1] + e + (c + e) * i, start[2]]} rotation={[0, 0, 0]} />

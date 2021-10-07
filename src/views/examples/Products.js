@@ -23,6 +23,7 @@ import delData from 'hooks/delData'
 import ModifyProductForm from 'components/Forms/ModifyProductForm'
 import ModalBox from 'layouts/ModalBox'
 import { Product3D } from '../../layouts/Product3D'
+import { Product2D } from 'layouts/Product2D'
 const Products = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
@@ -35,6 +36,7 @@ const Products = () => {
 	const [modal, setModal] = useToggle()
 	const [modal3d, setModal3d] = useToggle()
 	const [modalModif, setModif] = useToggle()
+	const [modalSvg, setModalSvg] = useToggle()
 
 	const [productState, setProductState] = useState([]) //update when deleting
 
@@ -85,6 +87,9 @@ const Products = () => {
 											<th scope="col" className="p-2">
 												<i className="fas fa-cubes"></i>
 											</th>
+											<th scope="col" className="p-2">
+												<i className="fas fa-route"></i>
+											</th>
 											<th className="p-2">
 												<i className="far fa-file-pdf "></i>
 											</th>
@@ -131,6 +136,15 @@ const Products = () => {
 														className="p-2"
 													>
 														<i className="fas fa-cubes text-pink"></i>
+													</td>
+													<td
+														onClick={() => {
+															setModalSvg()
+															setSelection(a)
+														}}
+														className="p-2"
+													>
+														<i className="fas fa-route text-purple"></i>
 													</td>
 													<td className="p-2">
 														<i className="far fa-file-pdf text-yellow"></i>
@@ -233,6 +247,9 @@ const Products = () => {
 			</ModalBox>
 			<ModalBox isOpen={modal3d} toggle={setModal3d} button1="Fermer" button2="Ajouter en Boutique" noheader>
 				<Product3D p_selected={p_selected}></Product3D>
+			</ModalBox>
+			<ModalBox isOpen={modalSvg} toggle={setModalSvg} button1="Fermer" button2="Ajouter en Boutique" noheader>
+				<Product2D p_selected={p_selected}></Product2D>
 			</ModalBox>
 		</>
 	)
