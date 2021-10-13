@@ -154,7 +154,7 @@ const Products = () => {
 													<td>{a.col_name}</td>
 													<td>{a.price} €</td>
 													<td>
-														{a.width}x{a.lenght}x{a.depth}
+														{a.width}x{a.length}x{a.depth}
 													</td>
 													<td>{a.spectre} Hz</td>
 													<td>{a.type}</td>

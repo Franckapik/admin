@@ -161,7 +161,7 @@ const Preview3D = ({
 									color="black" // default
 									anchorX="center" // default
 									anchorY="middle" // default
-									scale="10"
+									scale="100"
 									position={[x, z, y + 1]}
 								>
 									{/* {y.toFixed(2)}

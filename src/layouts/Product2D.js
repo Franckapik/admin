@@ -17,51 +17,55 @@ export const Product2D = ({ p_selected }) => {
 	const [peigneLong, setPeigneLong] = useState([])
 	const [cellule, setCellule] = useState([])
 	const [cel_width, setCelWidth] = useState(0)
+	const [width, setWidth] = useState(0)
+	const [length, setLength] = useState(0)
 
 	useEffect(() => {
-		const { e, w, p, l, d, c, n, n2 } = dimension(p_selected)
-		setCelWidth(c)
+		const { e, w, p, l, d, j, k, c, c2, n, n2, l2, j2 } = dimension(p_selected)
+		setCelWidth(c2)
+		setWidth(w)
+		setLength(l2)
 
 		let x = 0
 		let y = 0
 		let s = 50 // depart
 		let t = d / 4 // espacement entre pieces
-		let m = 1 // marge de decoupe
+		let m = 1 //marge d'assemblage
 
 		if (w && n2) {
-			console.log(e, w, p, l, d, c, n, n2)
+			console.log(e, w, p, l, d, j, k, c, c2, n, n2, l2, j2)
 
 			//Cadre long
-			const j = [
+			const o = [
 				[(x = s), (y = s)],
 				[(x += d / 3), y],
 				[x, (y -= e)],
 				[(x += d / 3), y],
 				[x, (y += e)],
 				[(x += d / 3), y],
-				[x, (y += l - 2 * e)],
+				[x, (y += j2)],
 				[(x -= d / 3), y],
 				[x, (y += e)],
 				[(x -= d / 3), y],
 				[x, (y -= e)],
 				[(x -= d / 3), y],
 			]
-			setCadreLong((old) => [...old, ...j])
+			setCadreLong((old) => [...old, ...o])
 
 			//Cadre court
 			const b = [
 				[(x = s + d * 1 + t), (y = s - e)],
-				[(x += d / 3), y],
+				[(x += d / 3 - m), y],
 				[x, (y += e)],
-				[(x += d / 3), y],
+				[(x += d / 3 + 2 * m), y],
 				[x, (y -= e)],
-				[(x += d / 3), y],
+				[(x += d / 3 - m), y],
 				[x, (y += w)],
-				[(x -= d / 3), y],
+				[(x -= d / 3 - m), y],
 				[x, (y -= e)],
-				[(x -= d / 3), y],
+				[(x -= d / 3 + 2 * m), y],
 				[x, (y += e)],
-				[(x -= d / 3), y],
+				[(x -= d / 3 - m), y],
 			]
 
 			setCadreCourt((old) => [...old, ...b])
@@ -76,10 +80,10 @@ export const Product2D = ({ p_selected }) => {
 			Array(p - 1)
 				.fill('')
 				.map((a, i) => {
-					f.push([x, (y += c)])
-					f.push([(x -= d / 2), y])
-					f.push([x, (y += e)])
-					f.push([(x += d / 2), y])
+					f.push([x, (y += c - m)])
+					f.push([(x -= d / 2 + m), y])
+					f.push([x, (y += e + m)])
+					f.push([(x += d / 2 + m), y])
 
 					return null
 				})
@@ -98,10 +102,10 @@ export const Product2D = ({ p_selected }) => {
 			Array(n2 - 1)
 				.fill('')
 				.map((a, i) => {
-					g.push([x, (y += c)])
-					g.push([(x -= d / 2), y])
-					g.push([x, (y += e)])
-					g.push([(x += d / 2), y])
+					g.push([x, (y += c - m)])
+					g.push([(x -= d / 2 + m), y])
+					g.push([x, (y += e + m)])
+					g.push([(x += d / 2 + m), y])
 
 					return null
 				})
@@ -114,9 +118,9 @@ export const Product2D = ({ p_selected }) => {
 			//Cellule
 			const h = [
 				[(x = s + (d + t) * 4), (y = s)],
-				[(x += c + m), y],
-				[x, (y += c + m)],
-				[(x -= c + m), y],
+				[(x += c2), y],
+				[x, (y += c2)],
+				[(x -= c2), y],
 			]
 			setCellule((old) => [...old, ...h])
 		}
@@ -149,7 +153,10 @@ export const Product2D = ({ p_selected }) => {
 					</Svg>
 				) : null}
 			</div>
-			<div>Mise à l'echelle avec les dimensions de la cellule : {cel_width.toFixed(4)} mm</div>
+			<div>
+				Dimensions rectifiées : {width} x {length} mm
+			</div>
+			<div>Cellule : {cel_width.toFixed(4)} mm</div>
 			<Button onClick={() => exportToFile()}>Export</Button>
 		</Container>
 	)
@@ -180,7 +187,7 @@ export const Product2D = ({ p_selected }) => {
 			ctx.lineTo((x += d / 3), y)
 			ctx.lineTo(x, (y += e))
 			ctx.lineTo((x += d / 3), y)
-			ctx.lineTo(x, (y += l - 2 * e))
+			ctx.lineTo(x, (y += j))
 			ctx.lineTo((x -= d / 3), y)
 			ctx.lineTo(x, (y += e))
 			ctx.lineTo((x -= d / 3), y)
@@ -211,9 +218,9 @@ export const Product2D = ({ p_selected }) => {
 				.fill('')
 				.map((a, i) => {
 					ctx.lineTo(x, (y += c))
-					ctx.lineTo((x -= d / 2), y)
+					ctx.lineTo((x -= d/2 - 1), y)
 					ctx.lineTo(x, (y += e))
-					ctx.lineTo((x += d / 2), y)
+					ctx.lineTo((x += d/2 - 1), y)
 					return null
 				})
 			ctx.lineTo(x, (y += c))
@@ -227,9 +234,9 @@ export const Product2D = ({ p_selected }) => {
 				.fill('')
 				.map((a, i) => {
 					ctx.lineTo(x, (y += c))
-					ctx.lineTo((x -= d / 2), y)
+					ctx.lineTo((x -= d/2 - 1), y)
 					ctx.lineTo(x, (y += e))
-					ctx.lineTo((x += d / 2), y)
+					ctx.lineTo((x += d/2 - 1), y)
 					return null
 				})
 			ctx.lineTo(x, (y += c))
