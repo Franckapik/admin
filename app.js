@@ -18,6 +18,9 @@ const { sessionStore, upsert, query, insert, insertForce } = require('./db/db')
 const cors = require('cors')
 
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
+const multer = require('multer')
+
+const fs = require('fs')
 
 app.options(
 	'*',
@@ -26,6 +29,8 @@ app.options(
 		credentials: true,
 	})
 )
+
+const path = require('path')
 
 let Parser = require('rss-parser')
 let parser = new Parser()
@@ -38,7 +43,7 @@ var helmet = require('helmet')
 app.use(helmet())
 
 // Middleware
-app.use(express.json()) //since express 4.16
+app.use(express.json({ limit: '10mb' })) // since express 4.16
 
 app.use(
 	session({
@@ -52,6 +57,33 @@ app.use(
 		saveUninitialized: true,
 	})
 )
+var storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, 'public/uploads/')
+	},
+	limits: {
+		fileSize: 1000000, // 1000000 Bytes = 1 MB
+	},
+	filename: function (req, file, cb) {
+		var getFileExt = function (fileName) {
+			var fileExt = fileName.split('.')
+			if (fileExt.length === 1 || (fileExt[0] === '' && fileExt.length === 2)) {
+				return ''
+			}
+			return fileExt.pop()
+		}
+		cb(null, file.fieldname + '_' + Date.now() + '.' + getFileExt(file.originalname))
+	},
+	fileFilter(req, file, cb) {
+		if (!file.originalname.match(/\.(csv)$/)) {
+			// upload only png and jpg format
+			return cb(new Error('Please upload a csv file'))
+		}
+		cb(undefined, true)
+	},
+})
+
+var multerUpload = multer({ storage: storage })
 
 //analytics
 
@@ -297,7 +329,37 @@ app.post('/addCustomer', (req, res) => {
 	})
 })
 
-//uploads with multer
+//uploads csv file with multer middleware
+app.post(
+	'/addCSV',
+	multerUpload.single('catalogue'),
+	(req, res, next) => {
+		console.log(req.files)
+		res.end('File is uploaded .... ' + Date.now())
+		// req.body will hold the text fields, if there were any
+	},
+	(error, req, res, next) => {
+		res.status(400).send({ error: error.message })
+	}
+)
+
+//download file csv
+
+app.get('/uploadedList', (req, res) => {
+	let arr = []
+
+	fs.readdir('./public/uploads', (err, files) => {
+		if (files) {
+			files.forEach((file) => {
+				arr.push(file)
+				console.log(file)
+			})
+			res.send(arr)
+		} else {
+			res.send(err)
+		}
+	})
+})
 
 //simple get
 
@@ -460,6 +522,8 @@ app.get('/service-points', (req, res) => {
 			res.send(data)
 		})
 })
+
+app.use(express.static('public'))
 
 app.listen(PORT, () => {
 	logger.info(`Server listening on ${PORT}`)

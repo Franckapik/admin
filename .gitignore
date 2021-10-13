@@ -4,3 +4,4 @@ build/
 config.js
 log/
 .eslintcache
+*.csv

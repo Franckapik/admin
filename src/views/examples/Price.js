@@ -1,17 +1,19 @@
 // core components
 import ProductHeader from 'components/Headers/ProductHeader.js'
+import postData from 'hooks/postData'
 import dimension from 'hooks/useDimension'
 import useFetch from 'hooks/useFetch'
 import React, { useEffect, useState } from 'react'
 import { CSVReader } from 'react-papaparse'
 import Select from 'react-select'
 // reactstrap components
-import { Button, Card, CardBody, CardHeader, Col, Container, Row, Table } from 'reactstrap'
+import { Button, Card, CardBody, CardHeader, Col, Container, Input, Row, Table } from 'reactstrap'
 
 const Price = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
 	const { response: propertyList } = useFetch('/property')
+	const { response: uploadedList } = useFetch('/uploadedList')
 
 	const [p_selected, setSelection] = useState(0)
 	const [matiere, setMatiere] = useState([])
@@ -45,6 +47,7 @@ const Price = () => {
 				stock: a.data[10],
 			}))
 		setMatiere(a)
+		postData('/addCSV', { catalogue: data })
 	}
 
 	const handleOnError = (err, file, inputElem, reason) => {
@@ -53,6 +56,13 @@ const Price = () => {
 
 	const handleOnRemoveFile = (data) => {
 		console.log('remove', data)
+	}
+
+	const onChangeHandler = (event) => {
+		event.preventDefault()
+		const data = new FormData()
+		data.append('catalogue', event.target.files[0])
+		fetch('/addCSV', { method: 'POST', body: data }).then((res) => res.json())
 	}
 
 	return (
@@ -69,6 +79,7 @@ const Price = () => {
 				<Row className="mt-5">
 					<Col md={12}>
 						<Card>
+							<input type="file" name="file" onChange={onChangeHandler} />
 							{propertyList && propertyList.length ? (
 								<select
 									className="form-control"
@@ -142,6 +153,16 @@ const Price = () => {
 							{m_favorite.map((a) => (
 								<li>{a.label}</li>
 							))}
+						</Card>
+						<Card>
+							{' '}
+							{uploadedList &&
+								uploadedList.map((a, i) => (
+									<a href={process.env.PUBLIC_URL + '/uploads/' + a}>
+										{' '}
+										<li>{a}</li>
+									</a>
+								))}
 						</Card>
 					</Col>
 				</Row>
