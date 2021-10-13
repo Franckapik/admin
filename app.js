@@ -297,6 +297,8 @@ app.post('/addCustomer', (req, res) => {
 	})
 })
 
+//uploads with multer
+
 //simple get
 
 app.get('/customer', (req, res) => {
