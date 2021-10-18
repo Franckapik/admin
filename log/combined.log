@@ -23428,3 +23428,7 @@ undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 
 undefined [34mdebug[39m : [Knex] Données Table collection chargées (length): 9
 undefined [34mdebug[39m : [Knex] Données Table property chargées (length): 4
 undefined [34mdebug[39m : [Knex] Données Table material chargées (length): 2
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-10-18T16:09:20.583Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-10-18T16:10:50.737Z ]
