@@ -312,6 +312,17 @@ app.delete('/delCustomer/:id', (req, res) => {
 		})
 		.catch((err) => res.json({ error: err }))
 })
+
+app.delete('/delMaterial/:id', (req, res) => {
+	knex('material')
+		.where('value', req.params.id)
+		.del()
+		.then((deletedRows) => {
+			res.sendStatus(200)
+			logger.warn('Le materiaux %s %s', req.params.id, 'a été supprimé.')
+		})
+		.catch((err) => res.json({ error: err }))
+})
 app.delete('/delInvoice/:id', (req, res) => {
 	knex('invoice')
 		.where('invoice_id', req.params.id)
@@ -342,6 +353,14 @@ app.post(
 		res.status(400).send({ error: error.message })
 	}
 )
+
+//add material to database
+app.post('/addMatiere', (req, res, next) => {
+	console.log(req.body)
+	insert('material', 'value', req.body).then(() => {
+		res.sendStatus(200)
+	})
+})
 
 //download file csv
 
@@ -395,6 +414,9 @@ app.get('/invoice', (req, res) => {
 })
 app.get('/delivery', (req, res) => {
 	query('delivery').then((data) => res.send(data))
+})
+app.get('/material', (req, res) => {
+	query('material').then((data) => res.send(data))
 })
 app.get('/news', (req, res) => {
 	;(async () => {

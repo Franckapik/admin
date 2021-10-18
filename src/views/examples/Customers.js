@@ -80,7 +80,7 @@ const Customers = () => {
 									</tbody>
 								</Table>
 							) : (
-								'Aucun produit existant'
+								'Aucun client existant'
 							)}
 						</Card>
 					</div>
