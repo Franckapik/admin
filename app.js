@@ -8,11 +8,8 @@ const config = require('./config')
 
 const knex = require('knex')(config.db)
 
-const { google } = require('googleapis')
-
 const logger = require('./log/logger')
 
-const moment = require('moment')
 const session = require('express-session')
 const { sessionStore, upsert, query, insert, insertForce } = require('./db/db')
 const cors = require('cors')
@@ -30,8 +27,6 @@ app.options(
 	})
 )
 
-const path = require('path')
-
 let Parser = require('rss-parser')
 let parser = new Parser()
 
@@ -41,6 +36,12 @@ app.use(cookies())
 
 var helmet = require('helmet')
 app.use(helmet())
+
+//Expressjs Router
+
+var ga = require('./routes/ga')
+
+app.use('/ga', ga)
 
 // Middleware
 app.use(express.json({ limit: '10mb' })) // since express 4.16
@@ -86,143 +87,6 @@ var storage = multer.diskStorage({
 var multerUpload = multer({ storage: storage })
 
 //analytics
-
-const googleAccounts = google.analytics('v3')
-const googleAnalytics = google.analyticsreporting('v4')
-let viewSelected
-
-const clientID = '136823446557-1uqetqqjabi0tbmqs1i9ci1rsil1i9np.apps.googleusercontent.com'
-const clientSecret = 'IlZwBg0TEhGnGHkyvUGOaBsn'
-const callbackURL = 'http://localhost:3001/login/google/return'
-
-const oauth2Client = new google.auth.OAuth2(clientID, clientSecret, callbackURL)
-const url = oauth2Client.generateAuthUrl({
-	access_type: 'online',
-	scope: 'https://www.googleapis.com/auth/analytics.readonly',
-})
-
-app.get('/auth/google', (req, res) => {
-	res.redirect(url)
-})
-
-app.get('/login/google/return', (req, res) => {
-	oauth2Client.getToken(req.query.code, (err, tokens) => {
-		viewSelected = ''
-		if (!err) {
-			oauth2Client.setCredentials({
-				access_token: tokens.access_token,
-			})
-			res.redirect('/setcookie')
-		} else {
-			console.log('Error: ' + err)
-		}
-	})
-})
-
-app.get('/setcookie', (req, res) => {
-	res.cookie('google-auth', new Date())
-	res.redirect('/success')
-})
-
-app.get('/success', (req, res) => {
-	if (req.cookies['google-auth']) {
-		res.redirect('/getData')
-	} else {
-		res.redirect('/')
-	}
-})
-
-app.get('/clear', (req, res) => {
-	viewSelected = ''
-	res.redirect('/success')
-})
-
-app.get('/getData', function (req, res) {
-	viewSelected = '169310577'
-
-	if (!viewSelected) {
-		console.log('pas de view')
-		googleAccounts.management.profiles.list(
-			{
-				accountId: '~all',
-				webPropertyId: '~all',
-				auth: oauth2Client,
-			},
-			(err, data) => {
-				if (err) {
-					console.error('Error: ' + err)
-					res.send('An error occurred')
-				} else if (data) {
-					let views = []
-					data.items.forEach((view) => {
-						views.push({
-							name: view.webPropertyId + ' - ' + view.name + ' (' + view.websiteUrl + ')',
-							id: view.id,
-						})
-					})
-					res.send({ type: 'views', results: views })
-					console.log(views)
-				}
-			}
-		)
-	} else {
-		console.log('view')
-		let now = moment().format('YYYY-MM-DD')
-		let aMonthAgo = moment().subtract(1, 'months').format('YYYY-MM-DD')
-		let repReq = [
-			{
-				viewId: viewSelected,
-				dateRanges: [
-					{
-						startDate: aMonthAgo,
-						endDate: now,
-					},
-				],
-				metrics: [
-					{
-						expression: 'ga:pageLoadTime',
-					},
-				],
-				dimensions: [
-					{
-						name: 'ga:source',
-					},
-				],
-			},
-		]
-
-		googleAnalytics.reports.batchGet(
-			{
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				auth: oauth2Client,
-				resource: {
-					reportRequests: repReq,
-				},
-			},
-			(err, data) => {
-				if (err) {
-					console.error('Error: ' + err)
-					res.send('An error occurred')
-				} else if (data) {
-					let views = []
-					let max = 0
-					data.data.reports[0].data.rows.forEach((view) => {
-						views.push(view.metrics[0].values[0])
-						if (parseInt(view.metrics[0].values[0]) > parseInt(max)) max = view.metrics[0].values[0]
-					})
-					res.send([views, max])
-				}
-			}
-		)
-	}
-})
-
-app.get('/logoff', (req, res) => {
-	res.clearCookie('google-auth')
-	res.redirect('/')
-})
 
 app.get('/api', (req, res) => {
 	res.json({ message: 'Hello from server!' })
