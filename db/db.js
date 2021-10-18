@@ -48,6 +48,24 @@ const insert = (table, id, body) => {
 		})
 }
 
+const insertForce = (table, body) => {
+	return knex(table)
+		.insert(body)
+		.then((id_data) => {
+			if (id_data.length) {
+				//ignore or not
+				logger.info('[Knex] Table ' + table + ' Données enregistrées (id): %s', id_data[0])
+				return id_data
+			} else {
+				logger.warn('[Knex] Table ' + table + ' Données existantes. Insertion ignorée')
+			}
+		})
+		.catch((error) => {
+			logger.error('[Erreur Enregistrement ' + table + '] Sauvegarde db %s', error.message)
+			return error
+		})
+}
+
 const query = (table) => {
 	return knex(table)
 		.then((data) => {
@@ -77,4 +95,5 @@ knex
 module.exports.sessionStore = sessionStore
 module.exports.upsert = upsert
 module.exports.insert = insert
+module.exports.insertForce = insertForce
 module.exports.query = query

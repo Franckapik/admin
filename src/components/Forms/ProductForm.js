@@ -1,8 +1,9 @@
 import postData from 'hooks/postData'
 import useToggle from 'hooks/useToggle'
+import { AddForm } from 'layouts/AddForm'
 import { useState } from 'react'
 import { FormProvider, useForm } from 'react-hook-form'
-import { Alert, Button, Card, CardBody, CardTitle, CustomInput, Form, FormGroup, InputGroup, InputGroupAddon } from 'reactstrap'
+import { Alert, Button, Card, CardBody, CardTitle, Col, Form, FormGroup, InputGroup, InputGroupAddon, Row } from 'reactstrap'
 import { CollectionForm } from './CollectionForm'
 import { PackagingForm } from './PackagingForm'
 import { PerformanceForm } from './PerformanceForm'
@@ -42,62 +43,82 @@ export default function ProductForm({ productList, collectionList, packagingList
 	return (
 		<FormProvider {...methods}>
 			<Form onSubmit={methods.handleSubmit(handleRegistration, handleError)}>
-				<FormGroup>
-					<label for="prod_ident">Identifiant produit</label>
-					<input className="form-control" type="text" placeholder={nextProductId} disabled></input>
-				</FormGroup>
-				<FormGroup>
-					<label for="product_name">Nom</label>
-					<input className="form-control" {...register('product.name', { required: true, maxLength: 20 })} />
+				<Row form>
+					<Col md={4}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="prod_ident">Identifiant produit</label>
+							<input className="form-control" type="text" placeholder={nextProductId} disabled></input>
+						</FormGroup>
+					</Col>
+					<Col md={4}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_name">Nom</label>
+							<input className="form-control" {...register('product.name', { required: true, maxLength: 20 })} />
 
-					{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'required' && (
-						<Alert color="warning">Un nom est requis</Alert>
-					)}
+							{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'required' && (
+								<Alert color="warning">Un nom est requis</Alert>
+							)}
 
-					{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'maxLength' && (
-						<Alert color="warning">Le nom est trop long</Alert>
-					)}
-				</FormGroup>
-				<FormGroup>
-					<label for="product_price">Prix</label>
-					<input
-						className="form-control"
-						type="number"
-						{...register('product.price', {
-							required: true,
-							min: 0,
-							max: 1000,
-						})}
-					/>
-					{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'required' && (
-						<Alert color="warning">Un prix est requis</Alert>
-					)}
-					{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'min' && (
-						<Alert color="warning">Prix positif seulement</Alert>
-					)}
-					{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'max' && (
-						<Alert color="warning">Prix trop important</Alert>
-					)}
-				</FormGroup>
+							{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'maxLength' && (
+								<Alert color="warning">Le nom est trop long</Alert>
+							)}
+						</FormGroup>
+					</Col>
+					<Col md={4}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_price">Prix</label>
+							<input
+								className="form-control"
+								type="number"
+								{...register('product.price', {
+									required: true,
+									min: 0,
+									max: 1000,
+								})}
+							/>
+							{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'required' && (
+								<Alert color="warning">Un prix est requis</Alert>
+							)}
+							{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'min' && (
+								<Alert color="warning">Prix positif seulement</Alert>
+							)}
+							{errorsForm && errorsForm.product && errorsForm.product.price?.type === 'max' && (
+								<Alert color="warning">Prix trop important</Alert>
+							)}
+						</FormGroup>
+					</Col>
+				</Row>
 
 				<FormGroup
 					style={{
 						display: !newCollection ? 'block' : 'none', // toggle the visbility of an input
 					}}
 				>
-					<label for="collection_id">Collection</label>
+					<label htmlFor="collection_id">Collection</label>
 					<InputGroup>
-						<select className="form-control" type="select" {...register('product.collection_id', { required: true })}>
-							<option disabled selected value="">
+						<select
+							className="form-control"
+							type="select"
+							defaultValue=""
+							{...register('product.collection_id', { required: true })}
+						>
+							<option disabled value="">
 								{' '}
 								-- Choisir une collection --{' '}
 							</option>
 							{Array.from(collectionList).map((a, i) => {
-								return <option value={a.collection_id}>{a.col_name}</option>
+								return (
+									<option key={a + i} value={a.collection_id}>
+										{a.col_name}
+									</option>
+								)
 							})}
 						</select>
 						<InputGroupAddon addonType="append">
-							<Button onClick={addCollection}>Ajouter</Button>
+							<Button onClick={addCollection}>+</Button>
 						</InputGroupAddon>
 					</InputGroup>
 					{errorsForm && errorsForm.product && errorsForm.product.collection_id?.type === 'required' && (
@@ -105,45 +126,46 @@ export default function ProductForm({ productList, collectionList, packagingList
 					)}
 				</FormGroup>
 				{newCollection ? (
-					<Card color="info">
-						<CardTitle>
-							Nouvelle Collection | <small onClick={addCollection}>Collection Existante</small>
-						</CardTitle>
-						<CardBody>
-							<CollectionForm nextId={nextCollectionId} errorsForm={errorsForm} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addCollection} title="Collection">
+						{' '}
+						<CollectionForm nextId={nextCollectionId} errorsForm={errorsForm} />
+					</AddForm>
 				) : null}
 
 				<FormGroup>
-					<label for="product_img">Image</label>
+					<label htmlFor="product_img">Image</label>
 					<input className="form-control" type="file" {...register('product.img')} />
 				</FormGroup>
 				{newPerformance ? (
-					<Card color="info">
-						<CardTitle>
-							Nouvelle Performance | <small onClick={addPerformance}>Performance Existante</small>
-						</CardTitle>
-						<CardBody>
-							<PerformanceForm nextId={nextPerformanceId} errorsForm={errorsForm} register={register} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addPerformance} title="Performance">
+						{' '}
+						<PerformanceForm nextId={nextPerformanceId} errorsForm={errorsForm} register={register} />
+					</AddForm>
 				) : (
 					<FormGroup>
-						<label for="product_perf">Performance</label>
+						<label htmlFor="product_perf">Performance</label>
 						<InputGroup>
-							<select className="form-control" type="select" {...register('product.performance_id', { required: true })}>
-								<option disabled selected value="">
+							<select
+								className="form-control"
+								type="select"
+								defaultValue=""
+								{...register('product.performance_id', { required: true })}
+							>
+								<option disabled value="">
 									{' '}
 									-- Choisir une performance --{' '}
 								</option>
 
 								{Array.from(performanceList).map((a, i) => {
-									return <option value={a.performance_id}>{a.spectre}</option>
+									return (
+										<option key={a + i} value={a.performance_id}>
+											{a.spectre}
+										</option>
+									)
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addPerformance}>Ajouter</Button>
+								<Button onClick={addPerformance}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.performance_id?.type === 'required' && (
@@ -153,30 +175,35 @@ export default function ProductForm({ productList, collectionList, packagingList
 				)}
 
 				{newPackaging ? (
-					<Card color="info">
-						<CardTitle>
-							Nouveau Packaging | <small onClick={addPackaging}>Packaging Existant</small>
-						</CardTitle>
-						<CardBody>
-							<PackagingForm nextId={nextPackagingId} errorsForm={errorsForm} register={register} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addPackaging} title="Packaging">
+						{' '}
+						<PackagingForm nextId={nextPackagingId} errorsForm={errorsForm} register={register} />
+					</AddForm>
 				) : (
 					<FormGroup>
-						<label for="product_pack">Packaging</label>
+						<label htmlFor="product_pack">Packaging</label>
 						<InputGroup>
-							<select className="form-control" type="select" {...register('product.packaging_id', { required: true })}>
-								<option disabled selected value="">
+							<select
+								className="form-control"
+								type="select"
+								defaultValue=""
+								{...register('product.packaging_id', { required: true })}
+							>
+								<option disabled value="">
 									{' '}
 									-- Choisir un packaging --{' '}
 								</option>
 
 								{Array.from(packagingList).map((a, i) => {
-									return <option value={a.packaging_id}>{a.reference}</option>
+									return (
+										<option key={a + i} value={a.packaging_id}>
+											{a.reference}
+										</option>
+									)
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addPackaging}>Ajouter</Button>
+								<Button onClick={addPackaging}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.packaging_id?.type === 'required' && (
@@ -186,30 +213,35 @@ export default function ProductForm({ productList, collectionList, packagingList
 				)}
 
 				{newProperty ? (
-					<Card color="info">
-						<CardTitle>
-							Nouvelle Propriété | <small onClick={addProperty}>Propriété Existante</small>
-						</CardTitle>
-						<CardBody>
-							<PropertyForm nextId={nextPropertyId} errorsForm={errorsForm} register={register} />
-						</CardBody>
-					</Card>
+					<AddForm toggleFunction={addProperty} title="Propriétés">
+						{' '}
+						<PropertyForm nextId={nextPropertyId} errorsForm={errorsForm} register={register} />
+					</AddForm>
 				) : (
 					<FormGroup>
-						<label for="product_prop">Propriétés</label>
+						<label htmlFor="product_prop">Propriétés</label>
 						<InputGroup>
-							<select className="form-control" type="select" {...register('product.property_id', { required: true })}>
-								<option disabled selected value="">
+							<select
+								className="form-control"
+								type="select"
+								defaultValue=""
+								{...register('product.property_id', { required: true })}
+							>
+								<option disabled value="">
 									{' '}
 									-- Choisir une propriété --{' '}
 								</option>
 
 								{Array.from(propertyList).map((a, i) => {
-									return <option value={a.property_id}>{a.type}</option>
+									return (
+										<option key={a + i} value={a.property_id}>
+											{a.type}
+										</option>
+									)
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addProperty}>Ajouter</Button>
+								<Button onClick={addProperty}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.property_id?.type === 'required' && (
@@ -218,22 +250,31 @@ export default function ProductForm({ productList, collectionList, packagingList
 					</FormGroup>
 				)}
 
-				<FormGroup>
-					<label for="product_stock">Stock</label>
-					<select className="form-control" type="select" {...register('product.stock')}>
-						<option>Disponible</option>
-						<option>En cours de fabrication</option>
-						<option>En rupture de stock</option>
-					</select>
-				</FormGroup>
-				<FormGroup>
-					<label for="product_publish">Publication</label>
-					<select className="form-control" type="select" {...register('product.product_publish')}>
-						<option value="true">Publication en boutique</option>
-						<option value="false">Stockage caché</option>
-					</select>
-				</FormGroup>
-				<Button>Ajouter</Button>
+				<Row form>
+					<Col md={6}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_stock">Stock</label>
+							<select className="form-control" type="select" {...register('product.stock')}>
+								<option>Disponible</option>
+								<option>En cours de fabrication</option>
+								<option>En rupture de stock</option>
+							</select>
+						</FormGroup>
+					</Col>
+					<Col md={6}>
+						{' '}
+						<FormGroup>
+							<label htmlFor="product_publish">Publication</label>
+							<select className="form-control" type="select" {...register('product.product_publish')}>
+								<option value="true">Publication en boutique</option>
+								<option value="false">Stockage caché</option>
+							</select>
+						</FormGroup>
+					</Col>
+				</Row>
+
+				<Button>+</Button>
 			</Form>
 		</FormProvider>
 	)

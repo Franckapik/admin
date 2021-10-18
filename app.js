@@ -14,8 +14,13 @@ const logger = require('./log/logger')
 
 const moment = require('moment')
 const session = require('express-session')
-const { sessionStore, upsert, query, insert } = require('./db/db')
+const { sessionStore, upsert, query, insert, insertForce } = require('./db/db')
 const cors = require('cors')
+
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
+const multer = require('multer')
+
+const fs = require('fs')
 
 app.options(
 	'*',
@@ -24,6 +29,8 @@ app.options(
 		credentials: true,
 	})
 )
+
+const path = require('path')
 
 let Parser = require('rss-parser')
 let parser = new Parser()
@@ -36,7 +43,7 @@ var helmet = require('helmet')
 app.use(helmet())
 
 // Middleware
-app.use(express.json()) //since express 4.16
+app.use(express.json({ limit: '10mb' })) // since express 4.16
 
 app.use(
 	session({
@@ -50,6 +57,33 @@ app.use(
 		saveUninitialized: true,
 	})
 )
+var storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, 'public/uploads/')
+	},
+	limits: {
+		fileSize: 1000000, // 1000000 Bytes = 1 MB
+	},
+	filename: function (req, file, cb) {
+		var getFileExt = function (fileName) {
+			var fileExt = fileName.split('.')
+			if (fileExt.length === 1 || (fileExt[0] === '' && fileExt.length === 2)) {
+				return ''
+			}
+			return fileExt.pop()
+		}
+		cb(null, file.fieldname + '_' + Date.now() + '.' + getFileExt(file.originalname))
+	},
+	fileFilter(req, file, cb) {
+		if (!file.originalname.match(/\.(csv)$/)) {
+			// upload only png and jpg format
+			return cb(new Error('Please upload a csv file'))
+		}
+		cb(undefined, true)
+	},
+})
+
+var multerUpload = multer({ storage: storage })
 
 //analytics
 
@@ -217,6 +251,30 @@ app.post('/addProduct', (req, res) => {
 		})
 })
 
+app.post('/addInvoice', (req, res) => {
+	console.log(req.body)
+	const cust = req.body.customer ? insert('customer', 'user_id', req.body.customer) : Promise.resolve()
+	const stat = req.body.status ? insert('status', 'status_id', req.body.status) : Promise.resolve()
+	const deli = req.body.delivery ? insert('delivery', 'delivery_id', req.body.delivery) : Promise.resolve()
+	const tran = req.body.transaction ? insert('transaction', 'transaction_id', req.body.transaction) : Promise.resolve()
+	const disc = req.body.discount ? insert('discount', 'discount_id', req.body.discount) : Promise.resolve()
+	const item = req.body.items
+		? req.body.items.map((a, i) => {
+				return insertForce('item', a)
+		  })
+		: Promise.resolve()
+
+	Promise.all([cust, stat, deli, tran, disc, item])
+		.then((values) => {
+			insert('invoice', 'invoice_id', req.body.invoice)
+				.then((id) => res.json({ 'New invoice': values }))
+				.catch((error) => res.sendStatus(500))
+		})
+		.catch((err) => {
+			console.log(err)
+		})
+})
+
 app.post('/modifyProduct', (req, res) => {
 	const col = req.body.collection ? insert('collection', 'collection_id', req.body.collection) : Promise.resolve()
 	const perf = req.body.performance ? insert('collection', 'collection_id', req.body.collection) : Promise.resolve()
@@ -255,9 +313,70 @@ app.delete('/delCustomer/:id', (req, res) => {
 		.catch((err) => res.json({ error: err }))
 })
 
+app.delete('/delMaterial/:id', (req, res) => {
+	knex('material')
+		.where('value', req.params.id)
+		.del()
+		.then((deletedRows) => {
+			res.sendStatus(200)
+			logger.warn('Le materiaux %s %s', req.params.id, 'a été supprimé.')
+		})
+		.catch((err) => res.json({ error: err }))
+})
+app.delete('/delInvoice/:id', (req, res) => {
+	knex('invoice')
+		.where('invoice_id', req.params.id)
+		.del()
+		.then((deletedRows) => {
+			res.sendStatus(200)
+			logger.warn('La facture %s %s', req.params.id, 'a été supprimée.')
+		})
+		.catch((err) => res.json({ error: err }))
+})
+
 app.post('/addCustomer', (req, res) => {
 	upsert('customer', 'user_id', req.body).then(() => {
 		res.sendStatus(200)
+	})
+})
+
+//uploads csv file with multer middleware
+app.post(
+	'/addCSV',
+	multerUpload.single('catalogue'),
+	(req, res, next) => {
+		console.log(req.files)
+		res.end('File is uploaded .... ' + Date.now())
+		// req.body will hold the text fields, if there were any
+	},
+	(error, req, res, next) => {
+		res.status(400).send({ error: error.message })
+	}
+)
+
+//add material to database
+app.post('/addMatiere', (req, res, next) => {
+	console.log(req.body)
+	insert('material', 'value', req.body).then(() => {
+		res.sendStatus(200)
+	})
+})
+
+//download file csv
+
+app.get('/uploadedList', (req, res) => {
+	let arr = []
+
+	fs.readdir('./public/uploads', (err, files) => {
+		if (files) {
+			files.forEach((file) => {
+				arr.push(file)
+				console.log(file)
+			})
+			res.send(arr)
+		} else {
+			res.send(err)
+		}
 	})
 })
 
@@ -295,6 +414,9 @@ app.get('/invoice', (req, res) => {
 })
 app.get('/delivery', (req, res) => {
 	query('delivery').then((data) => res.send(data))
+})
+app.get('/material', (req, res) => {
+	query('material').then((data) => res.send(data))
 })
 app.get('/news', (req, res) => {
 	;(async () => {
@@ -338,13 +460,92 @@ app.get('/complete_invoice', (req, res) => {
 	knex('invoice')
 		.join('customer', 'invoice.user_id', 'customer.user_id')
 		.join('status', 'invoice.status_id', 'status.status_id')
-		.join('transporter', 'invoice.transporter_id', 'transporter.transporter_id')
 		.join('discount', 'invoice.discount_id', 'discount.discount_id')
+		.join('delivery', 'invoice.delivery_id', 'delivery.delivery_id')
+		.join('transaction', 'invoice.transaction_id', 'transaction.transaction_id')
 		.then((data) => {
-			console.log(data)
 			res.send(data)
 		})
 })
+
+app.get('/ship/:id', (req, res) => {
+	logger.info('Shipping fetch data %s', req.params.id)
+
+	fetch(config.shipping.url + req.params.id, {
+		headers: {
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => response.text())
+		.then((data) => {
+			res.send(data)
+		})
+})
+
+app.post('/addParcel', (req, res) => {
+	logger.info('Add a parcel %o', req.body.parcel.name)
+	fetch('https://panel.sendcloud.sc/api/v2/parcels', {
+		method: 'post',
+		body: JSON.stringify(req.body),
+		headers: {
+			'Content-Type': 'application/json',
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => {
+			if (response.ok) {
+				logger.info('Parcel added %s', response.statusText)
+			} else {
+				logger.error('Parcel error%s', response.statusText)
+			}
+			response.text()
+		})
+		.then((data) => {
+			res.send(data)
+		})
+})
+
+app.get('/getParcel', (req, res) => {
+	logger.info('Fetch all parcels')
+	fetch('https://panel.sendcloud.sc/api/v2/parcels', {
+		headers: {
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => {
+			if (response.ok) {
+				logger.info('Parcel fetched %s', response.statusText)
+			} else {
+				logger.error('Parcel fetch error%s', response.statusText)
+			}
+			return response.json()
+		})
+		.then((data) => {
+			res.send(data)
+		})
+})
+
+//http://localhost:3001/ship/service-points?country=FR&latitude=48.2772321689434&longitude=-1.6697866335057476
+
+app.get('/service-points', (req, res) => {
+	logger.info('Shipping fetch data %s', req.url.substring(req.url.indexOf('?')))
+	const queries = req.url.substring(req.url.indexOf('?'))
+	fetch(config.shipping.url + 'service-points' + queries, {
+		headers: {
+			Authorization:
+				'Basic ' + Buffer.from(`${config.shipping.public}:${config.shipping.secret}`, 'binary').toString('base64'),
+		},
+	})
+		.then((response) => response.text())
+		.then((data) => {
+			res.send(data)
+		})
+})
+
+app.use(express.static('public'))
 
 app.listen(PORT, () => {
 	logger.info(`Server listening on ${PORT}`)

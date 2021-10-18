@@ -14,6 +14,7 @@ const Database = () => {
 	const { response: performanceList } = useFetch('/performance')
 	const { response: packagingList } = useFetch('/packaging')
 	const { response: invoiceList } = useFetch('/invoice')
+	const { response: materialList } = useFetch('/material')
 
 	return (
 		<>
@@ -53,6 +54,11 @@ const Database = () => {
 				)}
 				{invoiceList && invoiceList.length && invoiceList.length > 0 ? (
 					<List data={invoiceList} name="factures" />
+				) : (
+					'Aucune facture'
+				)}
+				{materialList && materialList.length && materialList.length > 0 ? (
+					<List data={materialList} name="materiaux" />
 				) : (
 					'Aucune facture'
 				)}

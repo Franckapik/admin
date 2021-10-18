@@ -1,3 +1,19 @@
+const { default: InvoiceForm } = require("components/Forms/InvoiceForm")
+
+-commencer à concevoir laffichage de produit 3d
+-faire un header pour chaque section
+-get relais details on click
+-get items details on click (à la place de produits)
+-pouvoir faire une modif de facture/cmde
+-verifier ts les formulaires existants avec la bonne reaction au fetch vides
+-changer les logos de la facture pdf
+-statut de facture/devis/commande interne en select dans invoice
+-resoudre le pb de click sur les markers de la map.
+
+
+
+
+
 -- version 5 ---
 alt shift o : effracer les dep non utilisées
 ctrl+l : join line
@@ -26,6 +42,16 @@ S'assurer du bon chargement des données et vérifier les erreurs possibles suit
 2- Trouver de nouvelles relations entre les tables avec les factures, mails, livraisons, etc...
 3- Mettre en place les clefs et les nouvelles infos dans les tables.
 4- Afficher le maxmimum de données sur l'admin avec les fausses informations.
+
+
+-----Faits pour la version 5 ----
+-laisser les fonctionnalités sup de lapi sendcloud pour plus tard et rester sur l'import de colis auto slmt. dc pas de order, del parcels, etc...
+-relais consultation dans un new tab
+-relais en modalbox pour le order form.
+-ajouter la generation de pdf depuis la liste des invoices
+-ajouter les items du invoice en séparé bas du form invoice
+
+
 
 
 Les dernières reflexions sur l'ancien site internet :

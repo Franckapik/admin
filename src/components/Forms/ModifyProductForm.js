@@ -62,11 +62,11 @@ export default function ModifyProductForm({
 		<FormProvider {...methods}>
 			<Form onSubmit={methods.handleSubmit(handleRegistration, handleError)}>
 				<FormGroup>
-					<label for="prod_ident">Identifiant produit</label>
+					<label htmlFor="prod_ident">Identifiant produit</label>
 					<input className="form-control" type="text" placeholder={p_selected.product_id} disabled></input>
 				</FormGroup>
 				<FormGroup>
-					<label for="product_name">Nom</label>
+					<label htmlFor="product_name">Nom</label>
 					<input className="form-control" {...register('product.name', { required: true, maxLength: 20 })} />
 
 					{errorsForm && errorsForm.product && errorsForm.product.name?.type === 'required' && (
@@ -78,7 +78,7 @@ export default function ModifyProductForm({
 					)}
 				</FormGroup>
 				<FormGroup>
-					<label for="product_price">Prix</label>
+					<label htmlFor="product_price">Prix</label>
 					<input
 						className="form-control"
 						type="number"
@@ -104,7 +104,7 @@ export default function ModifyProductForm({
 						display: !newCollection ? 'block' : 'none', // toggle the visbility of an input
 					}}
 				>
-					<label for="collection_id">Collection</label>
+					<label htmlFor="collection_id">Collection</label>
 					<InputGroup>
 						<select className="form-control" type="select" {...register('product.collection_id', { required: true })}>
 							<option disabled selected value="">
@@ -116,7 +116,7 @@ export default function ModifyProductForm({
 							})}
 						</select>
 						<InputGroupAddon addonType="append">
-							<Button onClick={addCollection}>Ajouter</Button>
+							<Button onClick={addCollection}>+</Button>
 						</InputGroupAddon>
 					</InputGroup>
 					{errorsForm && errorsForm.product && errorsForm.product.collection_id?.type === 'required' && (
@@ -135,7 +135,7 @@ export default function ModifyProductForm({
 				) : null}
 
 				<FormGroup>
-					<label for="product_img">Image</label>
+					<label htmlFor="product_img">Image</label>
 					<input className="form-control" type="file" {...register('product.img')} />
 				</FormGroup>
 				{newPerformance ? (
@@ -149,7 +149,7 @@ export default function ModifyProductForm({
 					</Card>
 				) : (
 					<FormGroup>
-						<label for="product_perf">Performance</label>
+						<label htmlFor="product_perf">Performance</label>
 						<InputGroup>
 							<select className="form-control" type="select" {...register('product.performance_id', { required: true })}>
 								<option disabled selected value="">
@@ -162,7 +162,7 @@ export default function ModifyProductForm({
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addPerformance}>Ajouter</Button>
+								<Button onClick={addPerformance}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.performance_id?.type === 'required' && (
@@ -182,7 +182,7 @@ export default function ModifyProductForm({
 					</Card>
 				) : (
 					<FormGroup>
-						<label for="product_pack">Packaging</label>
+						<label htmlFor="product_pack">Packaging</label>
 						<InputGroup>
 							<select className="form-control" type="select" {...register('product.packaging_id', { required: true })}>
 								<option disabled selected value="">
@@ -195,7 +195,7 @@ export default function ModifyProductForm({
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addPackaging}>Ajouter</Button>
+								<Button onClick={addPackaging}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.packaging_id?.type === 'required' && (
@@ -215,7 +215,7 @@ export default function ModifyProductForm({
 					</Card>
 				) : (
 					<FormGroup>
-						<label for="product_prop">Propriétés</label>
+						<label htmlFor="product_prop">Propriétés</label>
 						<InputGroup>
 							<select className="form-control" type="select" {...register('product.property_id', { required: true })}>
 								<option disabled selected value="">
@@ -228,7 +228,7 @@ export default function ModifyProductForm({
 								})}
 							</select>
 							<InputGroupAddon addonType="append">
-								<Button onClick={addProperty}>Ajouter</Button>
+								<Button onClick={addProperty}>+</Button>
 							</InputGroupAddon>
 						</InputGroup>
 						{errorsForm && errorsForm.product && errorsForm.product.property_id?.type === 'required' && (
@@ -238,7 +238,7 @@ export default function ModifyProductForm({
 				)}
 
 				<FormGroup>
-					<label for="product_stock">Stock</label>
+					<label htmlFor="product_stock">Stock</label>
 					<select className="form-control" type="select" {...register('product.stock')}>
 						<option>Disponible</option>
 						<option>En cours de fabrication</option>
@@ -246,7 +246,7 @@ export default function ModifyProductForm({
 					</select>
 				</FormGroup>
 				<FormGroup>
-					<label for="product_publish">Publication</label>
+					<label htmlFor="product_publish">Publication</label>
 					<select className="form-control" type="select" {...register('product.product_publish')}>
 						<option value="true">Publication en boutique</option>
 						<option value="false">Stockage caché</option>

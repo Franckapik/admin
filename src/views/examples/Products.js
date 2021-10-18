@@ -5,10 +5,25 @@ import useFetch from 'hooks/useFetch'
 import React, { useEffect, useState } from 'react'
 import useToggle from 'hooks/useToggle'
 // reactstrap components
-import { Button, Card, CardBody, CardHeader, Col, Container, ListGroup, ListGroupItem, Modal, Row, Table } from 'reactstrap'
+import {
+	Card,
+	CardBody,
+	CardHeader,
+	Col,
+	Container,
+	Container as Modal3D,
+	FormGroup,
+	ListGroup,
+	ListGroupItem,
+	Modal,
+	Row,
+	Table,
+} from 'reactstrap'
 import delData from 'hooks/delData'
 import ModifyProductForm from 'components/Forms/ModifyProductForm'
 import ModalBox from 'layouts/ModalBox'
+import { Product3D } from '../../layouts/Product3D'
+import { Product2D } from 'layouts/Product2D'
 const Products = () => {
 	const { response: productList } = useFetch('/complete_product')
 	const { response: collectionList } = useFetch('/collection')
@@ -19,7 +34,9 @@ const Products = () => {
 	const [p_selected, setSelection] = useState(0)
 
 	const [modal, setModal] = useToggle()
+	const [modal3d, setModal3d] = useToggle()
 	const [modalModif, setModif] = useToggle()
+	const [modalSvg, setModalSvg] = useToggle()
 
 	const [productState, setProductState] = useState([]) //update when deleting
 
@@ -58,14 +75,23 @@ const Products = () => {
 								<Table className="align-items-center table-dark table-flush" responsive>
 									<thead className="thead-dark">
 										<tr>
-											<th scope="col">
+											<th scope="col" className="p-2">
 												<i className="far fa-trash-alt" />
 											</th>
-											<th scope="col">
-												<i class="far fa-list-alt"></i>
+											<th scope="col" className="p-2">
+												<i className="far fa-list-alt"></i>
 											</th>
-											<th scope="col">
-												<i class="far fa-edit"></i>
+											<th scope="col" className="p-2">
+												<i className="far fa-edit"></i>
+											</th>
+											<th scope="col" className="p-2">
+												<i className="fas fa-cubes"></i>
+											</th>
+											<th scope="col" className="p-2">
+												<i className="fas fa-route"></i>
+											</th>
+											<th className="p-2">
+												<i className="far fa-file-pdf "></i>
 											</th>
 											<th scope="col">Id</th>
 											<th scope="col">Nom</th>
@@ -80,8 +106,8 @@ const Products = () => {
 									<tbody>
 										{Array.from(productState).map((a, i) => {
 											return (
-												<tr>
-													<td onClick={() => removeProduct(a.product_id)}>
+												<tr key={a + i}>
+													<td onClick={() => removeProduct(a.product_id)} className="p-2">
 														<i className="far fa-trash-alt text-danger"></i>
 													</td>
 													<td
@@ -89,6 +115,7 @@ const Products = () => {
 															setSelection(a)
 															setModal()
 														}}
+														className="p-2"
 													>
 														<i className="far fa-list-alt text-info"></i>
 													</td>
@@ -97,15 +124,37 @@ const Products = () => {
 															setSelection(a)
 															setModif()
 														}}
+														className="p-2"
 													>
-														<i class="far fa-edit text-info"></i>
+														<i className="far fa-edit text-orange"></i>
+													</td>
+													<td
+														onClick={() => {
+															setModal3d()
+															setSelection(a)
+														}}
+														className="p-2"
+													>
+														<i className="fas fa-cubes text-pink"></i>
+													</td>
+													<td
+														onClick={() => {
+															setModalSvg()
+															setSelection(a)
+														}}
+														className="p-2"
+													>
+														<i className="fas fa-route text-purple"></i>
+													</td>
+													<td className="p-2">
+														<i className="far fa-file-pdf text-yellow"></i>
 													</td>
 													<td>{a.product_id}</td>
 													<td>{a.name}</td>
 													<td>{a.col_name}</td>
 													<td>{a.price} €</td>
 													<td>
-														{a.width}x{a.lenght}x{a.depth}
+														{a.width}x{a.length}x{a.depth}
 													</td>
 													<td>{a.spectre} Hz</td>
 													<td>{a.type}</td>
@@ -161,7 +210,7 @@ const Products = () => {
 				button1="Fermer"
 				button2="Enregistrer"
 			>
-				<Container>
+				<Modal3D>
 					<Row>
 						<ListGroup className="col-3">
 							<ListGroupItem>{p_selected.product_id}</ListGroupItem>
@@ -194,7 +243,13 @@ const Products = () => {
 							<ListGroupItem>{p_selected.unit}</ListGroupItem>
 						</ListGroup>
 					</Row>
-				</Container>
+				</Modal3D>
+			</ModalBox>
+			<ModalBox isOpen={modal3d} toggle={setModal3d} button1="Fermer" button2="Ajouter en Boutique" noheader>
+				<Product3D p_selected={p_selected}></Product3D>
+			</ModalBox>
+			<ModalBox isOpen={modalSvg} toggle={setModalSvg} button1="Fermer" button2="Ajouter en Boutique" noheader>
+				<Product2D p_selected={p_selected}></Product2D>
 			</ModalBox>
 		</>
 	)

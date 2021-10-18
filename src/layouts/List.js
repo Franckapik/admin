@@ -13,16 +13,20 @@ export const List = ({ data, name }) => {
 						<thead className="thead-dark">
 							<tr>
 								{Object.keys(data[0]).map((a, i) => {
-									return <th scope="col">{a}</th>
+									return (
+										<th key={a + i} scope="col">
+											{a}
+										</th>
+									)
 								})}
 							</tr>
 						</thead>
 						<tbody>
 							{Array.from(data).map((a, i) => {
 								return (
-									<tr>
+									<tr key={a + i}>
 										{Object.keys(a).map((b, c) => {
-											return <td>{a[b]}</td>
+											return <td key={b + c}>{a[b]}</td>
 										})}
 									</tr>
 								)

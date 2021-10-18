@@ -6015,3 +6015,5 @@ undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
 undefined [34mdebug[39m : [Knex] Données Table business chargées (length): 1
 undefined [32minfo[39m : Server listening on 3001
 undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-10-18T16:11:06.451Z ]
+undefined [32minfo[39m : Server listening on 3001
+undefined [32minfo[39m : Connexion checked on database 127.0.0.1 / quadratik2 [ 2021-10-18T16:12:16.385Z ]
