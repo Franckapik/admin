@@ -1,8 +1,9 @@
 var express = require('express')
 var router = express.Router()
 const cors = require('cors')
-
+require('./auth')
 const moment = require('moment')
+const passport = require('passport')
 
 const { google } = require('googleapis')
 
@@ -10,10 +11,41 @@ const googleAccounts = google.analytics('v3')
 const googleAnalytics = google.analyticsreporting('v4')
 let viewSelected
 
-const clientID = '136823446557-1uqetqqjabi0tbmqs1i9ci1rsil1i9np.apps.googleusercontent.com'
-const clientSecret = 'IlZwBg0TEhGnGHkyvUGOaBsn'
-const callbackURL = 'http://localhost:3001/ga/login/google/return' //change this on production
+function isLoggedIn(req, res, next) {
+	req.user ? next() : res.sendStatus(401)
+}
 
+router.get('/failed', (req, res) => {
+	res.send('Failed')
+})
+router.get('/success', isLoggedIn, (req, res) => {
+	res.send(`Welcome ${req.user.email}`)
+})
+
+router.get(
+	'/google',
+	passport.authenticate('google', {
+		scope: ['email', 'profile'],
+	})
+)
+
+router.get(
+	'/login/google/return',
+	passport.authenticate('google', {
+		successRedirect: '/ga/sucess',
+		failureRedirect: '/ga/failed',
+	})
+)
+
+router.get('/logout', (req, res) => {
+	req.logout()
+	req.session.destroy()
+	res.send('Goodbye!')
+})
+
+module.exports = router
+
+/* 
 const oauth2Client = new google.auth.OAuth2(clientID, clientSecret, callbackURL)
 const url = oauth2Client.generateAuthUrl({
 	access_type: 'online',
@@ -144,5 +176,4 @@ router.get('/logoff', (req, res) => {
 	res.clearCookie('google-auth')
 	res.redirect('/')
 })
-
-module.exports = router
+ */

@@ -1,51 +1,39 @@
 const express = require('express')
-
 const PORT = process.env.PORT || 3001
-
 const app = express()
-
 const config = require('./config')
-
 const knex = require('knex')(config.db)
-
 const logger = require('./log/logger')
-
 const session = require('express-session')
+require('./routes/auth')
+const passport = require('passport')
 const { sessionStore, upsert, query, insert, insertForce } = require('./db/db')
 const cors = require('cors')
-
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
 const multer = require('multer')
-
 const fs = require('fs')
-
-app.use(cors())
-
-app.use(function (req, res, next) {
-	res.removeHeader('X-Powered-By')
-	next()
-})
-
 let Parser = require('rss-parser')
 let parser = new Parser()
-
-var cookies = require('cookie-parser')
-
-app.use(cookies())
-
-var helmet = require('helmet')
-
-app.use(helmet())
+const cookieParser = require('cookie-parser')
+const helmet = require('helmet')
 
 //Expressjs Router
 
-var ga = require('./routes/ga')
+/* const ga = require('./routes/ga')
 
-app.use('/ga', ga)
+app.use('/ga', ga) */
 
 // Middleware
+app.use(cors())
+app.use(helmet())
+app.use(express.static('public'))
+app.use(cookieParser()) //usefull for session and passportjs
 app.use(express.json({ limit: '10mb' })) // since express 4.16
-
+app.use(
+	express.urlencoded({
+		extended: true,
+	})
+)
 app.use(
 	session({
 		secret: config.secret,
@@ -58,7 +46,11 @@ app.use(
 		saveUninitialized: true,
 	})
 )
-var storage = multer.diskStorage({
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, 'public/uploads/')
 	},
@@ -66,8 +58,8 @@ var storage = multer.diskStorage({
 		fileSize: 1000000, // 1000000 Bytes = 1 MB
 	},
 	filename: function (req, file, cb) {
-		var getFileExt = function (fileName) {
-			var fileExt = fileName.split('.')
+		const getFileExt = function (fileName) {
+			const fileExt = fileName.split('.')
 			if (fileExt.length === 1 || (fileExt[0] === '' && fileExt.length === 2)) {
 				return ''
 			}
@@ -84,9 +76,44 @@ var storage = multer.diskStorage({
 	},
 })
 
-var multerUpload = multer({ storage: storage })
+const multerUpload = multer({ storage: storage })
 
 //analytics
+
+function isLoggedIn(req, res, next) {
+	console.log(req.user)
+	req.user ? next() : res.sendStatus(401)
+}
+
+app.get('/failed', (req, res) => {
+	res.send('Failed')
+})
+app.get('/sucess', (req, res) => {
+	res.send(`Welcome ${req.user.email}`)
+})
+
+app.get(
+	'/google',
+	passport.authenticate('google', {
+		scope: ['email', 'profile'],
+	})
+)
+
+app.get(
+	'/login/google/return',
+	passport.authenticate('google', {
+		successRedirect: '/sucess',
+		failureRedirect: '/failed',
+	})
+)
+
+app.get('/logout', (req, res) => {
+	req.logout()
+	req.session.destroy()
+	res.send('Goodbye!')
+})
+
+//
 
 app.get('/api', (req, res) => {
 	res.json({ message: 'Hello from server!' })
@@ -408,8 +435,6 @@ app.get('/service-points', (req, res) => {
 			res.send(data)
 		})
 })
-
-app.use(express.static('public'))
 
 app.listen(PORT, () => {
 	logger.info(`Server listening on ${PORT}`)
