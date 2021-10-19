@@ -1,5 +1,6 @@
 var express = require('express')
 var router = express.Router()
+const cors = require('cors')
 
 const moment = require('moment')
 
@@ -18,6 +19,8 @@ const url = oauth2Client.generateAuthUrl({
 	access_type: 'online',
 	scope: 'https://www.googleapis.com/auth/analytics.readonly',
 })
+
+router.use(cors()) // access-control-allow-origin: * in response headers
 
 router.get('/auth/google', (req, res) => {
 	res.redirect(url)

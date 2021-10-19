@@ -19,13 +19,12 @@ const multer = require('multer')
 
 const fs = require('fs')
 
-app.options(
-	'*',
-	cors({
-		origin: 'http://localhost:3000',
-		credentials: true,
-	})
-)
+app.use(cors())
+
+app.use(function (req, res, next) {
+	res.removeHeader('X-Powered-By')
+	next()
+})
 
 let Parser = require('rss-parser')
 let parser = new Parser()
@@ -35,6 +34,7 @@ var cookies = require('cookie-parser')
 app.use(cookies())
 
 var helmet = require('helmet')
+
 app.use(helmet())
 
 //Expressjs Router
