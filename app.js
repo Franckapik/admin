@@ -19,9 +19,7 @@ const helmet = require('helmet')
 
 //Expressjs Router
 
-/* const ga = require('./routes/ga')
-
-app.use('/ga', ga) */
+const ga = require('./routes/ga')
 
 // Middleware
 app.use(cors())
@@ -50,6 +48,9 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+//routes
+app.use('/ga', ga)
+
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, 'public/uploads/')
@@ -77,51 +78,6 @@ const storage = multer.diskStorage({
 })
 
 const multerUpload = multer({ storage: storage })
-
-//analytics
-
-function isLoggedIn(req, res, next) {
-	console.log(req.user)
-	req.user ? next() : res.sendStatus(401)
-}
-
-app.get('/failed', (req, res) => {
-	res.send('Failed')
-})
-app.get('/sucess', (req, res) => {
-	res.send(`Welcome ${req.user.email}`)
-})
-
-app.get(
-	'/google',
-	passport.authenticate('google', {
-		scope: ['email', 'profile'],
-	})
-)
-
-app.get(
-	'/login/google/return',
-	passport.authenticate('google', {
-		successRedirect: '/sucess',
-		failureRedirect: '/failed',
-	})
-)
-
-app.get('/logout', (req, res) => {
-	req.logout()
-	req.session.destroy()
-	res.send('Goodbye!')
-})
-
-//
-
-app.get('/api', (req, res) => {
-	res.json({ message: 'Hello from server!' })
-})
-
-app.get('/session', (req, res) => {
-	res.send(req.session)
-})
 
 // insert into db
 
